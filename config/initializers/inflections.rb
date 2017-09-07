@@ -10,6 +10,11 @@
 #   inflect.uncountable %w( fish sheep )
 # end
 
+# Aqui configuramos el nombre al hacer un scafold normal devolverá categorius pero si 
+# agregamos el siguiente codigo podemos poner de forma correcta 
+#inflect.irregular 'categoria', 'categorias'
+#-------------------------------------------
+
 # These inflection rules are supported but not enabled by default:
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
