@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#-----------------------------------------------------------
+# Configurar una carga por defecto para nuestro usuario
+#Usuario.create(email: "adminzoo@minizoo.com", password: "minizoo2018", password_confirmation: "minizoo2018")
