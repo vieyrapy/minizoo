@@ -9,7 +9,12 @@ Bundler.require(*Rails.groups)
 module Minizoo
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.1
+    # config.load_defaults 5.1
+
+    #-----------------------------------------
+    #Configurar el idioma de nuestra aplicación 
+    config.i18n.default_locale = :es
+    #-----------------------------------------
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
