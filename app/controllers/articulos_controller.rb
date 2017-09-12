@@ -4,7 +4,9 @@ class ArticulosController < ApplicationController
   # GET /articulos
   # GET /articulos.json
   def index
-    @articulos = Articulo.all
+    #@articulos = Articulo.all
+    # Con paginate agregamos la cantidad de articulo a mostrar 
+    @articulos = Articulo.paginate(:page => params[:page], :per_page => 2)
   end
 
   # GET /articulos/1
@@ -69,6 +71,6 @@ class ArticulosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def articulo_params
-      params.require(:articulo).permit(:titulo, :descripcion, :foto)
+      params.require(:articulo).permit(:titulo, :descripcion, :foto )
     end
 end

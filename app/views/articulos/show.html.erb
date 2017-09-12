@@ -12,7 +12,7 @@
 
 <p>
   <strong>Foto:</strong>
-  <%= @articulo.foto %>
+   <%= image_tag @articulo.foto.url %>
 </p>
 
 <%= link_to 'Edit', edit_articulo_path(@articulo) %> |

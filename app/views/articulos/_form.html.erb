@@ -21,9 +21,9 @@
     <%= form.text_field :descripcion, id: :articulo_descripcion %>
   </div>
 
-  <div class="field">
-    <%= form.label :foto %>
-    <%= form.text_field :foto, id: :articulo_foto %>
+<div class="field">
+    <%= form.label :foto %><br>
+    <%= form.file_field :foto, multiple:  true   %>
   </div>
 
   <div class="actions">

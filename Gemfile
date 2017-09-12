@@ -32,6 +32,13 @@ gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#Gemas para subir imagenes https://github.com/carrierwaveuploader/carrierwave
+gem 'carrierwave', '~> 1.0'
+#End -----------------------
+#Gema para poner paginacion en las publicaciones https://github.com/mislav/will_paginate 
+gem 'will_paginate', '~> 3.1.0'
+#---------------------------
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

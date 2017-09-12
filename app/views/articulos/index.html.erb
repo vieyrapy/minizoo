@@ -17,7 +17,7 @@
       <tr>
         <td><%= articulo.titulo %></td>
         <td><%= articulo.descripcion %></td>
-        <td><%= articulo.foto %></td>
+        <td><%= image_tag(articulo.foto) %></td>
         <td><%= link_to 'Show', articulo %></td>
         <td><%= link_to 'Edit', edit_articulo_path(articulo) %></td>
         <td><%= link_to 'Destroy', articulo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,3 +29,5 @@
 <br>
 
 <%= link_to 'New Articulo', new_articulo_path %>
+
+<%= will_paginate @articulo %>
