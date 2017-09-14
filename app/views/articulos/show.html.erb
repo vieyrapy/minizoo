@@ -15,5 +15,5 @@
    <%= image_tag @articulo.foto.url %>
 </p>
 
-<%= link_to 'Edit', edit_articulo_path(@articulo) %> |
-<%= link_to 'Back', articulos_path %>
+<%= link_to 'Edit', edit_articulo_path(@articulo), :class=>"btn btn-default" %> |
+<%= link_to 'Back', articulos_path, :class=>"btn btn-default" %>

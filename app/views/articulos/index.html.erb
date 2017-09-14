@@ -18,9 +18,9 @@
         <td><%= articulo.titulo %></td>
         <td><%= articulo.descripcion %></td>
         <td><%= image_tag(articulo.foto) %></td>
-        <td><%= link_to 'Show', articulo %></td>
-        <td><%= link_to 'Edit', edit_articulo_path(articulo) %></td>
-        <td><%= link_to 'Destroy', articulo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', articulo, :class=>"btn btn-default" %></td>
+        <td><%= link_to 'Editar', edit_articulo_path(articulo), :class=>"btn btn-default" %></td>
+        <td><%= link_to 'Eliminar', articulo, method: :delete, data: { confirm: 'Are you sure?' } , :class=>"btn btn-default"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,6 +28,6 @@
 
 <br>
 
-<%= link_to 'New Articulo', new_articulo_path %>
+<%= link_to 'Crear nuevo articulo', new_articulo_path, class: "btn btn-success" %>
 
 <%= will_paginate @articulo %>

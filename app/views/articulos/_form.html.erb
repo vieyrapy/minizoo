@@ -1,3 +1,4 @@
+<div class="col-sm-3 col-md-4">
 <%= form_with(model: articulo, local: true) do |form| %>
   <% if articulo.errors.any? %>
     <div id="error_explanation">
@@ -13,20 +14,21 @@
 
   <div class="field">
     <%= form.label :titulo %>
-    <%= form.text_field :titulo, id: :articulo_titulo %>
+    <%= form.text_field :titulo, id: :articulo_titulo, :class=>"form-control"%>
   </div>
 
   <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.text_field :descripcion, id: :articulo_descripcion %>
+    <%= form.label "Cuerpo del Articulo" %>
+    <%= form.text_area :descripcion, id: :articulo_descripcion, :class=>"form-control"%>
   </div>
 
-<div class="field">
-    <%= form.label :foto %><br>
+  <div class="field">
+    <%= form.label "Subir una foto" %><br>
     <%= form.file_field :foto %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Guardar", :class=>"btn btn-default"%>
   </div>
 <% end %>
+</div>
