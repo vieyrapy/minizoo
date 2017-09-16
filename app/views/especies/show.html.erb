@@ -5,5 +5,5 @@
   <%= @especie.nombre %>
 </p>
 
-<%= link_to 'Edit', edit_especie_path(@especie) %> |
-<%= link_to 'Back', especies_path %>
+<%= link_to 'Modificar', edit_especie_path(@especie), :class=>"btn btn-modificar" %> |
+<%= link_to 'Volver', especies_path, :class=>"btn btn-default" %>
