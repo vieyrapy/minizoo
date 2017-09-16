@@ -42,7 +42,7 @@ class EspeciesController < ApplicationController
   def update
     respond_to do |format|
       if @especie.update(especie_params)
-        format.html { redirect_to @especie, notice: 'Especie was successfully updated.' }
+        format.html { redirect_to @especie, notice: 'Especie actualizado con éxito' }
         format.json { render :show, status: :ok, location: @especie }
       else
         format.html { render :edit }

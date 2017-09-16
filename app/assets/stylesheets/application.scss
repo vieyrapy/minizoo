@@ -36,14 +36,14 @@ footer {
 }
 .btn-mostrar {
     font-weight: 500;
-    color: #7952b3;
-    border-color: #7952b3;
+    color: #2d2d2d;
+    border-color: #2d2d2d;
 }
 
 .btn-modificar {
     font-weight: 500;
-    color: #2d2d2d;
-    border-color: #2d2d2d;
+    color: #7952b3;
+    border-color: #7952b3;
 }
 .btn-destruir {
     font-weight: 500;
@@ -55,4 +55,13 @@ footer {
     color: #fff;
     background-color: #9C27B0;
     border-color: #773782;
+    hover-color: #fff;
+}
+.btn-nuevo:hover {
+  color:#9C27B0;
+  background-color: #fff;
+}
+.btn-destruir:hover {
+  color:#fff;
+  background-color: #fbb227;
 }
