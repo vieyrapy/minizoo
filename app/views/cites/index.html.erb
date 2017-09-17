@@ -1,0 +1,23 @@
+<div class="container">
+
+  <div class="alert alert-info" role="alert">
+    <%= notice %>
+  </div>
+
+    <h1>Lista de Cites</h1>
+    <div class="col-sm-9">
+    <div><%= link_to 'Nuevo Cite', new_cite_path, :class=>"btn btn-nuevo" %></div>
+        <br>
+        <table class="table table-condensed">
+          <tbody>
+            <% @cites.each do |cite| %>
+              <tr>
+                <td><%= cite.nombre %></td>
+                <td><%= link_to 'Modificar', edit_cite_path(cite), :class=>"btn btn-modificar" %></td>
+                <td><%= link_to 'Destruir', cite, method: :delete, data: { confirm: 'Esta seguro de querer eliminar'} , :class=>"btn btn-destruir"%></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+</div>

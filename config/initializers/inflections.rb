@@ -12,6 +12,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
 # agregamos el siguiente codigo podemos poner de forma correcta 
 inflect.irregular 'especie', 'especies'
 inflect.irregular 'estado_conservacion', 'estado_conservaciones'
+inflect.irregular 'cite', 'cites'
 #-------------------------------------------
 end
 

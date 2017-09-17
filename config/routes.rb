@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cites
   resources :estado_conservaciones
   resources :alimentos
   resources :especies

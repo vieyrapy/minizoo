@@ -1,0 +1,22 @@
+<%= form_with(model: cite, local: true) do |form| %>
+  <% if cite.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      Se ha encontrado <%= pluralize(cite.errors.count, "error") %> al intentar crear un nuevo registro
+      <ul>
+      <% cite.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2"><%= form.label :nombre %></span>
+    <%= form.text_field :nombre, id: :cite_nombre, :class=>"form-control", :placeholder=>"II" %>
+  </div>
+<br>
+  <div class="actions">
+    <%= form.submit  "Guardar", :class=>"btn btn-nuevo"%>
+      <%= link_to 'Volver', cites_path, :class=>"btn btn-default" %>
+  </div>
+<% end %>

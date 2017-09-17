@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="alert alert-info" role="alert">
+		<%= notice %>
+	</div>
+
+  <strong>Cites:</strong>
+  <div>
+  	<h2><%= @cite.nombre %></h2>
+  </div>
+
+
+<%= link_to 'Modificar', edit_cite_path(@cite), :class=>"btn btn-modificar" %> |
+<%= link_to 'Volver', cites_path, :class=>"btn btn-default"  %>
+</div>
