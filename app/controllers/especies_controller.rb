@@ -28,7 +28,7 @@ class EspeciesController < ApplicationController
 
     respond_to do |format|
       if @especie.save
-        format.html { redirect_to @especie, notice: 'Especie was successfully created.' }
+        format.html { redirect_to @especie, notice: 'Especie creado con éxito.' }
         format.json { render :show, status: :created, location: @especie }
       else
         format.html { render :new }
@@ -56,7 +56,7 @@ class EspeciesController < ApplicationController
   def destroy
     @especie.destroy
     respond_to do |format|
-      format.html { redirect_to especies_url, notice: 'Especie was successfully destroyed.' }
+      format.html { redirect_to especies_url, notice: 'Especie eliminado con éxito' }
       format.json { head :no_content }
     end
   end

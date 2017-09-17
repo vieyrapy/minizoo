@@ -1,9 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<div class="alert alert-info" role="alert">
+		<%= notice %>
+	</div>
 
-<p>
   <strong>Nombre:</strong>
-  <%= @especie.nombre %>
-</p>
+  <div>
+  	<h2><%= @especie.nombre %></h2>
+  </div>
+
 
 <%= link_to 'Modificar', edit_especie_path(@especie), :class=>"btn btn-modificar" %> |
 <%= link_to 'Volver', especies_path, :class=>"btn btn-default" %>
+</div>
