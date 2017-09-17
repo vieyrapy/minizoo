@@ -11,6 +11,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
 # Aqui configuramos el nombre al hacer un scafold normal devolverá categorius pero si 
 # agregamos el siguiente codigo podemos poner de forma correcta 
 inflect.irregular 'especie', 'especies'
+inflect.irregular 'estado_conservacion', 'estado_conservaciones'
 #-------------------------------------------
 end
 

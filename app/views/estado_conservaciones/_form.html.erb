@@ -1,0 +1,23 @@
+<%= form_with(model: estado_conservacion, local: true) do |form| %>
+  <% if estado_conservacion.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+       Se ha encontrado <%= pluralize(estado_conservacion.errors.count, "error") %> al intentar crear un nuevo dato
+
+      <ul>
+      <% estado_conservacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2"><%= form.label "Estado de Conservación (CDC)" %></span>
+    <%= form.text_field :nombre, id: :estado_conservacion_nombre, :class=>"form-control", :placeholder=>"N4N3" %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= form.submit "Guardar", :class=>"btn btn-nuevo" %>
+    <%= link_to 'Volver', estado_conservaciones_path, :class=>"btn btn-default" %>
+  </div>
+<% end %>

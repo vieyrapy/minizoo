@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="alert alert-info" role="alert">
+		<%= notice %>
+	</div>
+
+
+  <strong>Estado de Conservación (CDC):</strong>
+  <div>
+  	<h2><%= @estado_conservacion.nombre %></h2>
+  </div>
+
+
+<%= link_to 'Modificar', edit_estado_conservacion_path(@estado_conservacion), :class=>"btn btn-modificar" %> |
+<%= link_to 'Volver', estado_conservaciones_path, :class=>"btn btn-default" %>
+</div>

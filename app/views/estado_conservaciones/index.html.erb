@@ -1,0 +1,23 @@
+<div class="container">
+
+  <div class="alert alert-info" role="alert">
+    <%= notice %>
+  </div>
+
+  <h1>Lista de Estado Conservaciones</h1>
+  <div class="col-sm-9">
+     <div><%= link_to 'Nuevo Estado de Conservacion', new_estado_conservacion_path, :class=>"btn btn-nuevo" %></div>
+      <br>
+    <table class="table table-condensed">
+      <tbody>
+        <% @estado_conservaciones.each do |estado_conservacion| %>
+          <tr>
+            <td><%= estado_conservacion.nombre %></td>
+            <td><%= link_to 'Modificar', edit_estado_conservacion_path(estado_conservacion) %></td>
+            <td><%= link_to 'Destruir', estado_conservacion, method: :delete, data: { confirm: 'Esta seguro de querer eliminar'} , :class=>"btn btn-destruir"%></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
