@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_cientifico: MyString
+  nombre_comun: MyString
+  macho: false
+  edad: 1
+  origen: MyString
+  descripcion: MyString
+
+two:
+  nombre_cientifico: MyString
+  nombre_comun: MyString
+  macho: false
+  edad: 1
+  origen: MyString
+  descripcion: MyString

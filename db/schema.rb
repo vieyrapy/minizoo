@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917194301) do
+ActiveRecord::Schema.define(version: 20170917222654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,21 @@ ActiveRecord::Schema.define(version: 20170917194301) do
     t.string "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "animales", force: :cascade do |t|
+    t.string "nombre_cientifico"
+    t.string "nombre_comun"
+    t.boolean "macho"
+    t.integer "edad"
+    t.string "origen"
+    t.string "descripcion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "alimento_id"
+    t.integer "cite_id"
+    t.integer "especie_id"
+    t.integer "estado_conservacion_id"
   end
 
   create_table "articulos", force: :cascade do |t|
@@ -47,4 +62,8 @@ ActiveRecord::Schema.define(version: 20170917194301) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "animales", "alimentos"
+  add_foreign_key "animales", "cites"
+  add_foreign_key "animales", "especies"
+  add_foreign_key "animales", "estado_conservaciones"
 end

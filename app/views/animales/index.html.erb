@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Animales</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre cientifico</th>
+      <th>Nombre comun</th>
+      <th>Macho</th>
+      <th>Edad</th>
+      <th>Origen</th>
+      <th>Alimentación</th>
+      <th>Cite</th>
+      <th>Especie</th>
+      <th>Estado de Conservación</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @animales.each do |animal| %>
+      <tr>
+        <td><%= animal.nombre_cientifico %></td>
+        <td><%= animal.nombre_comun %></td>
+        <td><%= animal.macho %></td>
+        <td><%= animal.edad %></td>
+        <td><%= animal.origen %></td>
+        <td><%= animal.alimento.nombre %></td>
+        <td><%= animal.cite.nombre %></td>
+        <td><%= animal.especie.nombre %></td>
+        <td><%= animal.estado_conservacion.nombre %></td>
+        <td><%= animal.descripcion %></td>
+        <td><%= link_to 'Show', animal %></td>
+        <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
+        <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Animal', new_animal_path %>

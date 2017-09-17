@@ -13,6 +13,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
 inflect.irregular 'especie', 'especies'
 inflect.irregular 'estado_conservacion', 'estado_conservaciones'
 inflect.irregular 'cite', 'cites'
+inflect.irregular 'animal', 'animales'
 #-------------------------------------------
 end
 
