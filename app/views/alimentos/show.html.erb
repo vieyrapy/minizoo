@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="alert alert-info" role="alert">
+		<%= notice %>
+	</div>
+
+  <strong>Nombre:</strong>
+  <div><h2><%= @alimento.nombre %></h2></div>
+
+
+<%= link_to 'Modificar', edit_alimento_path(@alimento), :class=>"btn btn-modificar" %> |
+<%= link_to 'Volver', alimentos_path, :class=>"btn btn-default" %>
+</div>

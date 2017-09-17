@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div class="alert alert-info" role="alert">
+    <%= notice %>
+  </div>
+
+<h1>Lista de tipo de Alimentación de animales</h1>
+  <div class="col-sm-9">
+    <div><%= link_to 'Nuevo Alimento', new_alimento_path, :class=>"btn btn-nuevo" %></div>
+    <br>
+    <table class="table table-condensed">
+      <tbody>
+        <% @alimentos.each do |alimento| %>
+          <tr>
+            <td><%= alimento.nombre %></td>
+            <td><%= link_to 'Modificar', edit_alimento_path(alimento), :class=>"btn btn-modificar" %></td>
+            <td><%= link_to 'Destruir', alimento, method: :delete, data: { confirm: 'Esta seguro de querer eliminar'} , :class=>"btn btn-destruir"%></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table
+  </div>
+</div>
+
