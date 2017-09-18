@@ -1,7 +1,7 @@
 <%= form_with(model: animal, local: true) do |form| %>
   <% if animal.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(animal.errors.count, "error") %> prohibited this animal from being saved:</h2>
+    <div class="alert alert-danger" role="alert">
+      Se ha encontrado <%= pluralize(animal.errors.count, "error") %> al intentar crear un nuevo registro
 
       <ul>
       <% animal.errors.full_messages.each do |message| %>
@@ -11,56 +11,67 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nombre_cientifico %>
-    <%= form.text_field :nombre_cientifico, id: :animal_nombre_cientifico %>
+ <div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2"><%= form.label :nombre_cientifico %></span>
+    <%= form.text_field :nombre_cientifico, id: :animal_nombre_cientifico, :class=>"form-control", :placeholder=>"Mylopssitta monchat"  %>
   </div>
-
-  <div class="field">
-    <%= form.label :nombre_comun %>
-    <%= form.text_field :nombre_comun, id: :animal_nombre_comun %>
+<br>
+ <div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2"><%= form.label :nombre_comun %></span>
+    <%= form.text_field :nombre_comun, id: :animal_nombre_comun, :class=>"form-control", :placeholder=>"Contorrita" %>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :macho %>
     <%= form.check_box :macho, id: :animal_macho %>
   </div>
-
-  <div class="field">
-    <%= form.label :edad %>
-    <%= form.number_field :edad, id: :animal_edad %>
+<br>
+ <div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2"><%= form.label :edad %></span>
+    <%= form.number_field :edad, id: :animal_edad, :class=>"form-control", :placeholder=>"5" %>
   </div>
-
-  <div class="field">
-    <%= form.label :origen %>
-    <%= form.text_field :origen, id: :animal_origen %>
+<br>
+  <div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2"><%= form.label :origen %></span>
+    <%= form.text_field :origen, id: :animal_origen, :class=>"form-control", :placeholder=>"Brasil"  %>
   </div>
-  <div class="field">
-     <%= form.label "Alimentacion" %>
-     <%= form.collection_select(:alimento_id, Alimento.all, :id, :nombre) %><br>
+  <br>
+ <div class="field">
+    <%= form.label "Alimentación" %>
+      <%= form.collection_select(:alimento_id, Alimento.all, :id, :nombre) %>
+    
+    <br>
   </div>
-
+<br>
   <div class="field">
     <%= form.label "Cite" %>
      <%= form.collection_select(:cite_id, Cite.all, :id, :nombre) %><br>
   </div>
-
+<br>
   <div class="field">
     <%= form.label "Especie" %>
      <%= form.collection_select(:especie_id, Especie.all, :id, :nombre) %><br>
   </div>
-
+<br>
   <div class="field">
     <%= form.label "Estado de Conservación" %>
-     <%= form.collection_select(:estado_conservacion_id, EstadoConservacion.all, :id, :nombre) %><br>
+     <%= form.collection_select(:estado_conservacion_id, EstadoConservacion.all, :id, :nombre)%><br>
   </div>
-
-  <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.text_field :descripcion, id: :animal_descripcion %>
+<br>
+  <div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2"><%= form.label :descripcion %></span>
+    
+    <%= form.text_area :descripcion, id: :animal_descripcion, :class=>"form-control" %>
   </div>
-
+<br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Guardar", :class=>"btn btn-nuevo"%>
+    <%= link_to 'Volver', animales_path, :class=>"btn btn-default" %>
   </div>
+
+
+
+<br>
+<br>
+
 <% end %>
