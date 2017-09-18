@@ -28,7 +28,7 @@ class AlimentosController < ApplicationController
 
     respond_to do |format|
       if @alimento.save
-        format.html { redirect_to @alimento, notice: 'Alimento was successfully created.' }
+        format.html { redirect_to @alimento, notice: 'Nuevo tipo de alimento creado con éxito' }
         format.json { render :show, status: :created, location: @alimento }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class AlimentosController < ApplicationController
   def update
     respond_to do |format|
       if @alimento.update(alimento_params)
-        format.html { redirect_to @alimento, notice: 'Alimento was successfully updated.' }
+        format.html { redirect_to @alimento, notice: 'Tipo de alimento actualizado con éxito' }
         format.json { render :show, status: :ok, location: @alimento }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class AlimentosController < ApplicationController
   def destroy
     @alimento.destroy
     respond_to do |format|
-      format.html { redirect_to alimentos_url, notice: 'Alimento was successfully destroyed.' }
+      format.html { redirect_to alimentos_url, notice: 'Ha eliminado el tipo de alimento con éxito ' }
       format.json { head :no_content }
     end
   end
