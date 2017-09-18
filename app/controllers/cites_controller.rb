@@ -28,7 +28,7 @@ class CitesController < ApplicationController
 
     respond_to do |format|
       if @cite.save
-        format.html { redirect_to @cite, notice: 'Cite was successfully created.' }
+        format.html { redirect_to @cite, notice: 'Nuevo cites creado con éxito' }
         format.json { render :show, status: :created, location: @cite }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class CitesController < ApplicationController
   def update
     respond_to do |format|
       if @cite.update(cite_params)
-        format.html { redirect_to @cite, notice: 'Cite was successfully updated.' }
+        format.html { redirect_to @cite, notice: 'Cite actualizados con éxito' }
         format.json { render :show, status: :ok, location: @cite }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class CitesController < ApplicationController
   def destroy
     @cite.destroy
     respond_to do |format|
-      format.html { redirect_to cites_url, notice: 'Cite was successfully destroyed.' }
+      format.html { redirect_to cites_url, notice: 'Cite se ha eliminado con éxito' }
       format.json { head :no_content }
     end
   end
