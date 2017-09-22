@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ficha Medicas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha ingreso</th>
+      <th>Estado salud</th>
+      <th>Enfermedad</th>
+      <th>Dolencia</th>
+      <th>Descripcion</th>
+      <th>Archivos</th>
+      <th>Internacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ficha_medicas.each do |ficha_medica| %>
+      <tr>
+        <td><%= ficha_medica.fecha_ingreso %></td>
+        <td><%= ficha_medica.estado_salud %></td>
+        <td><%= ficha_medica.enfermedad %></td>
+        <td><%= ficha_medica.dolencia %></td>
+        <td><%= ficha_medica.descripcion %></td>
+        <td><%= ficha_medica.archivos %></td>
+        <td><%= ficha_medica.internacion %></td>
+        <td><%= link_to 'Show', ficha_medica %></td>
+        <td><%= link_to 'Edit', edit_ficha_medica_path(ficha_medica) %></td>
+        <td><%= link_to 'Destroy', ficha_medica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ficha Medica', new_ficha_medica_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha_ingreso: 2017-09-22 00:28:48
+  estado_salud: MyString
+  enfermedad: MyString
+  dolencia: MyString
+  descripcion: MyString
+  archivos: MyString
+  internacion: false
+
+two:
+  fecha_ingreso: 2017-09-22 00:28:48
+  estado_salud: MyString
+  enfermedad: MyString
+  dolencia: MyString
+  descripcion: MyString
+  archivos: MyString
+  internacion: false

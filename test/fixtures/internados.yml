@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  medicamento: MyString
+  dosis: MyString
+  fecha_inicio: 2017-09-22 00:31:34
+  fecha_fin: 2017-09-22 00:31:34
+  descripcion: MyString
+  dar_alta: false
+
+two:
+  medicamento: MyString
+  dosis: MyString
+  fecha_inicio: 2017-09-22 00:31:34
+  fecha_fin: 2017-09-22 00:31:34
+  descripcion: MyString
+  dar_alta: false

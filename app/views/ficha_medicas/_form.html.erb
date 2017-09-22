@@ -1,0 +1,59 @@
+<%= form_with(model: ficha_medica, local: true) do |form| %>
+  <% if ficha_medica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ficha_medica.errors.count, "error") %> prohibited this ficha_medica from being saved:</h2>
+
+      <ul>
+      <% ficha_medica.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fecha_ingreso %>
+    <%= form.datetime_select :fecha_ingreso, id: :ficha_medica_fecha_ingreso %>
+  </div>
+  <div class="field">
+    <%= form.label "Animal" %>
+      <%= form.collection_select(:animal_id, Animal.all, :id, :nombre_comun) %>
+    <br>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado_salud %>
+    <%= form.text_field :estado_salud, id: :ficha_medica_estado_salud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enfermedad %>
+    <%= form.text_field :enfermedad, id: :ficha_medica_enfermedad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dolencia %>
+    <%= form.text_field :dolencia, id: :ficha_medica_dolencia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :ficha_medica_descripcion %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label "Subir Multimedia" %><br>
+    <%= form.file_field :archivos %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :internacion %>
+    <%= form.check_box :internacion, id: :ficha_medica_internacion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

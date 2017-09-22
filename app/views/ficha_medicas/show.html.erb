@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha ingreso:</strong>
+  <%= @ficha_medica.fecha_ingreso %>
+</p>
+
+<p>
+  <strong>Estado salud:</strong>
+  <%= @ficha_medica.estado_salud %>
+</p>
+
+<p>
+  <strong>Enfermedad:</strong>
+  <%= @ficha_medica.enfermedad %>
+</p>
+
+<p>
+  <strong>Dolencia:</strong>
+  <%= @ficha_medica.dolencia %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @ficha_medica.descripcion %>
+</p>
+
+<p>
+  <strong>Multimedia:</strong>
+   <%= image_tag @ficha_medica.archivos.url %>
+</p>
+
+<p>
+  <strong>Internacion:</strong>
+  <%= @ficha_medica.internacion %>
+</p>
+
+<%= link_to 'Edit', edit_ficha_medica_path(@ficha_medica) %> |
+<%= link_to 'Back', ficha_medicas_path %>

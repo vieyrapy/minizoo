@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :internados
+  resources :ficha_medicas
   resources :animales
   resources :cites
   resources :estado_conservaciones
