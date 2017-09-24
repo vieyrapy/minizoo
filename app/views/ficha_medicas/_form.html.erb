@@ -21,10 +21,12 @@
     <br>
   </div>
 
-  <div class="field">
-    <%= form.label :estado_salud %>
-    <%= form.text_field :estado_salud, id: :ficha_medica_estado_salud %>
-  </div>
+
+<select class="selectpicker" id="ficha_medica_estado_salud" name="estado_salud">
+  <option>Leve</option>
+  <option>Grabe</option>
+  <option>Muy Grabe</option>
+</select>
 
   <div class="field">
     <%= form.label :enfermedad %>
@@ -43,8 +45,17 @@
 
 
   <div class="field">
-    <%= form.label "Subir Multimedia" %><br>
+    <%= form.label "Subir Fotos" %><br>
     <%= form.file_field :archivos %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Subir Audios" %><br>
+    <%= form.file_field :audio %>
+  </div>
+  <div class="field">
+    <%= form.label "Subir Videos" %><br>
+    <%= form.file_field :video %>
   </div>
 
 

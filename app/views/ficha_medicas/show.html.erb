@@ -26,9 +26,20 @@
 </p>
 
 <p>
-  <strong>Multimedia:</strong>
+  <strong>Fotos:</strong>
    <%= image_tag @ficha_medica.archivos.url %>
 </p>
+<p>
+  <strong>Audios:</strong>
+  <audio controls src=" <%= @ficha_medica.audio.url %>"></audio>
+</p>
+
+<video width="320" height="240" controls>
+  <strong>Video:</strong>
+  <%= @ficha_medica.video.url %>
+</video>
+
+
 
 <p>
   <strong>Internacion:</strong>
