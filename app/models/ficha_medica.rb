@@ -4,5 +4,5 @@ class FichaMedica < ApplicationRecord
 	mount_uploader :audio, AvatarUploader
 	mount_uploader :video, AvatarUploader
 	belongs_to :animal
-	has_many :internados
+	has_many :internados, autosave: true, dependent: :destroy
 end

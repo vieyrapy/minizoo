@@ -1,8 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="alert alert-info" role="alert">
+    <%= notice %>
+  </div>
 
 <p>
   <strong>Fecha ingreso:</strong>
-  <%= @ficha_medica.fecha_ingreso %>
+  <%= @ficha_medica.created_at %>
+</p>
+
+<p>
+  <strong>Nombre Comun:</strong>
+  <%= @ficha_medica.animal.nombre_comun %>
 </p>
 
 <p>
@@ -46,5 +54,6 @@
   <%= @ficha_medica.internacion %>
 </p>
 
-<%= link_to 'Edit', edit_ficha_medica_path(@ficha_medica) %> |
-<%= link_to 'Back', ficha_medicas_path %>
+<%= link_to 'Modificar', edit_ficha_medica_path(@ficha_medica), :class=>"btn btn-modificar" %> |
+<%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
+</div>
