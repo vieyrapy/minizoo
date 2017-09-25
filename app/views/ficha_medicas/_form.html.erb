@@ -1,3 +1,4 @@
+
 <%= form_with(model: ficha_medica, local: true) do |form| %>
   <% if ficha_medica.errors.any? %>
     <div id="error_explanation">
@@ -12,14 +13,15 @@
   <% end %>
 
 
-  <div class="field">
+ <div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2">
     <%= form.label "Animal" %>
+    </span>
       <%= form.collection_select(:animal_id, Animal.all, :id, :nombre_comun, {}, {:class=>"form-control"}) %>
-    <br>
   </div>
-
+<br>
   
-  <select class="form-control " data-live-search="true"id="ficha_medica_estado_salud" name="ficha_medica[estado_salud]">
+  <select class="form-control " data-live-search="true" id="ficha_medica_estado_salud" name="ficha_medica[estado_salud]">
     <option selected >Estado de salud</option>
     <option value="Leve">Leve</option>
     <option value="Grabe">Grabe</option>
@@ -43,35 +45,42 @@
 
   <div class="field">
     <%= form.label :descripcion %>
-    <%= form.text_area :descripcion, id: :ficha_medica_descripcion , :class=>"form-control", :placeholder=>"Detalles de l observación y del diagnostico"%>
+    <%= form.text_area :descripcion, id: :ficha_medica_descripcion , :class=>"form-control", :rows=>"5", :placeholder=>"Detalles de la observación y comentarios sobre el  diagnostico"%>
   </div>
-
+<br>
  
   <div class="field">
     <%= form.label "Subir Fotos" %><br>
     <%= form.file_field :archivos %>
   </div>
-
+<br>
   <div class="field">
     <%= form.label "Subir Audios" %><br>
     <%= form.file_field :audio %>
+    <small id="fileHelp" class="form-text text-muted">Solo se admiten audios con extesión .mp3</small>
   </div>
-  <div class="field">
-    <%= form.label "Subir Videos" %><br>
-    <%= form.file_field :video %>
+<br>
+  <div class="form-control-file">
+    <label for="exampleInputFile">Video</label>
+    <input id="ficha_medica_video" type="file" name="ficha_medica[video]">
+    <small id="fileHelp" class="form-text text-muted">Solo se admiten videos con extesión .mp4</small>
   </div>
-
+  
+<br>
   <div class="field">
     <%= form.label :internacion %>
     <%= form.check_box :internacion, id: :ficha_medica_internacion %>
   </div>
+<br>
 
   <div class="actions">
     <%= form.submit "Guardar Ficha" , :class=>"btn btn-nuevo" %>
-    <%= link_to 'Back', ficha_medicas_path, :class=>"btn btn-default" %>
+    <%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
 
   </div>
+
+
 <% end %>
-
-
+<br>
+<br><br>
 

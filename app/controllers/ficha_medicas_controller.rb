@@ -28,7 +28,7 @@ class FichaMedicasController < ApplicationController
 
     respond_to do |format|
       if @ficha_medica.save
-        format.html { redirect_to @ficha_medica, notice: 'Ficha medica was successfully created.' }
+        format.html { redirect_to @ficha_medica, notice: 'Nueva ficha creada con éxito' }
         format.json { render :show, status: :created, location: @ficha_medica }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class FichaMedicasController < ApplicationController
   def update
     respond_to do |format|
       if @ficha_medica.update(ficha_medica_params)
-        format.html { redirect_to @ficha_medica, notice: 'Ficha medica was successfully updated.' }
+        format.html { redirect_to @ficha_medica, notice: 'Ficha actualizada con éxito.' }
         format.json { render :show, status: :ok, location: @ficha_medica }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class FichaMedicasController < ApplicationController
   def destroy
     @ficha_medica.destroy
     respond_to do |format|
-      format.html { redirect_to ficha_medicas_url, notice: 'Ficha medica was successfully destroyed.' }
+      format.html { redirect_to ficha_medicas_url, notice: 'Ficha medica eliminada con éxito.' }
       format.json { head :no_content }
     end
   end

@@ -44,7 +44,8 @@
 
 <video width="320" height="240" controls>
   <strong>Video:</strong>
-  <%= @ficha_medica.video.url %>
+  <source src="<%= @ficha_medica.video.url %>" type="video/mp4">
+  <source src="<%= @ficha_medica.video.url %>" type="video/ogg">
 </video>
 
 
