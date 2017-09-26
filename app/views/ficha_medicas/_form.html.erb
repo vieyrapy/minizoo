@@ -12,16 +12,22 @@
     </div>
   <% end %>
 
+<!-- Script que control select2 para search list -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});</script>
+<!-- End//Script que control select2 para search list -->
 
  <div class="input-group">
     <span class="input-group-addon" id="sizing-addon2">
     <%= form.label "Animal" %>
     </span>
-      <%= form.collection_select(:animal_id, Animal.all, :id, :nombre_comun, {}, {:class=>"form-control"}) %>
+      <%= form.collection_select(:animal_id, Animal.all, :id, :nombre_comun, {}, {:class=>"js-example-basic-single js-states form-control", :style=>"width: 47%"}) %>
   </div>
 <br>
   
-  <select class="form-control " data-live-search="true" id="ficha_medica_estado_salud" name="ficha_medica[estado_salud]">
+  <select class="form-control " data-live-search="true" id="ficha_medica_estado_salud" name="ficha_medica[estado_salud]" style="width: 50%">
     <option selected >Estado de salud</option>
     <option value="Leve">Leve</option>
     <option value="Grabe">Grabe</option>
@@ -33,7 +39,7 @@
   <div class="input-group">
     <span class="input-group-addon" id="sizing-addon2">
     <%= form.label "Enfermedad" %></span>
-    <%= form.text_field :enfermedad, id: :ficha_medica_enfermedad,:class=>"form-control", :placeholder=>"Fiebre Amarilla" %>
+    <%= form.text_field :enfermedad, id: :ficha_medica_enfermedad,:class=>"form-control", :placeholder=>"Fiebre Amarilla", :style=>"width: 30%" %>
   </div>
 <br>
   <div class="input-group">
@@ -42,7 +48,7 @@
     </span>
     <%= form.text_area :dolencia, id: :ficha_medica_dolencia, :class=>"form-control", :placeholder=>"Dolores que cuenta el paciente" %>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :descripcion %>
     <%= form.text_area :descripcion, id: :ficha_medica_descripcion , :class=>"form-control", :rows=>"5", :placeholder=>"Detalles de la observación y comentarios sobre el  diagnostico"%>

@@ -20,7 +20,6 @@
       <th>Cite</th>
       <th>Especie</th>
       <th>Estado de Conservación</th>
-      <th>Descripcion</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -37,7 +36,6 @@
         <td><%= animal.cite.nombre %></td>
         <td><%= animal.especie.nombre %></td>
         <td><%= animal.estado_conservacion.nombre %></td>
-        <td><%= animal.descripcion %></td>
         <td><%= link_to 'Mostrar', animal, :class=>"btn btn-mostrar" %></td>
         <td><%= link_to 'Modificar', edit_animal_path(animal), :class=>"btn btn-modificar" %></td>
         <td><%= link_to 'Destruir', animal, method: :delete, data: { confirm: 'Esta seguro de querer eliminar' }, :class=>"btn btn-destruir"  %></td>
