@@ -1,0 +1,56 @@
+
+<p>
+  <strong>Fecha ingreso:</strong>
+  <%= @ficha_medica.created_at %>
+</p>
+
+<p>
+  <strong>Atendido por:</strong>
+  <%= @ficha_medica.veterinario %>
+</p>
+
+<p>
+  <strong>Nombre Comun:</strong>
+  <%= @ficha_medica.animal.nombre_comun %>
+</p>
+
+<p>
+  <strong>Estado salud:</strong>
+  <%= @ficha_medica.estado_salud %>
+</p>
+
+<p>
+  <strong>Enfermedad:</strong>
+  <%= @ficha_medica.enfermedad %>
+</p>
+
+<p>
+  <strong>Dolencia:</strong>
+  <%= @ficha_medica.dolencia %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @ficha_medica.descripcion %>
+</p>
+
+<p>
+  <strong>Fotos:</strong>
+   <%= image_tag @ficha_medica.archivos.url %>
+</p>
+<p>
+  <strong>Audios:</strong>
+  <audio controls src=" <%= @ficha_medica.audio.url %>"></audio>
+</p>
+
+<video width="320" height="240" controls>
+  <strong>Video:</strong>
+  <source src="<%= @ficha_medica.video.url %>" type="video/mp4">
+  <source src="<%= @ficha_medica.video.url %>" type="video/ogg">
+</video>
+
+
+
+<%= link_to 'Modificar', edit_ficha_medica_path(@ficha_medica), :class=>"btn btn-modificar" %> |
+<%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
+</div>

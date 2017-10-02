@@ -9,8 +9,9 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
-
- *= require_self
+  *= require_self
+  *= require select2
+  *= require select2-bootstrap
  */
 	@import "bootstrap-sprockets";
 	@import "bootstrap";
@@ -26,14 +27,7 @@ body {
 cuerpo-zoo{
   algin: center
 }
-footer {
-  background-color: #e7e7e7;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  color: white;
-}
+
 .btn-mostrar {
     font-weight: 500;
     color: #2d2d2d;

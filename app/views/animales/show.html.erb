@@ -1,7 +1,16 @@
-<div class="container">
-  <div class="alert alert-info" role="alert">
-    <%= notice %>
-  </div>
+
+<p>
+  <strong>Nombre cientifico:</strong>
+  <%= @animal.identificador %>
+</p>
+<p>
+  <strong>Nombre cientifico:</strong>
+  <%= @animal.especie %>
+</p>
+<p>
+  <strong>Nombre cientifico:</strong>
+  <%= @animal.familia %>
+</p>
 <p>
   <strong>Nombre cientifico:</strong>
   <%= @animal.nombre_cientifico %>
@@ -14,7 +23,7 @@
 
 <p>
   <strong>Macho:</strong>
-  <%= @animal.macho %>
+  <%= @animal.sexo %>
 </p>
 
 <p>
@@ -23,7 +32,7 @@
 </p>
 
 <p>
-  <strong>Origen:</strong>
+  <strong>Distribución:</strong>
   <%= @animal.origen %>
 </p>
 <p>
@@ -35,17 +44,14 @@
   <strong>Cites:</strong>
   <%= @animal.cite.nombre %>
 </p>
-<p>
-  <strong>Especies:</strong>
-  <%= @animal.especie.nombre %>
-</p>
+
 <p>
   <strong>Estado de Conservación:</strong>
   <%= @animal.estado_conservacion.nombre %>
 </p>
 
 <p>
-  <strong>Descripcion:</strong>
+  <strong>Carecteristicas:</strong>
   <%= @animal.descripcion %>
 </p>
 

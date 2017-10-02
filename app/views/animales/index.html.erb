@@ -1,16 +1,15 @@
-<div class="container">
 
-  <div class="alert alert-info" role="alert">
-    <%= notice %>
-  </div>
-
-<h1>Lista de Animales</h1>
+  <h3>Lista de animales en el zoo</h3>
+  <hr></hr>
 <div class="col-sm-9">
     <div><%= link_to 'Nuevo Animal', new_animal_path, :class=>"btn btn-nuevo" %></div>
 <br>
 <table class="table table-condensed">
   <thead>
     <tr>
+      <th>Ident.</th>
+      <th>Especia</th>
+      <th>Familia</th>
       <th>Nombre cientifico</th>
       <th>Nombre comun</th>
       <th>Sexo</th>
@@ -18,9 +17,7 @@
       <th>Origen</th>
       <th>Alimentación</th>
       <th>Cite</th>
-      <th>Especie</th>
       <th>Estado de Conservación</th>
-      <th>Descripcion</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,16 +25,17 @@
   <tbody>
     <% @animales.each do |animal| %>
       <tr>
+        <td><%= animal.identificador %></td>
+        <td><%= animal.especie %></td>
+        <td><%= animal.familia %></td>
         <td><%= animal.nombre_cientifico %></td>
         <td><%= animal.nombre_comun %></td>
-        <td><%= animal.macho %></td>
+        <td><%= animal.sexo %></td>
         <td><%= animal.edad %></td>
         <td><%= animal.origen %></td>
         <td><%= animal.alimento.nombre %></td>
         <td><%= animal.cite.nombre %></td>
-        <td><%= animal.especie.nombre %></td>
         <td><%= animal.estado_conservacion.nombre %></td>
-        <td><%= animal.descripcion %></td>
         <td><%= link_to 'Mostrar', animal, :class=>"btn btn-mostrar" %></td>
         <td><%= link_to 'Modificar', edit_animal_path(animal), :class=>"btn btn-modificar" %></td>
         <td><%= link_to 'Destruir', animal, method: :delete, data: { confirm: 'Esta seguro de querer eliminar' }, :class=>"btn btn-destruir"  %></td>
@@ -46,4 +44,4 @@
   </tbody>
 </table>
 </div>
-</div>
+

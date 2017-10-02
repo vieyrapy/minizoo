@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917222654) do
+ActiveRecord::Schema.define(version: 20171002005127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 20170917222654) do
   create_table "animales", force: :cascade do |t|
     t.string "nombre_cientifico"
     t.string "nombre_comun"
-    t.boolean "macho"
     t.integer "edad"
     t.string "origen"
     t.string "descripcion"
@@ -32,8 +31,11 @@ ActiveRecord::Schema.define(version: 20170917222654) do
     t.datetime "updated_at", null: false
     t.integer "alimento_id"
     t.integer "cite_id"
-    t.integer "especie_id"
     t.integer "estado_conservacion_id"
+    t.string "sexo"
+    t.string "identificador"
+    t.string "especie"
+    t.string "familia"
   end
 
   create_table "articulos", force: :cascade do |t|
@@ -50,20 +52,43 @@ ActiveRecord::Schema.define(version: 20170917222654) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "especies", force: :cascade do |t|
-    t.string "nombre"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "estado_conservaciones", force: :cascade do |t|
     t.string "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "ficha_medicas", force: :cascade do |t|
+    t.string "estado_salud"
+    t.string "enfermedad"
+    t.string "dolencia"
+    t.string "descripcion"
+    t.string "archivos"
+    t.boolean "internacion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "animal_id"
+    t.string "audio"
+    t.string "video"
+    t.string "veterinario"
+    t.boolean "activo"
+  end
+
+  create_table "internados", force: :cascade do |t|
+    t.string "medicamento"
+    t.string "dosis"
+    t.datetime "fecha_inicio"
+    t.datetime "fecha_fin"
+    t.string "descripcion"
+    t.boolean "dar_alta"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "ficha_medica_id"
+  end
+
   add_foreign_key "animales", "alimentos"
   add_foreign_key "animales", "cites"
-  add_foreign_key "animales", "especies"
   add_foreign_key "animales", "estado_conservaciones"
+  add_foreign_key "ficha_medicas", "animales"
+  add_foreign_key "internados", "ficha_medicas"
 end

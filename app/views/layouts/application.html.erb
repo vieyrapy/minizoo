@@ -14,7 +14,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">Navegacion mobil</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -31,18 +31,13 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Historia Clinica <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="http://localhost:3000/ficha_medicas">Ficha Medica</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">En tratamiento</a></li>
           </ul>
         </li>
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Buscar">
         </div>
         <button type="submit" class="btn btn-default">Buscar</button>
       </form>
@@ -52,7 +47,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configurar <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="http://localhost:3000/especies">Especies</a></li>
-            <li><a href="http://localhost:3000/estado_conservaciones">CDC</a></li>
+            <li><a href="http://localhost:3000/estado_conservaciones">Estado de Conservación (CDC)</a></li>
             <li><a href="http://localhost:3000/alimentos">Alimentación</a></li>
             <li><a href="http://localhost:3000/cites/">Cites</a></li>
             <li role="separator" class="divider"></li>
@@ -63,15 +58,23 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<div class="container">
+  
+    <!-- Capsula para las notificaciones de los AVM General -->
+    <% if flash[:notice] -%>
+      <div class = "alert alert-success"><%= flash[:notice] %></div>
+    <% end %>
 
-    <%= yield %>
+    <!-- Contenido -->
+      <%= yield %>
 
+</div>
 
-    <footer>
-      <div class="container">
-        <p class="text-muted credit">Mini Zoologico del Colegio Juan XXIII | Analisis de Sistemas - UNAE | <a href="#">Hector Vieyra</a> </p>
-      </div>
-    </footer>
+  <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p class="navbar-text pull-left">© 2017 - minizoo </p>
+        </div>
+    </div>
 
   </body>
 </html>

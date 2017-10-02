@@ -1,0 +1,37 @@
+
+
+  <h3>Lista de Fichas Medica de los animales</h3>
+  <hr></hr>
+
+<div class="col-sm-9">
+    <div><%= link_to ' Crear Nueva Ficha', new_ficha_medica_path, :class=>"btn btn-nuevo" %></div>
+<br>
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Fecha de Creación</th>
+      <th>Estado salud</th>
+      <th>Enfermedad</th>
+      <th>Dolencia</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ficha_medicas.each do |ficha_medica| %>
+      <tr>
+        <td><%= ficha_medica.created_at %></td>
+        <td><%= ficha_medica.estado_salud %></td>
+        <td><%= ficha_medica.enfermedad %></td>
+        <td><%= ficha_medica.dolencia %></td>
+        <td><%= link_to 'Mostrar', ficha_medica, :class=>"btn btn-mostrar"  %></td>
+        <td><%= link_to 'Modificar', edit_ficha_medica_path(ficha_medica), :class=>"btn btn-modificar"  %></td>
+        <td><%= link_to 'Destruir', ficha_medica, method: :delete, data: { confirm: 'Estas seguro de querer eliminar?'}, :class=>"btn btn-destruir" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
