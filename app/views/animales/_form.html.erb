@@ -11,58 +11,108 @@
     </div>
   <% end %>
 
- <div class="input-group">
-    <span class="input-group-addon" id="sizing-addon2"><%= form.label :nombre_cientifico %></span>
-    <%= form.text_field :nombre_cientifico, id: :animal_nombre_cientifico, :class=>"form-control", :placeholder=>"Mylopssitta monchat"  %>
+<div class="row">
+    <div class="col-md-4">
+       <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2"><%= form.label "Identificador" %></span>
+          <%= form.text_field :identificador, id: :animal_identificador, :class=>"form-control", :placeholder=>"F10010"  %>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+     <select class="form-control " id="animal_especie" name="animal[especie]" style="width: 50%">
+          <option selected >Especie</option>
+          <option value="Aves">Aves</option>
+          <option value="Mamíferos">Mamíferos</option>
+          <option value="Reptiles">Reptiles</option>
+          <option value="Anfibios">Anfibios</option>
+          <option value="Peces">Peces</option>
+      </select>
+    </div>
+
+    <div class="col-md-3">
+         <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2"><%= form.label "Familia" %></span>
+            <%= form.text_field :familia, id: :animal_familia, :class=>"form-control", :placeholder=>"Emberizidae"  %>
+          </div>
+      </div>
+</div>
+<br>
+
+<div class="row">
+  
+<div class="col-md-4">
+     <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2"><%= form.label :nombre_comun %></span>
+        <%= form.text_field :nombre_comun, id: :animal_nombre_comun, :class=>"form-control", :placeholder=>"Contorrita" %>
+      </div>
+    </div>
+
+  <div class="col-md-5 ">
+     <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2"><%= form.label :nombre_cientifico %></span>
+        <%= form.text_field :nombre_cientifico, id: :animal_nombre_cientifico, :class=>"form-control", :placeholder=>"Mylopssitta monchat", :style=>"width: 100%"  %>
+      </div>
+  </div>
+
   </div>
 <br>
- <div class="input-group">
-    <span class="input-group-addon" id="sizing-addon2"><%= form.label :nombre_comun %></span>
-    <%= form.text_field :nombre_comun, id: :animal_nombre_comun, :class=>"form-control", :placeholder=>"Contorrita" %>
-  </div>
+<div class="row">
+    <div class="col-md-2">
+     <select class="form-control " data-live-search="true" id="animal_sexo" name="animal[sexo]" style="width: 100%">
+          <option selected >Sexo</option>
+          <option value="Hembra">Hembra</option>
+          <option value="Macho">Macho</option>
+          <option value="Hermafroditas">Hermafroditas</option>
+      </select>
+    </div>
+
+    <div class="col-md-4">
+       <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2"><%= form.label :edad %></span>
+          <%= form.number_field :edad, id: :animal_edad, :class=>"form-control", :placeholder=>"5", :style=>"width: 30%" %>
+        </div>
+    </div>
+</div>
 <br>
-  <div class="field">
-    <%= form.label :macho %>
-    <%= form.check_box :macho, id: :animal_macho %>
-  </div>
+
+<div class="row">
+  <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2"><%= form.label "Distribución" %></span>
+          <%= form.text_area :origen, id: :animal_origen, :class=>"form-control", :placeholder=>"Brasil, Bolivia, Paraguay hasta Argentina" , :style=>"width: 100%" %>
+        </div>
+    </div>
+</div>
 <br>
- <div class="input-group">
-    <span class="input-group-addon" id="sizing-addon2"><%= form.label :edad %></span>
-    <%= form.number_field :edad, id: :animal_edad, :class=>"form-control", :placeholder=>"5" %>
-  </div>
+<div class="row">
+    <div class="col-md-3">
+       <div class="field">
+          <%= form.label "Tipo de Alimentación" %>
+          <%= form.collection_select(:alimento_id, Alimento.all, :id, :nombre) %>
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="field">
+          <%= form.label "Cite" %>
+           <%= form.collection_select(:cite_id, Cite.all, :id, :nombre) %>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="field">
+        <%= form.label "Estado de Conservación" %>
+         <%= form.collection_select(:estado_conservacion_id, EstadoConservacion.all, :id, :nombre)%><br>
+      </div>
+    </div>
+</div>
 <br>
-  <div class="input-group">
-    <span class="input-group-addon" id="sizing-addon2"><%= form.label :origen %></span>
-    <%= form.text_field :origen, id: :animal_origen, :class=>"form-control", :placeholder=>"Brasil"  %>
-  </div>
-  <br>
- <div class="field">
-    <%= form.label "Tipo de Alimentación" %>
-      <%= form.collection_select(:alimento_id, Alimento.all, :id, :nombre) %>
-    
-    <br>
-  </div>
-<br>
-  <div class="field">
-    <%= form.label "Cite" %>
-     <%= form.collection_select(:cite_id, Cite.all, :id, :nombre) %><br>
-  </div>
-<br>
-  <div class="field">
-    <%= form.label "Especie" %>
-     <%= form.collection_select(:especie_id, Especie.all, :id, :nombre) %><br>
-  </div>
-<br>
-  <div class="field">
-    <%= form.label "Estado de Conservación" %>
-     <%= form.collection_select(:estado_conservacion_id, EstadoConservacion.all, :id, :nombre)%><br>
-  </div>
-<br>
-  <div class="input-group">
-    <span class="input-group-addon" id="sizing-addon2"><%= form.label :descripcion %></span>
-    
-    <%= form.text_area :descripcion, id: :animal_descripcion, :class=>"form-control" %>
-  </div>
+    <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2"><%= form.label "Características Naturales" %>
+        </span>
+        <%= form.text_area :descripcion, id: :animal_descripcion, :class=>"form-control" %>
+    </div>
 <br>
   <div class="actions">
     <%= form.submit "Guardar", :class=>"btn btn-nuevo"%>
