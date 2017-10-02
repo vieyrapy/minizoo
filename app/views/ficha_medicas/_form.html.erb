@@ -18,7 +18,19 @@ $(document).ready(function() {
     $('.js-example-basic-single').select2();
 });</script>
 <!-- End//Script que control select2 para search list -->
+<div class="row">
+   <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2">
+        <%= form.label "Atendido Por:" %></span>
+        <%= form.text_field :veterinario, id: :ficha_medica_veterinario,:class=>"form-control", :placeholder=>"Dr. Nestor Tapia", :style=>"width: 70%" %>
+      </div>
+  </div>
+ </div>
 
+ <br>
+
+<div class="row">
   <div class="col-md-4">
    <div class="input-group">
       <span class="input-group-addon" id="sizing-addon2">
@@ -30,36 +42,40 @@ $(document).ready(function() {
 
   <div class="col-md-2">
     <select class="form-control " data-live-search="true" id="ficha_medica_estado_salud" name="ficha_medica[estado_salud]" style="width: 100%">
-      <option selected >Estado de salud</option>
+      <option disabled >Estado de salud</option>
+      <option selected>Buen Estado</option>
+      <option disabled>──────────</option>
       <option value="Leve">Leve</option>
       <option value="Grabe">Grabe</option>
       <option value="Muy Grabe">Muy Grabe</option>
     </select>
   </div>
 
- <div class="col-md-6">
-    <div class="input-group">
-      <span class="input-group-addon" id="sizing-addon2">
-      <%= form.label "Enfermedad" %></span>
-      <%= form.text_field :enfermedad, id: :ficha_medica_enfermedad,:class=>"form-control", :placeholder=>"Fiebre Amarilla", :style=>"width: 70%" %>
-    </div>
-    <br>
+   <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2">
+        <%= form.label "Motivo de la consulta" %></span>
+        <%= form.text_field :enfermedad, id: :ficha_medica_enfermedad,:class=>"form-control", :placeholder=>"Vacunación/Traumatismo...", :style=>"width: 70%" %>
+      </div>
+      <br>
+  </div>
 </div>
-
+<div class="row">
  <div class="col-md-8">
   <div class="input-group">
     <span class="input-group-addon" id="sizing-addon2">
-    <%= form.label "Sintomas" %>
+    <%= form.label "Pre-Diagnóstico" %>
     </span>
-    <%= form.text_area :dolencia, id: :ficha_medica_dolencia, :class=>"form-control", :placeholder=>"Detallar la condición del paciente" %>
+    <%= form.text_area :dolencia, id: :ficha_medica_dolencia, :class=>"form-control", :placeholder=>"Fractura completa de radio y cúbito" %>
   </div>
    <br>
 </div>
-
+</div>
+<div class="row">
  <div class="col-md-8">
   <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.text_area :descripcion, id: :ficha_medica_descripcion , :class=>"form-control", :rows=>"8", :placeholder=>"Detalles de la observación y comentarios sobre el  diagnostico"%>
+    <%= form.label "Tratamiento e Indicaciones" %>
+    <%= form.text_area :descripcion, id: :ficha_medica_descripcion , :class=>"form-control", :rows=>"8", :placeholder=>"Reducación de fractura con yeso por 15 dias - Rp. Ketofen 20 mg (1 comp. cada 12 horas por 4 dias)"%>
   </div>
    <br>
 </div>
@@ -83,25 +99,31 @@ $(document).ready(function() {
     <small id="fileHelp" class="form-text text-muted">Solo se admiten videos con extesión .mp4</small>
   </div>
   </div>
-<br>
- <div class="col-md-12">
-  <div class="field">
-    <%= form.label "Cuarentena" %>
-    <%= form.check_box :internacion, id: :ficha_medica_internacion %>
-  </div>
-   <br>
 </div>
-
+<br>
 <div class="rows">
+   <div class="col-md-5">
+      <div class="field">
+        <%= form.label "Trasladar a Cuarentena" %>
+        <%= form.check_box :internacion, id: :ficha_medica_internacion %>
+      </div>
+      <div class="field">
+        <%= form.label "Inactivo/Muerto" %>
+        <%= form.check_box :activo, id: :ficha_medica_activo %>
+      </div>
+    </div>
+
  <div class="col-md-4">
     <div class="actions">
       <%= form.submit "Guardar Ficha" , :class=>"btn btn-nuevo" %>
       <%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
     </div>
+      <br>
+      <br>
+      <br>
   </div>
 </div>
 
 <% end %>
-<br>
-<br><br>
+
 

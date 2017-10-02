@@ -1,11 +1,12 @@
-<div class="container">
-  <div class="alert alert-info" role="alert">
-    <%= notice %>
-  </div>
 
 <p>
   <strong>Fecha ingreso:</strong>
   <%= @ficha_medica.created_at %>
+</p>
+
+<p>
+  <strong>Atendido por:</strong>
+  <%= @ficha_medica.veterinario %>
 </p>
 
 <p>
@@ -49,11 +50,6 @@
 </video>
 
 
-
-<p>
-  <strong>Internacion:</strong>
-  <%= @ficha_medica.internacion %>
-</p>
 
 <%= link_to 'Modificar', edit_ficha_medica_path(@ficha_medica), :class=>"btn btn-modificar" %> |
 <%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
