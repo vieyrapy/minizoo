@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171002013835) do
+ActiveRecord::Schema.define(version: 20171002204937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,13 +74,9 @@ ActiveRecord::Schema.define(version: 20171002013835) do
     t.boolean "activo"
   end
 
-  create_table "internados", force: :cascade do |t|
-    t.string "medicamento"
-    t.string "dosis"
-    t.datetime "fecha_inicio"
-    t.datetime "fecha_fin"
-    t.string "descripcion"
-    t.boolean "dar_alta"
+  create_table "tareas", force: :cascade do |t|
+    t.datetime "fecha"
+    t.boolean "terminado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "ficha_medica_id"
@@ -90,5 +86,5 @@ ActiveRecord::Schema.define(version: 20171002013835) do
   add_foreign_key "animales", "cites"
   add_foreign_key "animales", "estado_conservaciones"
   add_foreign_key "ficha_medicas", "animales"
-  add_foreign_key "internados", "ficha_medicas"
+  add_foreign_key "tareas", "ficha_medicas"
 end

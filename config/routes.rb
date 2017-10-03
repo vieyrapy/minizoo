@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :internados
+  resources :tareas
   resources :ficha_medicas
   resources :animales
   resources :cites
