@@ -1,60 +1,69 @@
+<div class="row">
+  <div class="col-md-3">Menu</div>
+  <div class="col-md-6">
+      <p>
+        <strong>Identificador:</strong>
+        <%= @animal.identificador %>
+      </p>
+      <p>
+        <strong>Especie:</strong>
+        <%= @animal.especie %>
+      </p>
+      <p>
+        <strong>Familia:</strong>
+        <%= @animal.familia %>
+      </p>
+      <p>
+        <strong>Nombre cientifico:</strong>
+        <%= @animal.nombre_cientifico %>
+      </p>
 
-<p>
-  <strong>Nombre cientifico:</strong>
-  <%= @animal.identificador %>
-</p>
-<p>
-  <strong>Nombre cientifico:</strong>
-  <%= @animal.especie %>
-</p>
-<p>
-  <strong>Nombre cientifico:</strong>
-  <%= @animal.familia %>
-</p>
-<p>
-  <strong>Nombre cientifico:</strong>
-  <%= @animal.nombre_cientifico %>
-</p>
+      <p>
+        <strong>Nombre comun:</strong>
+        <%= @animal.nombre_comun %>
+      </p>
 
-<p>
-  <strong>Nombre comun:</strong>
-  <%= @animal.nombre_comun %>
-</p>
+      <p>
+        <strong>Sexo</strong>
+        <%= @animal.sexo %>
+      </p>
 
-<p>
-  <strong>Macho:</strong>
-  <%= @animal.sexo %>
-</p>
+      <p>
+        <strong>Edad:</strong>
+        <%= @animal.edad %>
+      </p>
 
-<p>
-  <strong>Edad:</strong>
-  <%= @animal.edad %>
-</p>
+      <p>
+        <strong>Distribución:</strong>
+        <%= @animal.origen %>
+      </p>
+      <p>
+        <strong>Alimentacion:</strong>
+        <%= @animal.alimento.nombre %>
+       
+      </p>
+      <p>
+        <strong>Cites:</strong>
+        <%= @animal.cite.nombre %>
+      </p>
 
-<p>
-  <strong>Distribución:</strong>
-  <%= @animal.origen %>
-</p>
-<p>
-  <strong>Alimentacion:</strong>
-  <%= @animal.alimento.nombre %>
- 
-</p>
-<p>
-  <strong>Cites:</strong>
-  <%= @animal.cite.nombre %>
-</p>
+      <p>
+        <strong>Estado de Conservación:</strong>
+        <%= @animal.estado_conservacion.nombre %>
+      </p>
 
-<p>
-  <strong>Estado de Conservación:</strong>
-  <%= @animal.estado_conservacion.nombre %>
-</p>
+      <p>
+        <strong>Carecteristicas:</strong>
+        <%= @animal.descripcion %>
+      </p>
 
-<p>
-  <strong>Carecteristicas:</strong>
-  <%= @animal.descripcion %>
-</p>
+      <%= link_to 'Modificar', edit_animal_path(@animal), :class=>"btn btn-modificar" %> |
+      <%= link_to 'Volver', animales_path, :class=>"btn btn-default" %>
+  </div>
+  <div class="col-md-3">
+    Historial por cada animal
 
-<%= link_to 'Modificar', edit_animal_path(@animal), :class=>"btn btn-modificar" %> |
-<%= link_to 'Volver', animales_path, :class=>"btn btn-default" %>
+    <%= @animales %>
+  </div>
 </div>
+
