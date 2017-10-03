@@ -26,7 +26,7 @@ $(document).ready(function() {
         <%= form.text_field :veterinario, id: :ficha_medica_veterinario,:class=>"form-control", :placeholder=>"Dr. Nestor Tapia", :style=>"width: 70%" %>
       </div>
   </div>
- </div>
+ </div> 
 
  <br>
 
@@ -101,6 +101,23 @@ $(document).ready(function() {
   </div>
 </div>
 <br>
+
+<div class="rows">
+  <div class="col-md-5">
+ <%= form.fields_for :tareas do |f|  %>
+    <div class="field">
+      <%= f.label "Dar de Alta" %>
+      <%= f.check_box :terminado, id: :tarea_terminado %>
+    </div>
+
+    <div class="field">
+        <%= f.label :fecha %>
+        <%= f.datetime_select :fecha, id: :tarea_fecha %>
+      </div>
+ <% end %>
+</div>
+</div>
+
 <div class="rows">
    <div class="col-md-5">
       <div class="field">
@@ -123,6 +140,9 @@ $(document).ready(function() {
       <br>
   </div>
 </div>
+
+
+
 
 <% end %>
 

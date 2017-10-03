@@ -69,6 +69,6 @@ class FichaMedicasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ficha_medica_params
-      params.require(:ficha_medica).permit(:estado_salud, :enfermedad, :dolencia, :descripcion, :archivos, :internacion, :animal_id, :audio, :video, :veterinario, :activo)
+      params.require(:ficha_medica).permit(:estado_salud, :enfermedad, :dolencia, :descripcion, :archivos, :internacion, :animal_id, :audio, :video, :veterinario, :activo, tareas_attributes: [ :id, :fecha, :terminado, :ficha_medica_id ])
     end
 end
