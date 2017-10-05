@@ -44,7 +44,7 @@ $(document).ready(function() {
     <select class="form-control " data-live-search="true" id="ficha_medica_estado_salud" name="ficha_medica[estado_salud]" style="width: 100%">
       <option disabled >Estado de salud</option>
       <option selected>Buen Estado</option>
-      <option disabled>──────────</option>
+      <option disabled>───────</option>
       <option value="Leve">Leve</option>
       <option value="Grabe">Grabe</option>
       <option value="Muy Grabe">Muy Grabe</option>
@@ -103,6 +103,15 @@ $(document).ready(function() {
 <br>
 
 <div class="rows">
+      <div class="field">
+        <%= form.label "Necesita tratamiento" %>
+        <%= form.check_box :internacion, id: :ficha_medica_internacion %>
+      </div>
+</div>
+
+
+
+<div class="rows hidden" id="tratamiento_div">
   <div class="col-md-5">
  <%= form.fields_for :tareas do |f|  %>
     <div class="field">
@@ -115,6 +124,10 @@ $(document).ready(function() {
         <%= f.datetime_select :fecha, id: :tarea_fecha %>
       </div>
  <% end %>
+ <ul id="campos">
+  <li><input type="text" name="email[]" size="25" />&nbsp;&nbsp;<a href="javascript:agregar();">Agregar</a></li>
+</ul>
+
 </div>
 </div>
 
@@ -147,3 +160,34 @@ $(document).ready(function() {
 <% end %>
 
 
+<script type="text/javascript">
+  
+  $('#ficha_medica_internacion').on('change', function() { 
+    
+      if($('#ficha_medica_internacion').is(':checked')){
+        
+        $('#tratamiento_div').removeClass('hidden');
+      }else{
+        $('#tratamiento_div').addClass('hidden'); 
+      }
+
+      
+
+
+    // From the other examples
+  });
+
+
+</script>
+
+<script type="text/javascript">
+emails=0;
+function agregar() {
+  emails=emails+1;
+  $("#campos").append('<li class="email'+emails+'"><input type="text" name="email[]" size="25" />&nbsp;&nbsp;<a href="#" onclick="javascript:borrar('+emails+');">Borrar</a></li>');
+}
+function borrar(cual) {
+  $("li.email"+cual).remove();
+  return false;
+}
+</script>

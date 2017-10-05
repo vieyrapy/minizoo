@@ -63,3 +63,5 @@ gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
 #Tarea programadas
 gem 'whenever', :require => false
+#Botones toggles
+gem 'bootstrap-toggle-rails'

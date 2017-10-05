@@ -10,6 +10,7 @@
   <thead>
     <tr>
       <th>Fecha de Creación</th>
+      <th>Nombre comun </th>
       <th>Estado salud</th>
       <th>Motivo de Consulta</th>
       <th>Pre-diagnóstico</th>
@@ -20,7 +21,9 @@
   <tbody>
     <% @ficha_medicas.each do |ficha_medica| %>
       <tr>
+         
         <td><%= ficha_medica.created_at %></td>
+        <td><%= ficha_medica.animal.nombre_comun %></td>
         <td><%= ficha_medica.estado_salud %></td>
         <td><%= ficha_medica.enfermedad %></td>
         <td><%= ficha_medica.dolencia %></td>

@@ -15,10 +15,16 @@ class FichaMedicasController < ApplicationController
   # GET /ficha_medicas/new
   def new
     @ficha_medica = FichaMedica.new
+    @ficha_medica.tareas.build 
   end
+
+  def agregartareas
+
+  end 
 
   # GET /ficha_medicas/1/edit
   def edit
+    @ficha_medica.tareas.build 
   end
 
   # POST /ficha_medicas
