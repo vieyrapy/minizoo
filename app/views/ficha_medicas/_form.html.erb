@@ -114,6 +114,7 @@ $(document).ready(function() {
 <div class="rows hidden" id="tratamiento_div">
   <div class="col-md-5">
  <%= form.fields_for :tareas do |f|  %>
+ <div id="tarea01" class="tarea-item">
     <div class="field">
       <%= f.label "Dar de Alta" %>
       <%= f.check_box :terminado, id: :tarea_terminado %>
@@ -123,9 +124,10 @@ $(document).ready(function() {
         <%= f.label :fecha %>
         <%= f.datetime_select :fecha, id: :tarea_fecha %>
       </div>
+  </div>
  <% end %>
  <ul id="campos">
-  <li><input type="text" name="email[]" size="25" />&nbsp;&nbsp;<a href="javascript:agregar();">Agregar</a></li>
+  <li><a href="javascript:agregar();">Agregar</a></li>
 </ul>
 
 </div>
@@ -170,24 +172,21 @@ $(document).ready(function() {
       }else{
         $('#tratamiento_div').addClass('hidden'); 
       }
-
-      
-
-
-    // From the other examples
   });
 
 
 </script>
 
 <script type="text/javascript">
-emails=0;
+
 function agregar() {
-  emails=emails+1;
-  $("#campos").append('<li class="email'+emails+'"><input type="text" name="email[]" size="25" />&nbsp;&nbsp;<a href="#" onclick="javascript:borrar('+emails+');">Borrar</a></li>');
+
+  var mastarea = $( "#tarea01" ).clone();
+  mastarea.find( "input" ).val( '' );
+  mastarea.attr( 'id', "tarea0" + parseInt( $( ".tarea-item" ).length + 1 ) );
+  mastarea.appendTo( "#tratamiento_div .col-md-5" );
+
 }
-function borrar(cual) {
-  $("li.email"+cual).remove();
-  return false;
-}
+
 </script>
+
