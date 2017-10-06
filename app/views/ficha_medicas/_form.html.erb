@@ -103,39 +103,12 @@ $(document).ready(function() {
 <br>
 
 <div class="rows">
+  <div class="col-md-4">
       <div class="field">
         <%= form.label "Necesita tratamiento" %>
-        <%= form.check_box :internacion, id: :ficha_medica_internacion %>
+        <%= form.check_box :tratamiento, id: :ficha_medica_tratamiento %>
       </div>
-</div>
-
-
-
-<div class="rows hidden" id="tratamiento_div">
-  <div class="col-md-5">
- <%= form.fields_for :tareas do |f|  %>
- <div id="tarea01" class="tarea-item">
-    <div class="field">
-      <%= f.label "Dar de Alta" %>
-      <%= f.check_box :terminado, id: :tarea_terminado %>
-    </div>
-
-    <div class="field">
-        <%= f.label :fecha %>
-        <%= f.datetime_select :fecha, id: :tarea_fecha %>
-      </div>
-  </div>
- <% end %>
- <ul id="campos">
-  <li><a href="javascript:agregar();">Agregar</a></li>
-</ul>
-
-</div>
-</div>
-
-<div class="rows">
-   <div class="col-md-5">
-      <div class="field">
+        <div class="field">
         <%= form.label "Trasladar a Cuarentena" %>
         <%= form.check_box :internacion, id: :ficha_medica_internacion %>
       </div>
@@ -143,19 +116,58 @@ $(document).ready(function() {
         <%= form.label "Inactivo/Muerto" %>
         <%= form.check_box :activo, id: :ficha_medica_activo %>
       </div>
-    </div>
+  </div>
 
- <div class="col-md-4">
+  <div class="col-md-4">
     <div class="actions">
       <%= form.submit "Guardar Ficha" , :class=>"btn btn-nuevo" %>
       <%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
     </div>
-      <br>
-      <br>
-      <br>
+    <br>
   </div>
+
 </div>
 
+
+
+<div class="rows hidden" id="tratamiento_div">
+  <div class="col-md-5">
+    <%= form.fields_for :tareas do |f|  %>
+   <div id="tarea01" class="tarea-item">
+    <div class="field">
+        <%= form.label "Medicamento" %> <a href="javascript:agregar();">Agregar</a>
+        <%= form.text_field :medicamento, id: :tarea_medicamento, :class=>"form-control", :placeholder=>"Rp. Ketofen 20 mg."  %>
+    </div>
+  
+    <div class="form-group">
+      <%= form.label "Proxima aplicación"%>
+      <div class='input-group date' id='tarea_fecha_datepicker'>
+        <input type='text' name="tarea[fecha]" id='tarea_fecha'class="form-control" style="width: 100%" />
+        <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar">
+        </span>
+        </span>
+      </div>
+    </div>
+   
+      <div class="field" hidden="on">
+        <%= f.label :fecha %>
+        <%= f.datetime_select :fecha, id: :tarea_fecha %>
+      </div>
+
+      <div class="field">
+        <%= f.label "Dar de Alta" %>
+        <%= f.check_box :terminado, id: :tarea_terminado %>
+      </div>
+      <hr>
+    </div>
+  </div>
+ <% end %>
+
+<br>
+
+</div>
+</div>
 
 
 
@@ -164,9 +176,9 @@ $(document).ready(function() {
 
 <script type="text/javascript">
   
-  $('#ficha_medica_internacion').on('change', function() { 
+  $('#ficha_medica_tratamiento').on('change', function() { 
     
-      if($('#ficha_medica_internacion').is(':checked')){
+      if($('#ficha_medica_tratamiento').is(':checked')){
         
         $('#tratamiento_div').removeClass('hidden');
       }else{
@@ -190,3 +202,12 @@ function agregar() {
 
 </script>
 
+
+    <script type="text/javascript">
+        $(function () {
+            $('#tarea_fecha_datepicker').datetimepicker({
+                
+                
+            });
+        });
+    </script>

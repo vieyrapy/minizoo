@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :estado_conservaciones
   resources :alimentos
   resources :articulos
-
-   resources :ficha_medicas  do
+  get 'tareas/programados'
+  resources :ficha_medicas  do
     member do
       put 'agregartareas'
       #delete 'eliminar'

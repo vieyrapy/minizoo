@@ -69,6 +69,6 @@ class TareasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tarea_params
-      params.require(:tarea).permit(:fecha, :terminado, :ficha_medica_id)
+      params.require(:tarea).permit(:fecha, :terminado, :ficha_medica_id, :medicamento)
     end
 end

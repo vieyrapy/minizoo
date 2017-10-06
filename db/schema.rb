@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171002204937) do
+ActiveRecord::Schema.define(version: 20171006022125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20171002204937) do
     t.string "video"
     t.string "veterinario"
     t.boolean "activo"
+    t.boolean "tratamiento"
   end
 
   create_table "tareas", force: :cascade do |t|
@@ -80,6 +81,7 @@ ActiveRecord::Schema.define(version: 20171002204937) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "ficha_medica_id"
+    t.string "medicamento"
   end
 
   add_foreign_key "animales", "alimentos"
