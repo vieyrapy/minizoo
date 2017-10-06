@@ -15,7 +15,10 @@
     <%= form.label "Ficha Medica" %>
      <%= form.collection_select(:ficha_medica_id, FichaMedica.all, :id, :id) %>
   </div>
-
+  <div class="field">
+      <%= form.label "Medicamento" %>
+      <%= form.text_field :medicamento, id: :tarea_medicamento, :class=>"form-control", :placeholder=>"Emberizidae"  %>
+  </div>
   <div class="field">
     <%= form.label :fecha %>
     <%= form.datetime_select :fecha, id: :tarea_fecha %>
