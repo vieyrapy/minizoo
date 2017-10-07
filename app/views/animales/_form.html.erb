@@ -111,6 +111,16 @@
         </div>
     </div>
 
+
+  <!-- Filtrado por condiciones collection select
+      <div class="col-md-3">
+       <div class="field">
+          <%= form.label "Tipo de Alimentación" %>
+          <%= form.collection_select(:alimento_id, Alimento.where(nombre: "Carnivoro").all, :id, :nombre) %>
+        </div>
+    </div> -->
+
+
     <div class="col-md-2">
         <div class="field">
           <%= form.label "Cite" %>
