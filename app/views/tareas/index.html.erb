@@ -6,7 +6,10 @@
   <thead>
     <tr>
       <th>Fecha</th>
-      <th>Terminado</th>
+      <th>Animal</th>
+      <th>Diagnostico</th>
+      <th>Medicamento</th>
+      <th>Finalizar tratamiento</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +18,10 @@
     <% @tareas.each do |tarea| %>
       <tr>
         <td><%= tarea.fecha %></td>
-        <td><%= tarea.terminado %></td>
+        <td><%= tarea.ficha_medica.animal.nombre_comun %></td>
+        <td><%= tarea.ficha_medica.dolencia %></td>
+        <td><%= tarea.medicamento %></td>
+         <td><%= check_box_tag (tarea.terminado) %></td>
         <td><%= link_to 'Show', tarea %></td>
         <td><%= link_to 'Edit', edit_tarea_path(tarea) %></td>
         <td><%= link_to 'Destroy', tarea, method: :delete, data: { confirm: 'Are you sure?' } %></td>

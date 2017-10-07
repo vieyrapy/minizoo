@@ -135,23 +135,12 @@ $(document).ready(function() {
     <%= form.fields_for :tareas do |f|  %>
    <div id="tarea01" class="tarea-item">
     <div class="field">
-        <%= form.label "Medicamento" %> <a href="javascript:agregar();">Agregar</a>
-        <%= form.text_field :medicamento, id: :tarea_medicamento, :class=>"form-control", :placeholder=>"Rp. Ketofen 20 mg."  %>
+        <%= f.label "Medicamento" %> <a href="javascript:agregar();">Agregar</a>
+        <%= f.text_field :medicamento, id: :tarea_medicamento, :class=>"form-control", :placeholder=>"Rp. Ketofen 20 mg."  %>
     </div>
   
-    <div class="form-group">
-      <%= form.label "Proxima aplicación"%>
-      <div class='input-group date' id='tarea_fecha_datepicker'>
-        <input type='text' name="tarea[fecha]" id='tarea_fecha'class="form-control" style="width: 100%" />
-        <span class="input-group-addon">
-        <span class="glyphicon glyphicon-calendar">
-        </span>
-        </span>
-      </div>
-    </div>
-   
-      <div class="field" hidden="on">
-        <%= f.label :fecha %>
+      <div class="field" >
+        <%= f.label "Proxima aplicación" %>
         <%= f.datetime_select :fecha, id: :tarea_fecha %>
       </div>
 
@@ -205,7 +194,7 @@ function agregar() {
 
     <script type="text/javascript">
         $(function () {
-            $('#tarea_fecha_datepicker').datetimepicker({
+            $('datetime_select').datetimepicker({
                 
                 
             });
