@@ -4,7 +4,12 @@ class TareasController < ApplicationController
   # GET /tareas
   # GET /tareas.json
   def index
-    @tareas = Tarea.all
+    #@tarea = Tarea.all
+    # A nivel local 
+    #@tareas = Tarea.where(fecha: Date.today.all_day)
+
+    # Mas eficiente de acuerdo a nuestra zona horaria 
+    @tareas = Tarea.where(fecha: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day)
   end
 
   # GET /tareas/1
