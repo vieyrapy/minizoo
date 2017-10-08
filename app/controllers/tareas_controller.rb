@@ -6,10 +6,10 @@ class TareasController < ApplicationController
   def index
     #@tarea = Tarea.all
     # A nivel local 
-    #@tareas = Tarea.where(fecha: Date.today.all_day)
+    @tareas = Tarea.where(fecha: Date.today.all_day)
 
-    # Mas eficiente de acuerdo a nuestra zona horaria 
-    @tareas = Tarea.where(fecha: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day)
+    # Mas eficiente de acuerdo a nuestra zona horaria (fecha: Time.zone.now.midnight)
+    #@tareas = Tarea.where(fecha: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day and tratamiento: true:)
   end
 
   # GET /tareas/1
