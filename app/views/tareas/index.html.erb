@@ -1,11 +1,10 @@
-<p id="notice"><%= notice %></p>
+  <h3>Alertas diarias</h3>
+  <hr></hr>
 
-<h1>Tareas</h1>
-
-<table>
+<table class="table table-condensed">
   <thead>
     <tr>
-      <th>Fecha</th>
+      <th>Fecha / Hora</th>
       <th>Animal</th>
       <th>Diagnostico</th>
       <th>Medicamento</th>
@@ -22,9 +21,11 @@
         <td><%= tarea.ficha_medica.dolencia %></td>
         <td><%= tarea.medicamento %></td>
          <td><%= check_box_tag (tarea.terminado) %></td>
-        <td><%= link_to 'Show', tarea %></td>
+
+
+        <!-- <td><%= link_to 'Show', tarea %></td>
         <td><%= link_to 'Edit', edit_tarea_path(tarea) %></td>
-        <td><%= link_to 'Destroy', tarea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', tarea, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Tarea', new_tarea_path %>
+
