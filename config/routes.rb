@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :estado_conservaciones
   resources :alimentos
   resources :articulos
-  get 'tareas/programados'
+  get 'cuarentena/index'
   resources :ficha_medicas  do
     member do
       put 'agregartareas'
