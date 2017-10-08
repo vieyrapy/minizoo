@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :tareas
   #resources :ficha_medicas
   resources :animales
+  get 'animales/historial'
   resources :cites
   resources :estado_conservaciones
   resources :alimentos

@@ -1,7 +1,17 @@
+<div class="row">
+  <div class="col-md-4">
+      <h3>Lista de animales en el zoo</h3>
+      <hr></hr>  
+  </div>
+  <div class="col-md-4">
+      <%= render 'buscar' %>
+  </div>
 
-  <h3>Lista de animales en el zoo</h3>
-  <hr></hr>
-<div class="col-sm-9">
+</div>
+  
+
+<div class="col-sm-12">
+<div class="table-responsive">
     <div><%= link_to 'Nuevo Animal', new_animal_path, :class=>"btn btn-nuevo" %></div>
 <br>
 <table class="table table-condensed">
@@ -42,6 +52,9 @@
       </tr>
     <% end %>
   </tbody>
+
 </table>
+ </div> 
 </div>
+
 

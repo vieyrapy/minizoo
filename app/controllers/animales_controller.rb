@@ -1,15 +1,25 @@
 class AnimalesController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
+
   # GET /animales
   # GET /animales.json
   def index
-    @animales = Animal.all
+    if params[:Buscar]
+      @animales = Animal.where(["nombre_comun LIKE ?","%#{params[:Buscar]}%"])
+    else
+      @animales = Animal.paginate(:page => params[:page], :per_page => 5)
+    end  
   end
 
   # GET /animales/1
   # GET /animales/1.json
   def show
+  end
+
+  #Filtrar historiall de animales 
+  def historial
+    @historial = Animal.where(nombre_comun: :venado)
   end
 
   # GET /animales/new

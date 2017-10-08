@@ -1,0 +1,9 @@
+    <div class="navbar-form ">
+           <div class="form-group">
+                <%= form_tag animales_path, :method => 'get' do %>
+                        <%= text_field_tag :Buscar, params[:Buscar], :class=>"form-control", placeholder: "Jacaré Hü"  %>
+                    <%= submit_tag "Buscar" , :class=>"btn btn-default"%>
+                <% end %>
+              </div>
+    </div> 
+     <hr></hr>  
