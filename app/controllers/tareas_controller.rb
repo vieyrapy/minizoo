@@ -7,11 +7,10 @@ class TareasController < ApplicationController
     #@tareas = Tarea.all
     # A nivel local 
       
-    if 
+    if params[:terminado]
+      @tareas = Tarea.where(:terminado => params[:terminado]).order(:fecha) 
+    else 
       @tareas = Tarea.where(fecha: Date.today.all_day, :terminado => 'false').order(:fecha) 
-    else params[:todo]
-      #@tareas = Tarea.where(fecha: Date.today.all_day, :terminado => 'false').order(:fecha) 
-      @tareas = Tarea.where(:terminado => 'false').order(:fecha) 
     end
     # De acuerdo a nuestra zona horaria (fecha: Time.zone.now.midnight)
     #@tareas = Tarea.where(fecha: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day and tratamiento: true:)

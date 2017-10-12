@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :tareas
+  resources :tareas do
+    member do
+       put 'daralta'
+       get 'index'
+    end
+  end
+
   #resources :ficha_medicas
   resources :animales
   get 'animales/historial'

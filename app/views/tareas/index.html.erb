@@ -1,8 +1,8 @@
   <h3>Lista de Animales con tratamientos</h3>
   <hr></hr>
   <div>
-    
- <%= render 'filtrar' %>
+<%= link_to 'Hoy', tareas_path, method: "get", class:"btn btn-primary" %>    
+<%= link_to 'Todos', tareas_path({terminado: 'false'}), method: "get", class:"btn btn-primary" %>
     
       
   </div>
