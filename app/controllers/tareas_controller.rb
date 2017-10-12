@@ -4,17 +4,37 @@ class TareasController < ApplicationController
   # GET /tareas
   # GET /tareas.json
   def index
-    #@tarea = Tarea.all
+    #@tareas = Tarea.all
     # A nivel local 
-    @tareas = Tarea.where(fecha: Date.today.all_day)
-
-    # Mas eficiente de acuerdo a nuestra zona horaria (fecha: Time.zone.now.midnight)
+      
+    if 
+      @tareas = Tarea.where(fecha: Date.today.all_day, :terminado => 'false').order(:fecha) 
+    else params[:todo]
+      #@tareas = Tarea.where(fecha: Date.today.all_day, :terminado => 'false').order(:fecha) 
+      @tareas = Tarea.where(:terminado => 'false').order(:fecha) 
+    end
+    # De acuerdo a nuestra zona horaria (fecha: Time.zone.now.midnight)
     #@tareas = Tarea.where(fecha: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day and tratamiento: true:)
   end
+
 
   # GET /tareas/1
   # GET /tareas/1.json
   def show
+  end
+
+  def daralta
+    @tarea = Tarea.find(params[:id])
+    if @tarea.update_attributes(:terminado => 'true')
+      #mostrar mensaje de éxito
+      msg = "El animal fue dado de alta"
+      flash[:notice] =  msg
+    else
+      msg = "No se ha podido dar de alta "
+      flash[:notice] =  msg
+    end
+    # Redireccionar
+    redirect_to(:action => :index)
   end
 
   # GET /tareas/new
