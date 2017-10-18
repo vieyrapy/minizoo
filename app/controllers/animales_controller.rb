@@ -15,11 +15,9 @@ class AnimalesController < ApplicationController
   # GET /animales/1
   # GET /animales/1.json
   def show
-  end
-
-  #Filtrar historiall de animales 
-  def historial
-    @historial = Animal.where(nombre_comun: :venado)
+    #@ficha = @animales.ficha_medicas.create(params[:ficha])
+    #@edad = Animal.find(params[:id])
+    #@edad = (:fecha - DateTime.now).to_i
   end
 
   # GET /animales/new

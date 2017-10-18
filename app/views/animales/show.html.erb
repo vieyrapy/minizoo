@@ -32,7 +32,10 @@
         <strong>Edad:</strong>
         <%= @animal.edad %>
       </p>
-
+      <p>
+        <strong>Edad:</strong>
+        <%=  @edad %>
+      </p>
       <p>
         <strong>Distribución:</strong>
         <%= @animal.origen %>
@@ -61,9 +64,18 @@
       <%= link_to 'Volver', animales_path, :class=>"btn btn-default" %>
   </div>
   <div class="col-md-3">
-    Historial por cada animal
+    Historial 
 
-    <%= @historial  %>
+<% if @animal.ficha_medicas.any? %>
+  <ul>
+    <% @animal.ficha_medicas.each do |ficha| %>
+    <li><%= link_to ficha, ficha %></li> 
+    <% end %>
+  </ul>
+<% else %>
+  <p>no hay ficha</p>
+<% end %>
+
   </div>
 </div>
 

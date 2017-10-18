@@ -107,7 +107,7 @@
     <div class="col-md-3">
        <div class="field">
           <%= form.label "Tipo de Alimentación" %>
-          <%= form.collection_select(:alimento_id, Alimento.all, :id, :nombre) %>
+          <%= form.collection_select(:alimento_id, Alimento.all, :id, :nombre, {} , {:class => 'form-control'}) %>
         </div>
     </div>
 
@@ -124,14 +124,14 @@
     <div class="col-md-2">
         <div class="field">
           <%= form.label "Cite" %>
-           <%= form.collection_select(:cite_id, Cite.all, :id, :nombre) %>
+           <%= form.collection_select(:cite_id, Cite.all, :id, :nombre, {} , {:class => 'form-control'}) %>
         </div>
     </div>
 
     <div class="col-md-3">
       <div class="field">
         <%= form.label "Estado de Conservación" %>
-         <%= form.collection_select(:estado_conservacion_id, EstadoConservacion.all, :id, :nombre)%><br>
+         <%= form.collection_select(:estado_conservacion_id, EstadoConservacion.all, :id, :nombre, {} , {:class => 'form-control'})%><br>
       </div>
     </div>
 </div>

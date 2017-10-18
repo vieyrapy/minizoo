@@ -8,4 +8,9 @@ class FichaMedica < ApplicationRecord
 	
 	has_many :tareas, autosave: true, dependent: :destroy
 	accepts_nested_attributes_for :tareas
+
+	def to_s
+    	veterinario 
+    	enfermedad
+  	end
 end
