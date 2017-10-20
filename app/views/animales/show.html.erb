@@ -63,19 +63,27 @@
       <%= link_to 'Modificar', edit_animal_path(@animal), :class=>"btn btn-modificar" %> |
       <%= link_to 'Volver', animales_path, :class=>"btn btn-default" %>
   </div>
-  <div class="col-md-3">
-    Historial 
 
-<% if @animal.ficha_medicas.any? %>
-  <ul>
-    <% @animal.ficha_medicas.each do |ficha| %>
-    <li><%= link_to ficha, ficha %></li> 
+  <div class="col-md-3"> Historial 
+
+    <span class="btn btn-primary badge" style="font-size:16px">
+      <%= link_to '', animales_path,  class: "glyphicon glyphicon-heart-empty", style: 'color:#FFFFFF;' %> 
+    <% @sumar %> 3</span>
+
+    
+    <% if @animal.ficha_medicas.any? %>
+      <ul>
+        <% @animal.ficha_medicas.each do |ficha| %> 
+        <li><%=  l(ficha.created_at, :format => :timehisto)%><%= link_to ficha, ficha %></li> 
+    
     <% end %>
-  </ul>
-<% else %>
-  <p>no hay ficha</p>
-<% end %>
+      </ul>
+    <% else %>
+         <p>No hay ficha</p>
+         
+    <% end %>
 
   </div>
+
 </div>
 
