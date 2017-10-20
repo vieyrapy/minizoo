@@ -64,17 +64,17 @@
       <%= link_to 'Volver', animales_path, :class=>"btn btn-default" %>
   </div>
 
-  <div class="col-md-3"> Historial 
-
-    <span class="btn btn-primary badge" style="font-size:16px">
-      <%= link_to '', animales_path,  class: "glyphicon glyphicon-heart-empty", style: 'color:#FFFFFF;' %> 
-    <% @sumar %> 3</span>
-
+  <div class="col-md-3" id="historial">
+    <div class="list-group">
+      <a href="">Historial Médico  
+        <span id="totalspan", class="btn btn-primary badge" style="font-size:14px">
+       </span></a>
+    </div>
     
     <% if @animal.ficha_medicas.any? %>
-      <ul>
+      <ul class="list-group">
         <% @animal.ficha_medicas.each do |ficha| %> 
-        <li><%=  l(ficha.created_at, :format => :timehisto)%><%= link_to ficha, ficha %></li> 
+        <li class="list-group-item" ><%=  l(ficha.created_at, :format => :timehisto)%> - <%= link_to ficha, ficha %></li> 
     
     <% end %>
       </ul>
@@ -87,3 +87,7 @@
 
 </div>
 
+<script type="text/javascript">
+  var totalhistorial = $("#historial li").size();
+    $("#totalspan").text(totalhistorial);
+</script>
