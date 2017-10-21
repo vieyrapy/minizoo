@@ -29,12 +29,14 @@
       </p>
 
       <p>
-        <strong>Edad:</strong>
-        <%= @animal.edad %>
+        <strong>Fecha de Nac./Ingreso:</strong>
+        <%= l(@animal.edad, :format => :timehistorial)%> 
+
       </p>
       <p>
         <strong>Edad:</strong>
-        <%=  @edad %>
+        
+       <script>document.write(anosanimal(<%= l(@animal.edad, :format => :edadanimal)%> ))</script> años
       </p>
       <p>
         <strong>Distribución:</strong>
@@ -74,7 +76,7 @@
     <% if @animal.ficha_medicas.any? %>
       <ul class="list-group">
         <% @animal.ficha_medicas.each do |ficha| %> 
-        <li class="list-group-item" ><%=  l(ficha.created_at, :format => :timehisto)%> - <%= link_to ficha, ficha %></li> 
+        <li class="list-group-item" ><%=  l(ficha.created_at, :format => :timehistorial)%> - <%= link_to ficha, ficha %></li> 
     
     <% end %>
       </ul>
@@ -91,3 +93,4 @@
   var totalhistorial = $("#historial li").size();
     $("#totalspan").text(totalhistorial);
 </script>
+
