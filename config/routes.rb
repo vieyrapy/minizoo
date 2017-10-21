@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :estado_medicos
   resources :tareas do
     member do
        put 'daralta'

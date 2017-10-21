@@ -1,0 +1,2 @@
+module EstadoMedicosHelper
+end
