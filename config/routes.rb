@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :especies
   resources :estado_medicos
   resources :tareas do
     member do
