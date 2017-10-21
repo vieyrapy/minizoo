@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171006022125) do
+ActiveRecord::Schema.define(version: 20171021005549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20171006022125) do
     t.string "identificador"
     t.string "especie"
     t.string "familia"
-    t.date "edad"
+    t.datetime "edad"
   end
 
   create_table "articulos", force: :cascade do |t|
