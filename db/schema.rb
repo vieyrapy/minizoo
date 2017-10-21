@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171021012740) do
+ActiveRecord::Schema.define(version: 20171021211425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20171021012740) do
     t.integer "estado_conservacion_id"
     t.string "sexo"
     t.string "identificador"
-    t.string "especie"
     t.string "familia"
     t.datetime "edad"
+    t.integer "especie_id"
   end
 
   create_table "articulos", force: :cascade do |t|
@@ -47,6 +47,12 @@ ActiveRecord::Schema.define(version: 20171021012740) do
   end
 
   create_table "cites", force: :cascade do |t|
+    t.string "nombre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "especies", force: :cascade do |t|
     t.string "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -65,7 +71,6 @@ ActiveRecord::Schema.define(version: 20171021012740) do
   end
 
   create_table "ficha_medicas", force: :cascade do |t|
-    t.string "estado_salud"
     t.string "enfermedad"
     t.string "dolencia"
     t.string "descripcion"
@@ -93,6 +98,7 @@ ActiveRecord::Schema.define(version: 20171021012740) do
 
   add_foreign_key "animales", "alimentos"
   add_foreign_key "animales", "cites"
+  add_foreign_key "animales", "especies"
   add_foreign_key "animales", "estado_conservaciones"
   add_foreign_key "ficha_medicas", "animales"
   add_foreign_key "ficha_medicas", "estado_medicos"

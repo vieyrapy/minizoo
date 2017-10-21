@@ -35,7 +35,7 @@
     <% @animales.each do |animal| %>
       <tr>
         <td><%= animal.identificador %></td>
-        <td><%= animal.especie %></td>
+        <td><%= animal.especie.nombre %></td>
         <td><%= animal.familia %></td>
         <td><%= animal.nombre_cientifico %></td>
         <td><%= animal.nombre_comun %></td>

@@ -20,14 +20,10 @@
     </div>
 
     <div class="col-md-3">
-     <select class="form-control " id="animal_especie" name="animal[especie]" style="width: 100%">
-          <option disabled selected >Especie</option>
-          <option value="Aves">Aves</option>
-          <option value="Mamíferos">Mamíferos</option>
-          <option value="Reptiles">Reptiles</option>
-          <option value="Anfibios">Anfibios</option>
-          <option value="Peces">Peces</option>
-      </select>
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2"><%= form.label "Especie" %></span>
+           <%= form.collection_select(:especie_id, Especie.all, :id, :nombre, {} , {:class => 'form-control'}) %>
+        </div>
     </div>
 
     <div class="col-md-3">
