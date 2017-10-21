@@ -1,7 +1,14 @@
 
+<div class="row">
+  <div class="col-md-4">
+      <h3>Fichas Médica</h3>
+      <hr></hr>  
+  </div>
+  <div class="col-md-4">
+      <%= render 'buscar' %>
+  </div>
 
-  <h3>Lista de Fichas Medica de los animales</h3>
-  <hr></hr>
+</div>
 
 <div class="col-sm-9">
     <div><%= link_to ' Crear Nueva Ficha', new_ficha_medica_path, :class=>"btn btn-nuevo" %></div>
@@ -10,6 +17,7 @@
   <thead>
     <tr>
       <th>Fecha de Creación</th>
+      <th>Paciente</th>
       <th>Nombre comun </th>
       <th>Estado salud</th>
       <th>Motivo de Consulta</th>
@@ -23,6 +31,7 @@
       <tr>
          
         <td><%= ficha_medica.created_at %></td>
+        <td><%= ficha_medica.animal.identificador %></td>
         <td><%= ficha_medica.animal.nombre_comun %></td>
         <td><%= ficha_medica.estado_medico.nombre %></td>
         <td><%= ficha_medica.enfermedad %></td>
@@ -35,6 +44,6 @@
   </tbody>
 </table>
 </div>
-
+<%= will_paginate @ficha_medica %>
 <br>
 

@@ -26,6 +26,18 @@ $(document).ready(function() {
         <%= form.text_field :veterinario, id: :ficha_medica_veterinario,:class=>"form-control", :placeholder=>"Dr. Nestor Tapia", :style=>"width: 70%" %>
       </div>
   </div>
+
+
+  <div class="col-md-6">
+   <div class="input-group">
+      <span class="input-group-addon" id="sizing-addon2">
+      <%= form.label "Iden Paciente:" %>
+      </span>
+        <%= form.collection_select(:animal_id, Animal.all, :id, :identificador, {}, {:class=>"js-example-basic-single js-states form-control", :style=>"width: 70%"}) %>
+    </div>
+  </div>
+
+
  </div> 
 
  <br>
