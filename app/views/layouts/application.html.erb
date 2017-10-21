@@ -5,6 +5,18 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+          <script type="text/javascript">
+           function anosanimal(dia,mes,anio){
+              hoy=new Date();
+              nacido=new Date(anio,mes-1,dia);
+              tiempo=hoy-nacido;
+              unanio=1000*60*60*24*365;
+              tienes=parseInt(tiempo/unanio);
+              return tienes;
+              }
+          </script>
+
   </head>
 
   <body>
