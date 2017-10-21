@@ -40,16 +40,14 @@ $(document).ready(function() {
     </div>
   </div>
 
-  <div class="col-md-2">
-    <select class="form-control " data-live-search="true" id="ficha_medica_estado_salud" name="ficha_medica[estado_salud]" style="width: 100%">
-      <option disabled >Estado de salud</option>
-      <option selected>Buen Estado</option>
-      <option disabled>───────</option>
-      <option value="Leve">Leve</option>
-      <option value="Grabe">Grabe</option>
-      <option value="Muy Grabe">Muy Grabe</option>
-    </select>
-  </div>
+    <div class="col-md-2">
+      <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2">
+      <%= form.label "Estado" %>
+      </span>
+         <%= form.collection_select(:estado_medico_id, EstadoMedico.all, :id, :nombre, {} , {:class => 'form-control'})%><br>
+      </div>
+    </div>
 
    <div class="col-md-6">
       <div class="input-group">
