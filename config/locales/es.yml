@@ -204,13 +204,16 @@ es:
       last_word_connector: " y "
       two_words_connector: " y "
       words_connector: ", "
+  
+
   time:
     am: am
     formats:
       default: "%A, %d de %B de %Y %H:%M:%S %z"
       long: "%d de %B de %Y %H:%M"
       short: "%d de %b %H:%M"
-      timehisto: "%d de %b de %Y" 
+      timehistorial: "%d de %b de %Y"  
+      edadanimal: "%d,%m,%Y" 
     pm: pm
 devise:
   my_sessions:
