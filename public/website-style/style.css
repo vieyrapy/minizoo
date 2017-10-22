@@ -329,6 +329,83 @@ header .search-box-area .search-form a {
   font-size: 20px;
   display: inline-block;
 }
+
+
+.slider-area .slide-tree {
+  background: url(http://localhost:3000/images/slider/3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 300px 0;
+}
+.slider-area .slide-tree h2 {
+  font-size: 120px;
+  font-family: 'Architects Daughter', cursive;
+  color: #dcd794;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.slider-area .slide-tree h2:after {
+  background: #dcd794;
+  height: 5px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+}
+.slider-area .slide-tree p {
+  font-size: 24px;
+  color: #ffffff;
+}
+.slider-area .slide-tree a {
+  margin-top: 20px;
+  background: url(http://localhost:3000/images/slider/slider-btn.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 15px 20px;
+  color: #ffffff;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.slider-area .slide-for {
+  background: url(http://localhost:3000/images/slider/5.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 300px 0;
+}
+.slider-area .slide-for h2 {
+  font-size: 120px;
+  font-family: 'Architects Daughter', cursive;
+  color: #dcd794;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.slider-area .slide-for h2:after {
+  background: #dcd794;
+  height: 5px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: "";
+}
+.slider-area .slide-for p {
+  font-size: 24px;
+  color: #ffffff;
+}
+.slider-area .slide-for a {
+  margin-top: 20px;
+  background: url(http://localhost:3000/images/slider/slider-btn.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 15px 20px;
+  color: #ffffff;
+  font-size: 20px;
+  display: inline-block;
+}
 /* ------------------------------------
 4.Home Services Start Here 
 ---------------------------------------*/
