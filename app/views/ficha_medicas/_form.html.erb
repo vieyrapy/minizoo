@@ -46,7 +46,7 @@ $(document).ready(function() {
   <div class="col-md-4">
    <div class="input-group">
       <span class="input-group-addon" id="sizing-addon2">
-      <%= form.label "Animal" %>
+      <%= form.label "Animal: " %>
       </span>
         <%= form.collection_select(:animal_id, Animal.all, :id, :nombre_comun, {}, {:class=>"js-example-basic-single js-states form-control", :style=>"width: 100%"}) %>
     </div>
