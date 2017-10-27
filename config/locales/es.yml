@@ -214,6 +214,7 @@ es:
       short: "%d de %b %H:%M"
       timehistorial: "%d de %b de %Y"  
       edadanimal: "%d,%m,%Y" 
+      edadanimalshow: "%d-%m-%Y" 
     pm: pm
 devise:
   my_sessions:

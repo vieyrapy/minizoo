@@ -1,5 +1,10 @@
 <div class="row">
-  <div class="col-md-3">Menu</div>
+  <div class="col-md-3">Menu
+      <h1><span class="btn btn-alert badge" style="font-size:100px">
+        <%= @animal.identificador %>
+      </span></h1>
+  </div>
+
   <div class="col-md-6">
       <p>
         <strong>Identificador:</strong>
@@ -62,14 +67,14 @@
       </p>
 
       <%= link_to 'Modificar', edit_animal_path(@animal), :class=>"btn btn-modificar" %> |
-      <%= link_to 'Volver', animales_path, :class=>"btn btn-default" %>
+      <%= link_to 'Volver', animales_path, :class=>"btn btn-atras" %>
   </div>
 
   <div class="col-md-3" id="historial">
 
     <div class="page-header">
         <h5 id="timeline">Historial Medico
-        <span id="totalspan", class="btn btn-primary badge" style="font-size:14px"></h5>
+        <span id="totalspan", class="btn btn-alert badge" style="font-size:14px"></h5>
     </div>
     
     <% if @animal.ficha_medicas.any? %>
@@ -83,9 +88,9 @@
                  <%=  l(ficha.created_at, :format => :timehistorial)%> 
               </div>
 
-              <div class="timeline-body">
+            <!--   <div class="timeline-body">
                 <%= ficha.descripcion%> 
-              </div>
+              </div> -->
 
               <%= link_to ficha, ficha %>
            </div> 

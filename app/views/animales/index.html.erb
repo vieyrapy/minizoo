@@ -14,16 +14,15 @@
 <div class="table-responsive">
     <div><%= link_to 'Nuevo Animal', new_animal_path, :class=>"btn btn-nuevo" %></div>
 <br>
-<table class="table table-condensed">
+<table class="table">
   <thead>
     <tr>
       <th>Ident.</th>
-      <th>Especia</th>
+      <th>Especie</th>
       <th>Familia</th>
-      <th>Nombre cientifico</th>
-      <th>Nombre comun</th>
-      <th>Sexo</th>
-      <th>Edad</th>
+      <th>Nombre científico</th>
+      <th>Nombre común</th>
+      <th>Fecha.Nac.</th>
       <th>Origen</th>
       <th>Cite</th>
       <th>Estado de Conservación</th>
@@ -39,8 +38,7 @@
         <td><%= animal.familia %></td>
         <td><%= animal.nombre_cientifico %></td>
         <td><%= animal.nombre_comun %></td>
-        <td><%= animal.sexo %></td>
-        <td><%= animal.edad %></td>
+        <td><%= l(animal.edad, :format => :edadanimalshow)%></td>
         <td><%= animal.origen %></td>
         <td><%= animal.cite.nombre %></td>
         <td><%= animal.estado_conservacion.nombre %></td>
