@@ -1,9 +1,6 @@
 <div class="row">
-  <div class="col-md-3">Menu
-      <h1><span class="btn btn-alert badge" style="font-size:100px">
-        <%= @animal.identificador %>
-      </span></h1>
-  </div>
+  <div class="col-md-3">Menu</div>
+   
 
   <div class="col-md-6">
       <p>
@@ -70,43 +67,45 @@
       <%= link_to 'Volver', animales_path, :class=>"btn btn-atras" %>
   </div>
 
-  <div class="col-md-3" id="historial">
+<div class="col-md-3" id="historial">
 
-    <div class="page-header">
-        <h5 id="timeline">Historial Medico
-        <span id="totalspan", class="btn btn-alert badge" style="font-size:14px"></h5>
-    </div>
-    
-    <% if @animal.ficha_medicas.any? %>
-      <ul class="timeline">
-        <% @animal.ficha_medicas.each do |ficha| %> 
-        <li>
-          <div class="timeline-badge"><i class="glyphicon glyphicon-record"></i></div>
-          <div class="timeline-panel">
-          
-              <div class="timeline-heading">
-                 <%=  l(ficha.created_at, :format => :timehistorial)%> 
-              </div>
+        <div class="page-header">
+            <h5 id="timeline">Historial Medico
+            <span id="totalspan", class="btn btn-alert badge" style="font-size:14px"></h5>
+        </div>
 
-            <!--   <div class="timeline-body">
-                <%= ficha.descripcion%> 
-              </div> -->
+        <% if @animal.ficha_medicas.any? %>
+            
+              <div class="years2">
+                <div class="row item wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+  
+                  <% @animal.ficha_medicas.each do |ficha| %> 
+  
+                  <div class="desc">
+                    <h4><%=  l(ficha.created_at, :format => :timehistorial)%></h4>
+                    <p class="subtitle"><%= link_to ficha, ficha %></p>
+                    <p><%= ficha.descripcion%> </p>
+                  </div> 
 
-              <%= link_to ficha, ficha %>
-           </div> 
-          </li> 
-    
-          <% end %>
-            </ul>
-          <% else %>
-               <p>No hay ficha</p>
+                    <% end %>
 
-          <% end %>
+                </div>
+                    <% else %>
+                    <p>No hay ficha</p>
+               </div>
+                    <% end %>   
+
+  </div>
 </div>
+            
+      
+
+
+
 
 <script type="text/javascript">
 
-  var totalhistorial = $("#historial li").size();
+  var totalhistorial = $("#historial h4").size();
   $("#totalspan").text(totalhistorial);
 </script>
 
