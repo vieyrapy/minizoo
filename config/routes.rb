@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   resources :ficha_medicas  do
     member do
-      put 'agregartareas'
+      put 'daraltacuarentena'
       #delete 'eliminar'
       #put 'actualizar'
     end

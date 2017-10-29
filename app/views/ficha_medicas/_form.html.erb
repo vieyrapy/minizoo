@@ -18,161 +18,163 @@ $(document).ready(function() {
     $('.js-example-basic-single').select2();
 });</script>
 <!-- End//Script que control select2 para search list -->
-<div class="row">
-   <div class="col-md-6">
-      <div class="input-group">
-        <span class="input-group-addon" id="sizing-addon2">
-        <%= form.label "Atendido Por:" %></span>
-        <%= form.text_field :veterinario, id: :ficha_medica_veterinario,:class=>"form-control", :placeholder=>"Dr. Nestor Tapia", :style=>"width: 70%" %>
-      </div>
-  </div>
 
-
-  <div class="col-md-6">
-   <div class="input-group">
-      <span class="input-group-addon" id="sizing-addon2">
-      <%= form.label "Iden Paciente:" %>
-      </span>
-        <%= form.collection_select(:animal_id, Animal.all, :id, :identificador, {}, {:class=>"js-example-basic-single js-states form-control", :style=>"width: 70%"}) %>
-    </div>
-  </div>
-
-
- </div> 
-
- <br>
 
 <div class="row">
-  <div class="col-md-4">
-   <div class="input-group">
-      <span class="input-group-addon" id="sizing-addon2">
-      <%= form.label "Animal: " %>
-      </span>
-        <%= form.collection_select(:animal_id, Animal.all, :id, :nombre_comun, {}, {:class=>"js-example-basic-single js-states form-control", :style=>"width: 100%"}) %>
+     <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2">
+          <%= form.label "Atendido Por:" %></span>
+          <%= form.text_field :veterinario, id: :ficha_medica_veterinario,:class=>"form-control", :placeholder=>"Dr. Nestor Tapia", :style=>"width: 70%" %>
+        </div>
     </div>
-  </div>
 
-    <div class="col-md-2">
-      <div class="input-group">
+
+    <div class="col-md-6">
+     <div class="input-group">
         <span class="input-group-addon" id="sizing-addon2">
-      <%= form.label "Estado" %>
-      </span>
-         <%= form.collection_select(:estado_medico_id, EstadoMedico.all, :id, :nombre, {} , {:class => 'form-control'})%><br>
+        <%= form.label "Iden Paciente:" %>
+        </span>
+          <%= form.collection_select(:animal_id, Animal.all, :id, :identificador, {}, {:class=>"js-example-basic-single js-states form-control", :style=>"width: 70%"}) %>
       </div>
     </div>
 
-   <div class="col-md-6">
+</div> 
+<br>
+
+  <div class="row">
+    <div class="col-md-4">
+     <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2">
+        <%= form.label "Animal: " %>
+        </span>
+          <%= form.collection_select(:animal_id, Animal.all, :id, :nombre_comun, {}, {:class=>"js-example-basic-single js-states form-control", :style=>"width: 100%"}) %>
+      </div>
+    </div>
+
+      <div class="col-md-2">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2">
+        <%= form.label "Estado" %>
+        </span>
+           <%= form.collection_select(:estado_medico_id, EstadoMedico.all, :id, :nombre, {} , {:class => 'form-control'})%><br>
+        </div>
+      </div>
+
+     <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2">
+          <%= form.label "Motivo de la consulta" %></span>
+          <%= form.text_field :enfermedad, id: :ficha_medica_enfermedad,:class=>"form-control", :placeholder=>"Vacunación/Traumatismo...", :style=>"width: 70%" %>
+        </div>
+        <br>
+    </div>
+  </div>
+
+  <div class="row">
+     <div class="col-md-8">
       <div class="input-group">
         <span class="input-group-addon" id="sizing-addon2">
-        <%= form.label "Motivo de la consulta" %></span>
-        <%= form.text_field :enfermedad, id: :ficha_medica_enfermedad,:class=>"form-control", :placeholder=>"Vacunación/Traumatismo...", :style=>"width: 70%" %>
+        <%= form.label "Pre-Diagnóstico" %>
+        </span>
+        <%= form.text_area :dolencia, id: :ficha_medica_dolencia, :class=>"form-control", :placeholder=>"Fractura completa de radio y cúbito" %>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+   <div class="col-md-8">
+    <div class="field">
+      <%= form.label "Tratamiento e Indicaciones" %>
+      <%= form.text_area :descripcion, id: :ficha_medica_descripcion , :class=>"form-control", :rows=>"8", :placeholder=>"Reducación de fractura con yeso por 15 dias - Rp. Ketofen 20 mg (1 comp. cada 12 horas por 4 dias)"%>
+    </div>
+     <br>
+  </div>
+
+   <div class="col-md-4">
+      <div class="field">
+        <%= form.label "Subir Fotos" %><br>
+        
+        <%= form.file_field :archivos %>
       </div>
       <br>
-  </div>
-</div>
-<div class="row">
- <div class="col-md-8">
-  <div class="input-group">
-    <span class="input-group-addon" id="sizing-addon2">
-    <%= form.label "Pre-Diagnóstico" %>
-    </span>
-    <%= form.text_area :dolencia, id: :ficha_medica_dolencia, :class=>"form-control", :placeholder=>"Fractura completa de radio y cúbito" %>
-  </div>
-   <br>
-</div>
-</div>
-<div class="row">
- <div class="col-md-8">
-  <div class="field">
-    <%= form.label "Tratamiento e Indicaciones" %>
-    <%= form.text_area :descripcion, id: :ficha_medica_descripcion , :class=>"form-control", :rows=>"8", :placeholder=>"Reducación de fractura con yeso por 15 dias - Rp. Ketofen 20 mg (1 comp. cada 12 horas por 4 dias)"%>
-  </div>
-   <br>
-</div>
-
- <div class="col-md-4">
-  <div class="field">
-    <%= form.label "Subir Fotos" %><br>
-    
-    <%= form.file_field :archivos %>
-  </div>
-<br>
-  <div class="field">
-    <%= form.label "Subir Audios" %><br>
-    <%= form.file_field :audio %>
-    <small id="fileHelp" class="form-text text-muted">Solo se admiten audios con extesión .mp3</small>
-  </div>
-<br>
-  <div class="form-control-file">
-    <label for="exampleInputFile">Video</label>
-    <input id="ficha_medica_video" type="file" name="ficha_medica[video]">
-    <small id="fileHelp" class="form-text text-muted">Solo se admiten videos con extesión .mp4</small>
-  </div>
-  </div>
-</div>
-<br>
-
-<div class="rows">
-  <div class="col-md-4">
       <div class="field">
-        <%= form.label "Necesita tratamiento" %>
-        <%= form.check_box :tratamiento, id: :ficha_medica_tratamiento %>
+        <%= form.label "Subir Audios" %><br>
+        <%= form.file_field :audio %>
+        <small id="fileHelp" class="form-text text-muted">Solo se admiten audios con extesión .mp3</small>
       </div>
+      <br>
+      <div class="form-control-file">
+        <label for="exampleInputFile">Video</label>
+        <input id="ficha_medica_video" type="file" name="ficha_medica[video]">
+        <small id="fileHelp" class="form-text text-muted">Solo se admiten videos con extesión .mp4</small>
+      </div>
+  </div>
+  <br>
+
+  <div class="rows">
+    <div class="col-md-5">
         <div class="field">
-        <%= form.label "Trasladar a Cuarentena" %>
-        <%= form.check_box :internacion, id: :ficha_medica_internacion %>
-      </div>
-      <div class="field">
-        <%= form.label "Inactivo/Muerto" %>
-        <%= form.check_box :activo, id: :ficha_medica_activo %>
-      </div>
-      <div class="field hidden">
-        <%= form.label "Alta/Cuarentena" %>
-        <%= form.check_box :alta_cuarentena, id: :ficha_medica_alta_cuarentena %>
-      </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="actions">
-      <%= form.submit "Guardar Ficha" , :class=>"btn btn-nuevo" %>
-      <%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
+          <%= form.label "Necesita tratamiento" %>
+          <%= form.check_box :tratamiento, id: :ficha_medica_tratamiento %>
+        </div>
+          <div class="field">
+          <%= form.label "Trasladar a Cuarentena" %>
+          <%= form.check_box :internacion, id: :ficha_medica_internacion %>
+        </div>
+        <div class="field">
+          <%= form.label "Inactivo/Muerto" %>
+          <%= form.check_box :activo, id: :ficha_medica_activo %>
+        </div>
+        <div class="field hidden">
+          <%= form.label "Alta/Cuarentena" %>
+          <%= form.check_box :alta_cuarentena, id: :ficha_medica_alta_cuarentena %>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
-    <br>
-  </div>
 
-</div>
-
-
-
-<div class="rows hidden" id="tratamiento_div">
-  <div class="col-md-5">
-    <%= form.fields_for :tareas do |f|  %>
-   <div id="tarea01" class="tarea-item">
-    <div class="field">
-        <%= f.label "Medicamento" %> <a href="javascript:agregar();">Agregar</a>
-        <%= f.text_field :medicamento, id: :tarea_medicamento, :class=>"form-control", :placeholder=>"Rp. Ketofen 20 mg."  %>
-    </div>
-  
-      <div class="field" >
-        <%= f.label "Proxima aplicación" %>
-        <%= f.datetime_select :fecha, id: :tarea_fecha %>
+    <div class="col-md-5">
+      <div class="actions">
+        <%= form.submit "Guardar Ficha" , :class=>"btn btn-nuevo" %>
+        <%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
       </div>
-
-      <div class="field">
-        <%= f.label "Dar de Alta" %>
-        <%= f.check_box :terminado, id: :tarea_terminado %>
-      </div>
-      <hr>
+      <br>  
     </div>
   </div>
- <% end %>
 
-<br>
-
-</div>
-</div>
+    
 
 
+
+
+      <div class="rows hidden" id="tratamiento_div">
+        <div class="col-md-5">
+          <%= form.fields_for :tareas do |f|  %>
+         <div id="tarea01" class="tarea-item">
+          <div class="field">
+              <%= f.label "Medicamento" %> <a href="javascript:agregar();">Agregar</a>
+              <%= f.text_field :medicamento, id: :tarea_medicamento, :class=>"form-control", :placeholder=>"Rp. Ketofen 20 mg."  %>
+          </div>
+        
+            <div class="field" >
+              <%= f.label "Proxima aplicación" %>
+              <%= f.datetime_select :fecha, id: :tarea_fecha %>
+            </div>
+
+            <div class="field">
+              <%= f.label "Dar de Alta" %>
+              <%= f.check_box :terminado, id: :tarea_terminado %>
+            </div>
+            <hr>
+            <br>
+          </div>
+        </div>
+       <% end %>
+      </div>
 
 <% end %>
 

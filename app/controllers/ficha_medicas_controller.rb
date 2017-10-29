@@ -23,9 +23,20 @@ class FichaMedicasController < ApplicationController
     @ficha_medica.tareas.build 
   end
 
-  def agregartareas
-
-  end 
+  def daraltacuarentena
+   
+    @ficha_medica = FichaMedica.find(params[:id])
+    if @ficha_medica.update(:alta_cuarentena => "true")
+      #mostrar mensaje de éxito
+      msg = "El animal fue dado de alta"
+      flash[:notice] =  msg
+    else
+      msg = "No se ha podido dar de alta "
+      flash[:notice] =  msg
+    end
+    # Redireccionar
+    redirect_to(:action => :index)
+  end
 
   # GET /ficha_medicas/1/edit
   def edit
