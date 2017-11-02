@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   resources :especies
   resources :estado_medicos
   
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
   resources :articulos
 
   get 'cuarentena/index'
-  put 'cuarentena/daralta'
+  
 
 
   resources :ficha_medicas  do

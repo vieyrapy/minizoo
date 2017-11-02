@@ -1,0 +1,59 @@
+<%= simple_form_for @event, remote: true do |f| %>
+  <div class="form-inputs">
+    <%= f.input :title %>
+   
+ <div class="col-md-6">
+    <div class="form-group">
+           <%= f.label " Inicio"%>
+            <div class='input-group date' id='event_datepicker'>
+                <input type='text' name="event[start]" id='event_start' class="form-control" style="width: 100%" />
+                 <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#event_datepicker').datetimepicker({
+                
+                 format: 'DD/MM/YYYY'
+            });
+        });
+    </script>
+
+ <div class="col-md-6">
+    <div class="form-group">
+           <%= f.label "Fin"%>
+            <div class='input-group date' id='event_datepicker_end'>
+                <input type='text' name="event[end]" id='event_end' class="form-control" style="width: 100%" />
+                 <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+ 
+   <script type="text/javascript">
+        $(function () {
+            $('#event_datepicker_end').datetimepicker({
+                
+                 format: 'DD/MM/YYYY'
+            });
+        });
+    </script>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to 'Delete', 
+                event, 
+                method: :delete, 
+                class: 'btn btn-danger', 
+                data: { confirm: 'Are you sure?' }, 
+                remote: true unless @event.new_record? %>
+  </div>
+<% end %>

@@ -11,6 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+
+
+
 //= require rails-ujs
 //= require turbolinks
 //= require select2-full
@@ -18,4 +21,9 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require bootstrap-toggle
+//= require fullcalendar
+
+
+
 //= require_tree .
+

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -65,3 +65,9 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
 gem 'whenever', :require => false
 #Botones toggles
 gem 'bootstrap-toggle-rails'
+#Calendario
+gem 'fullcalendar-rails'
+gem 'faker'
+gem 'simple_form'
+
+
