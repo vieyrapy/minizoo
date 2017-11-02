@@ -1,7 +1,14 @@
 <%= simple_form_for @event, remote: true do |f| %>
-  <div class="form-inputs">
-    <%= f.input :title %>
-   
+<div class="row">
+    <div class="col-md-12">
+      <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2"><%= f.label 'Titulo' %></span>
+    <%= f.text_area :title, title: :event_title, :class=>"form-control", :placeholder=>"Vacunación"  %>
+   </div>
+   </div>
+ </div>
+
+<div class="row">
  <div class="col-md-6">
     <div class="form-group">
            <%= f.label " Inicio"%>
@@ -36,6 +43,7 @@
             </div>
         </div>
     </div>
+</div>
 
  
    <script type="text/javascript">
@@ -47,13 +55,28 @@
         });
     </script>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-    <%= link_to 'Delete', 
-                event, 
-                method: :delete, 
-                class: 'btn btn-danger', 
-                data: { confirm: 'Are you sure?' }, 
-                remote: true unless @event.new_record? %>
-  </div>
+<div class="row">
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2"><%= f.label 'Color' %></span>
+         <select class="form-control " data-live-search="true" id="event_color" name="event[color]" style="width: 100%">
+              <option value="black">Black</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="red">Red</option>
+          </select>
+      </div>
+    </div>
+      <div class="col-md-6">
+          <div class="form-actions">
+            <%= f.submit "Guardar", :class=>"btn btn-nuevo"%>
+            <%= link_to 'Destruir', 
+                        event, 
+                        method: :delete, 
+                        class: 'btn btn-default', 
+                        data: { confirm: 'Esta seguro que quiere eliminar?' }, 
+                        remote: true unless @event.new_record? %>
+          </div>
+       </div>
+ </div>
 <% end %>
