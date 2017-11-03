@@ -63,6 +63,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+   zoom: 85%;
 }
 ol, ul {
   list-style: none;
@@ -1859,8 +1860,8 @@ cuerpo-zoo{
     cursor: pointer;
     text-transform: uppercase;
     transition: all .15s linear;
-    font-size: 14px;
-    padding: .5rem 18px;
+    font-size: 12px;
+    padding: 4px 10px;
     line-height: 1.75;
     border-color: #6bd098;
     color: #6bd098;
