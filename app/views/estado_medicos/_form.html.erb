@@ -1,7 +1,7 @@
 <%= form_with(model: estado_medico, local: true) do |form| %>
   <% if estado_medico.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(estado_medico.errors.count, "error") %> prohibited this estado_medico from being saved:</h2>
+  <div class="alert alert-danger" role="alert">
+      Se ha encontrado <%= pluralize(estado_medico.errors.count, "error") %> al intentar crear un nuevo estado medico
 
       <ul>
       <% estado_medico.errors.full_messages.each do |message| %>
@@ -9,14 +9,17 @@
       <% end %>
       </ul>
     </div>
+    
   <% end %>
 
-  <div class="field">
-    <%= form.label :nombre %>
-    <%= form.text_field :nombre, id: :estado_medico_nombre %>
+  <div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2"><%= form.label :nombre %></span>
+    <%= form.text_field :nombre, id: :estado_medico_nombre, :class=>"form-control", :placeholder=>"Grabe" %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Guardar", :class=>"btn btn-nuevo" %>
+    <%= link_to 'Volver', estado_medicos_path, :class=>"btn btn-default" %> 
   </div>
 <% end %>
+ 

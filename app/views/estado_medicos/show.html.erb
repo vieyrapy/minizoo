@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<div class="alert alert-info" role="alert">
+		<%= notice %>
+	</div>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @estado_medico.nombre %>
-</p>
+	  <strong>Nombre:</strong>
+	  <div><h2><%= @estado_medico.nombre %></h2></div>
 
-<%= link_to 'Edit', edit_estado_medico_path(@estado_medico) %> |
-<%= link_to 'Back', estado_medicos_path %>
+	<%= link_to 'Editar', edit_estado_medico_path(@estado_medico), :class=>"btn btn-modificar" %> |
+	<%= link_to 'Volver', estado_medicos_path, :class=>"btn btn-default" %>
+</div>		 
