@@ -1,10 +1,11 @@
 
 <%= form_with(model: ficha_medica, local: true) do |form| %>
   <% if ficha_medica.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(ficha_medica.errors.count, "error") %> prohibited this ficha_medica from being saved:</h2>
-
+      <div class="alert alert-danger" role="alert">
+      <h2>Se ha detectado <%= pluralize(ficha_medica.errors.count, "error") %> al intentar guardar la Ficha Médica. Por favor verifique los siguientes datos:</h2>
+ </div><div class="alert alert-info" role="alert">
       <ul>
+
       <% ficha_medica.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
