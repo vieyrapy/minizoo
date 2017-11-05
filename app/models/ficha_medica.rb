@@ -9,6 +9,8 @@ class FichaMedica < ApplicationRecord
 	validates :enfermedad, :presence => {message: "El Motivo de la consulta no puede estar en blanco" }
 	validates :descripcion, length: { maximum: 1000}
 	validates :archivos, presence: false
+
+	
 	belongs_to :animal
 	belongs_to :estado_medico
 	

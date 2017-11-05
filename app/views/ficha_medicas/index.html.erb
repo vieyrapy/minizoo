@@ -30,7 +30,7 @@
     <% @ficha_medicas.each do |ficha_medica| %>
       <tr>
          
-        <td><%= ficha_medica.created_at %></td>
+        <td><%= l(ficha_medica.created_at, :format => :long) %></td>
         <td><%= ficha_medica.animal.identificador %></td>
         <td><%= ficha_medica.animal.nombre_comun %></td>
         <td><%= ficha_medica.estado_medico.nombre %></td>
