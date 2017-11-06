@@ -2,13 +2,9 @@
   <div class="col-md-3">
 
         <div class="animalh1"><%= @animal.identificador %></div>
-  </div>
-    
-
-  <div class="col-md-6">
-      
-      <p>
-        <strong>Especie:</strong> 
+        
+        <div class="animalh2">Especie:</div> 
+        <p>
         <%= @animal.especie.nombre %>
       </p>
       <p>
@@ -58,6 +54,12 @@
         <%= @animal.estado_conservacion.nombre %>
       </p>
 
+  </div>
+    
+
+  <div class="col-md-6">
+      
+      
       <p>
         <strong>Carecteristicas:</strong>
         <div class="parrafo"><%= @animal.descripcion %></div>
@@ -96,6 +98,7 @@
                     <% end %>   
 
   </div>
+  
 </div>
             
       

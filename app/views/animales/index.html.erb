@@ -17,15 +17,14 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Ident.</th>
-      <th>Especie</th>
-      <th>Familia</th>
-      <th>Nombre científico</th>
-      <th>Nombre común</th>
-      <th>Fecha.Nac.</th>
-      <th>Origen</th>
-      <th>Cite</th>
-      <th>Estado de Conservación</th>
+      <th>IDENT.</th>
+      <th>ESPECIE</th>
+      <th>FAMILIA</th>
+      <th>NOMBRE CIENTÍFICO</th>
+      <th>NOMBRE COMÚN</th>
+      <th>FECHA NAC.</th>
+      <th>ORIGEN</th>
+ 
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -40,8 +39,7 @@
         <td><%= animal.nombre_comun %></td>
         <td><%= l(animal.edad, :format => :edadanimalshow)%></td>
         <td><%= animal.origen %></td>
-        <td><%= animal.cite.nombre %></td>
-        <td><%= animal.estado_conservacion.nombre %></td>
+
         <td><%= link_to 'Mostrar', animal, :class=>"btn btn-mostrar" %></td>
         <td><%= link_to 'Modificar', edit_animal_path(animal), :class=>"btn btn-modificar" %></td>
         <td><%= link_to 'Destruir', animal, method: :delete, data: { confirm: 'Esta seguro de querer eliminar' }, :class=>"btn btn-destruir"  %></td>
