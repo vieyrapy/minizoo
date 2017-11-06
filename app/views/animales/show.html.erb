@@ -1,12 +1,12 @@
 <div class="row">
-  <div class="col-md-3">Menu</div>
-   
+  <div class="col-md-3">
+
+        <div class="animalh1"><%= @animal.identificador %></div>
+  </div>
+    
 
   <div class="col-md-6">
-      <p>
-        <strong>Identificador:</strong>
-        <%= @animal.identificador %>
-      </p>
+      
       <p>
         <strong>Especie:</strong> 
         <%= @animal.especie.nombre %>
@@ -60,13 +60,13 @@
 
       <p>
         <strong>Carecteristicas:</strong>
-        <%= @animal.descripcion %>
+        <div class="parrafo"><%= @animal.descripcion %></div>
       </p>
 
       <%= link_to 'Modificar', edit_animal_path(@animal), :class=>"btn btn-modificar" %> |
       <%= link_to 'Volver', animales_path, :class=>"btn btn-atras" %>
   </div>
-
+<br>
 <div class="col-md-3" id="historial">
 
         <div class="page-header">

@@ -1,5 +1,5 @@
 class Animal < ApplicationRecord
-	validates :nombre_cientifico, :nombre_comun, :origen, :familia, presence: true, format: { with: /\A[a-zA-Z]+\z/, message: "Solo se permite textos" }, length: { minimum: 4, maximum: 100}
+	validates :nombre_cientifico, :nombre_comun, :origen, :familia, presence: true,  length: { minimum: 4, maximum: 100}
 	validates :identificador,presence: true , length: { minimum: 4, maximum: 100}
 	validates :descripcion, length: { maximum: 1000}
 	validates :edad, presence: true 
