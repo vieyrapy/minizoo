@@ -29,7 +29,7 @@
     <div class="col-md-3">
          <div class="input-group">
             <span class="input-group-addon" id="sizing-addon2"><%= form.label "Familia" %></span>
-            <%= form.text_field :familia, id: :animal_familia, :class=>"form-control", :placeholder=>"Emberizidae"  %>
+            <%= form.text_field :familia, id: :animal_familia, :class=>"form-control", :placeholder=>"Emberizidae", pattern=>"[a-zA-ZñÑáéíóúÁÉÍÓÚ`âêîô^û\s]+" ,  :title=>'No se aceptan números'  %>
           </div>
       </div>
 </div>
@@ -64,7 +64,14 @@
     </div>
 
 
+<!-- <div class="col-md-2">
+  <div class="form-group">
+           <%= form.label "Fecha de Nacimiento"%>
+<div class='input-group date' id='animal_edad_datepicker'>
+<%= form.date_select :edad , {} , {:class => 'form-control'} %>
 
+            </div>
+</div></div> -->
     <div class="col-md-2">
         <div class="form-group">
            <%= form.label "Fecha de Nacimiento"%>
