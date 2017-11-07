@@ -29,7 +29,7 @@
     <div class="col-md-3">
          <div class="input-group">
             <span class="input-group-addon" id="sizing-addon2"><%= form.label "Familia" %></span>
-            <%= form.text_field :familia, id: :animal_familia, :class=>"form-control", :placeholder=>"Emberizidae", pattern=>"[a-zA-ZñÑáéíóúÁÉÍÓÚ`âêîô^û\s]+" ,  :title=>'No se aceptan números'  %>
+            <%= form.text_field :familia, id: :animal_familia, :class=>"form-control", :placeholder=>"Emberizidae", :pattern=>"[a-zA-ZñÑáéíóúÁÉÍÓÚ`âêîô^û\s]+" ,  :title=>'No se aceptan números ni especios en blancos'  %>
           </div>
       </div>
 </div>
