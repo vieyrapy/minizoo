@@ -15,7 +15,7 @@
     <div class="col-md-4">
        <div class="input-group">
           <span class="input-group-addon" id="sizing-addon2"><%= form.label "Identificador" %></span>
-          <%= form.text_field :identificador, id: :animal_identificador, :class=>"form-control", :placeholder=>"F10010"  %>
+          <%= form.text_field :identificador, id: :animal_identificador, :class=>"form-control", :placeholder=>"F10010" , :pattern=>"^[A-Z0-9]*$",  :title=>'No se aceptan: minúsculas, letras especiales y espacios en blanco'  %>
         </div>
     </div>
 
@@ -40,14 +40,14 @@
 <div class="col-md-4">
      <div class="input-group">
         <span class="input-group-addon" id="sizing-addon2"><%= form.label :nombre_comun %></span>
-        <%= form.text_field :nombre_comun, id: :animal_nombre_comun, :class=>"form-control", :placeholder=>"Contorrita" %>
+        <%= form.text_field :nombre_comun, id: :animal_nombre_comun, :class=>"form-control", :placeholder=>"Contorrita", :pattern=>"[a-zA-ZñÑáéíóúÁÉÍÓÚ`âêîô^û\s]+" ,  :title=>'No se aceptan números' %>
       </div>
     </div>
 
   <div class="col-md-5 ">
      <div class="input-group">
         <span class="input-group-addon" id="sizing-addon2"><%= form.label :nombre_cientifico %></span>
-        <%= form.text_field :nombre_cientifico, id: :animal_nombre_cientifico, :class=>"form-control", :placeholder=>"Mylopssitta monchat", :style=>"width: 100%"  %>
+        <%= form.text_field :nombre_cientifico, id: :animal_nombre_cientifico, :class=>"form-control", :placeholder=>"Mylopssitta monchat", :style=>"width: 100%", :pattern=>"[a-zA-ZñÑáéíóúÁÉÍÓÚ`âêîô^û\s]+",  :title=>'No se aceptan números'  %>
       </div>
   </div>
 
@@ -69,7 +69,7 @@
         <div class="form-group">
            <%= form.label "Fecha de Nacimiento"%>
             <div class='input-group date' id='animal_edad_datepicker'>
-                <input type='text' name="animal[edad]" id='animal_edad'class="form-control" style="width: 100%" />
+                <input name="animal[edad]" id='animal_edad'class="form-control" style="width: 100%"  required='required', title='Se necesita una fecha'/>
                  <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar">
                     </span>
