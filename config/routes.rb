@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :especies
   resources :estado_medicos
   
-  resources :tareas do
+  resources :tareas do 
     member do
        put 'daralta'
        get 'index'
@@ -11,8 +11,14 @@ Rails.application.routes.draw do
   end
 
   #resources :ficha_medicas
-  resources :animales
-  get 'animales/historial'
+  resources :animales do
+    member do
+      get "ficha"
+      get 'historial'
+    end
+  end
+
+  #get 'animales/historial'
   resources :cites
   resources :estado_conservaciones
   resources :alimentos

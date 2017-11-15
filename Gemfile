@@ -69,5 +69,6 @@ gem 'bootstrap-toggle-rails'
 gem 'fullcalendar-rails'
 gem 'faker'
 gem 'simple_form'
-
-
+#Exportar pdf
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary-edge'

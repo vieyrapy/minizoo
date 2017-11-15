@@ -2,7 +2,7 @@ class AnimalesController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
 
-  # GET /animales
+  # GET /animales  
   # GET /animales.json
   def index
     if params[:Buscar]
@@ -12,10 +12,20 @@ class AnimalesController < ApplicationController
     end  
   end
 
+  def ficha
+    @animal = Animal.find(params[:id])
+    if params[:id]
+        respond_to do |format|
+        format.html
+        format.pdf {render template: 'animales/ficha', pdf:'ficha'}
+      end
+    else
+    end 
+  end
+
   # GET /animales/1
   # GET /animales/1.json
   def show
- 
     #Calcular edad de los animales 
     if params[:id]
     @edad = (((@animal.edad) - (DateTime.now))).to_i / (-31629805)

@@ -1,6 +1,5 @@
 <div class="row">
-
-
+  <%= wicked_pdf_stylesheet_link_tag 'pdf'%> 
   <div class="col-md-3">
 
         <div class="animalh1"><%= @animal.identificador %></div>
@@ -66,11 +65,11 @@
       <p>
         <strong>Carecteristicas:</strong>
         <div class="parrafo"><%= @animal.descripcion %></div>
-      </p>    
+      </p>
+
       <%= link_to 'Modificar', edit_animal_path(@animal), :class=>"btn btn-modificar" %> 
-      <%= link_to 'Destruir', @animal, method: :delete, data: { confirm: 'Esta seguro de querer eliminar' }, :class=>"btn btn-destruir"  %>
-      <%= link_to 'Imprimir', ficha_animal_path(@animal, format: :pdf),  method: :get, :class=>"btn btn-modificar" %> 
       <%= link_to 'Volver', animales_path, :class=>"btn btn-atras" %>
+      <%= link_to 'Destruir', @animal, method: :delete, data: { confirm: 'Esta seguro de querer eliminar' }, :class=>"btn btn-destruir"  %>
   </div>
 
 
