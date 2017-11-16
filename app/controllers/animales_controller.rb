@@ -13,7 +13,9 @@ class AnimalesController < ApplicationController
   end
 
   def ficha
+    #Para implementar el boton en el show primero traemos la funcion set_animal 
     @animal = Animal.find(params[:id])
+    # Condicionamos el boton si hace clic en el trae pdf
     if params[:id]
         respond_to do |format|
         format.html
@@ -27,10 +29,11 @@ class AnimalesController < ApplicationController
   # GET /animales/1.json
   def show
     #Calcular edad de los animales 
-    if params[:id]
+    # Al ser en show no necesitamos condicionar con un if params id ya que por defecto rails hace esa comparacion 
+    # en el show para mostrar ese ID en especifico 
+    
     @edad = (((@animal.edad) - (DateTime.now))).to_i / (-31629805)
-    else 
-    end
+   
     
   end
 
