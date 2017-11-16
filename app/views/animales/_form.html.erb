@@ -76,7 +76,8 @@
         <div class="form-group">
            <%= form.label "Fecha de Nacimiento"%>
             <div class='input-group date' id='animal_edad_datepicker'>
-                <input name="animal[edad]" id='animal_edad'class="form-control" style="width: 100%"  required='required', title='Se necesita una fecha'/>
+                <input name="animal[edad]" id='animal_edad'class="form-control" style="width: 100%"  required='required', title='Se necesita una fecha' value='<%= animal.edad %>'/>
+
                  <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar">
                     </span>
@@ -85,7 +86,20 @@
         </div>
     </div>
     <script type="text/javascript">
+
         $(function () {
+          // Esto podemos utilizar si deseamos traer cualquier atributo de la tabla 
+          // y repintarlo donde quisieramos
+          
+            // var test=JSON.stringify('<%=@animal.edad %>');
+            // console.log(test);
+
+
+            date = moment($('#animal_edad').val().substring(0,10)).format('DD/MM/YYYY');
+            console.log(date);
+
+            $('#animal_edad').val(date);
+
             $('#animal_edad_datepicker').datetimepicker({
                 
                  format: 'DD/MM/YYYY'
