@@ -4,11 +4,10 @@ class FichaMedicasController < ApplicationController
   # GET /ficha_medicas
   # GET /ficha_medicas.json
   def index
-    @ficha_medicas = FichaMedica.all
+    @ficha_medicas = FichaMedica.paginate(:page => params[:page], :per_page => 2)
+
     if params[:Buscar]
-      @ficha_medicas = FichaMedica.where(["nombre_comun LIKE ?","%#{params[:Buscar]}%"])
-    else
-      @ficha_medicas = FichaMedica.paginate(:page => params[:page], :per_page => 5)
+      @ficha_medicas = FichaMedica.where(["nombre_comun LIKE ?","%#{params[:Buscar]}%"]).paginate(:page => params[:page], :per_page => 2)
     end
   end
 

@@ -5,10 +5,11 @@ class AnimalesController < ApplicationController
   # GET /animales  
   # GET /animales.json
   def index
-    if params[:Buscar]
-      @animales = Animal.where(["nombre_comun LIKE ?","%#{params[:Buscar]}%"])
-    else
-      @animales = Animal.paginate(:page => params[:page], :per_page => 5)
+    #Mostramos la lista de animales con index de paginate 
+    @animales = Animal.paginate(:page => params[:page], :per_page => 4)
+    # Si utilizamos la busqueda se filtra por nombre comun y se agrega paginate al final
+    if params[:Buscar]  
+      @animales = Animal.where(["nombre_comun LIKE ?","%#{params[:Buscar]}%"]).paginate(:page => params[:page], :per_page => 2)
     end  
   end
 
