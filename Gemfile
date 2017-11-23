@@ -38,6 +38,7 @@ gem 'carrierwave', '~> 1.0'
 #End -----------------------
 #Gema para poner paginacion en las publicaciones https://github.com/mislav/will_paginate 
 gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
 #---------------------------
 
 group :development, :test do

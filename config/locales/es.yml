@@ -220,3 +220,8 @@ devise:
   my_sessions:
    usuario:
     signed_id: "Hola"
+
+  will_paginate:
+    previous_label: "&#8592; Menos"
+    next_label: "Mas &#8594;"
+    page_gap: "&hellip;"
