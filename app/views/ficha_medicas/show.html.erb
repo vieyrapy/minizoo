@@ -36,21 +36,35 @@
 
 <p>
   <strong>Fotos:</strong>
-   <%= image_tag @ficha_medica.archivos.url %>
+
+   <% if @ficha_medica.archivos.url.nil? %>
+    No hay fotos 
+    <% else %>
+      <%= image_tag @ficha_medica.archivos.url %>
+    <% end %>
 </p>
 <p>
   <strong>Audios:</strong>
-  <audio controls src=" <%= @ficha_medica.audio.url %>"></audio>
+
+  <% if @ficha_medica.audio.url.nil? %>
+    No hay Audios 
+    <% else %>
+      <audio controls src=" <%= @ficha_medica.audio.url %>"></audio>
+    <% end %>
+</p>
+<p>
+<strong>Video:</strong>
+<% if @ficha_medica.video.url.nil? %>
+    No hay Videos 
+    <% else %>
+      <video width="320" height="240" controls>
+        <source src="<%= @ficha_medica.video.url %>" type="video/mp4">
+        <source src="<%= @ficha_medica.video.url %>" type="video/ogg">
+      </video>
+    <% end %>
 </p>
 
-<video width="320" height="240" controls>
-  <strong>Video:</strong>
-  <source src="<%= @ficha_medica.video.url %>" type="video/mp4">
-  <source src="<%= @ficha_medica.video.url %>" type="video/ogg">
-</video>
-
-
-
+<br>
 <%= link_to 'Modificar', edit_ficha_medica_path(@ficha_medica), :class=>"btn btn-modificar" %> |
 <%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
 </div>
