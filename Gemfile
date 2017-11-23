@@ -72,3 +72,14 @@ gem 'simple_form'
 #Exportar pdf
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary-edge'
+# Login
+# .--------------------------------------
+# Intslamos la gema de Device para loguear a los usuarios
+# Resolver problemas 'bcrypt' para device https://github.com/codahale/bcrypt-ruby/issues/149
+# para versiones inferior 5
+gem 'devise'
+#---------------------------------------------
+#Agregar gemas para form add and delet en forma dinamica 
+gem 'nested_form_fields'
+#.-----------------------
+

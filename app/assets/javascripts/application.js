@@ -22,7 +22,7 @@
 //= require bootstrap-datetimepicker
 //= require bootstrap-toggle
 //= require fullcalendar
-
+//= require nested_form_fields
 
 
 //= require_tree .

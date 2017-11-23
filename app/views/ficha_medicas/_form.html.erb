@@ -136,9 +136,12 @@ $(document).ready(function() {
         <br>
         <br>
         <br>
+
     </div>
 
     <div class="col-md-5">
+
+
       <div class="actions">
         <%= form.submit "Guardar Ficha" , :class=>"btn btn-nuevo" %>
         <%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
@@ -149,64 +152,52 @@ $(document).ready(function() {
 
     
 
+        <div class ="row hidden" id="tratamiento_medico">
+          <div class="col-md-5">
+            <%= form.nested_fields_for :tareas do |ff|  %>
+                
+                  <div class="field">
+                      <%= ff.label "Medicamento" %> </a>
+                      <%= ff.text_field :medicamento, id: :tarea_medicamento, :class=>"form-control", :placeholder=>"Rp. Ketofen 20 mg."  %>
+                  </div>
+                
+                    <div class="field" >
+                      <%= ff.label "Proxima aplicación" %>
+                      <%= ff.datetime_select :fecha, id: :tarea_fecha %>
+                    </div>
 
-
-
-      <div class="rows hidden" id="tratamiento_div">
-        <div class="col-md-5">
-          <%= form.fields_for :tareas do |f|  %>
-         <div id="tarea01" class="tarea-item">
-          <div class="field">
-              <%= f.label "Medicamento" %> <a href="javascript:agregar();">Agregar</a>
-              <%= f.text_field :medicamento, id: :tarea_medicamento, :class=>"form-control", :placeholder=>"Rp. Ketofen 20 mg."  %>
-          </div>
-        
-            <div class="field" >
-              <%= f.label "Proxima aplicación" %>
-              <%= f.datetime_select :fecha, id: :tarea_fecha %>
-            </div>
-
-            <div class="field">
-              <%= f.label "Dar de Alta" %>
-              <%= f.check_box :terminado, id: :tarea_terminado %>
-            </div>
-            <hr>
-            <br>
-          </div>
-        </div>
-       <% end %>
-      </div>
+                    <div class="field">
+                      <%= ff.label "Dar de Alta" %>
+                      <%= ff.check_box :terminado, id: :tarea_terminado %>
+                    </div>
+              <%= ff.remove_nested_fields_link 'Eliminarme' %>
+              <% end %>
+              <%= form.add_nested_fields_link :tareas, 'Agregar'%>
+               
+          
+       
+      
 
 <% end %>
-
+</div>
+ </div>
 
 <script type="text/javascript">
   
   $('#ficha_medica_tratamiento').on('change', function() { 
     
       if($('#ficha_medica_tratamiento').is(':checked')){
-        
-        $('#tratamiento_div').removeClass('hidden');
+
+          $('#tratamiento_medico').removeClass('hidden')
       }else{
-        $('#tratamiento_div').addClass('hidden'); 
+         $('#tratamiento_medico').addClass('hidden');
+         ;
       }
   });
 
 
 </script>
 
-<script type="text/javascript">
-
-function agregar() {
-
-  var mastarea = $( "#tarea01" ).clone();
-  mastarea.find( "input" ).val( '' );
-  mastarea.attr( 'id', "tarea0" + parseInt( $( ".tarea-item" ).length + 1 ) );
-  mastarea.appendTo( "#tratamiento_div .col-md-5" );
-
-}
-
-</script>
 
 
     <script type="text/javascript">
