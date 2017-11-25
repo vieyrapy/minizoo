@@ -64,7 +64,27 @@
     <% end %>
 </p>
 
+<p>
+<strong>Atención!:</strong>
+
+<%= @ficha_medica.tareas.each do |t|%>
+
+    <% if  (@ficha_medica.id == t.ficha_medica_id) && (t.terminado  == true) %>
+        Su medicación <%= t.medicamento %> fue dada por completa
+        <% elsif @ficha_medica.tratamiento == false %>
+        No se registraron tratamiento 
+        <% else %>
+          No se ha completado el tratamiento.<br> 
+          Verificar tratamiento algunos no fueron realizadas y/o no fueron dadas de alta en el sistema. <%= t.medicamento %> 
+          <%= link_to "Verificar", tareas_path(@tarea, terminado: false)%>
+    <% end %>
+<% end %>
+
+ 
+</p>
+
 <br>
+
 <%= link_to 'Modificar', edit_ficha_medica_path(@ficha_medica), :class=>"btn btn-modificar" %> |
 <%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
 </div>
