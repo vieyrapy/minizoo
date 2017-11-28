@@ -390,6 +390,14 @@ NAVBAR
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   border-radius: 0px;
+  
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
 .main-menu .navbar-nav > li > a {
   color: #666;
