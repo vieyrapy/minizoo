@@ -9,12 +9,15 @@
 # Configurar una carga por defecto para nuestro usuario
 #Usuario.create(email: "adminzoo@minizoo.com", password: "minizoo2018", password_confirmation: "minizoo2018")
 
-3650.times do 
-  event = Event.new
-  event.title = Faker::Book.title
-  start = Faker::Time.between(4.years.ago, Date.today + 4.years, :morning)
-  event.start = start
-  event.end = Faker::Time.between(start, start + 2.days, :evening)
-  event.color = ['black','green','red', nil].sample
-  event.save
-end
+# 3650.times do 
+#   event = Event.new
+#   event.title = Faker::Book.title
+#   start = Faker::Time.between(4.years.ago, Date.today + 4.years, :morning)
+#   event.start = start
+#   event.end = Faker::Time.between(start, start + 2.days, :evening)
+#   event.color = ['black','green','red', nil].sample
+#   event.save
+# end
+
+user = CreateAdminService.new.call
+puts 'CREATED ADMIN USER: ' << user.email
