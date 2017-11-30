@@ -1,4 +1,6 @@
 class AlimentosController < ApplicationController
+  before_action :authenticate_user!
+  before_action :admin_only
   before_action :set_alimento, only: [:show, :edit, :update, :destroy]
 
   # GET /alimentos
@@ -60,6 +62,13 @@ class AlimentosController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+ def admin_only
+    unless current_user.admin?
+      redirect_to ficha_medicas_path, :alert => "No tienes acceso a esta área"
+    end
+  end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
