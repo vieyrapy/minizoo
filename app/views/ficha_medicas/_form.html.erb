@@ -126,6 +126,10 @@ $(document).ready(function() {
         <%= form.label "Inactivo/Muerto" %>
         <%= form.check_box :activo, id: :ficha_medica_activo %>
       </div>
+      <div class="field hidden">
+        <%= form.label "Alta/Cuarentena" %>
+        <%= form.check_box :alta_cuarentena, id: :ficha_medica_alta_cuarentena %>
+      </div>
   </div>
 
   <div class="col-md-4">

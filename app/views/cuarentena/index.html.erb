@@ -26,6 +26,7 @@
         <td><%= ficha_medica.enfermedad %></td>
         <td><%= ficha_medica.dolencia %></td>
         <td><%= link_to 'Mostrar', ficha_medica, :class=>"btn btn-mostrar"  %></td>
+        <td> <%= link_to 'Dar de Alta', cuarentena_daralta_path(ficha_medica), method: "put", class:"btn btn-primary" %> </td>
      <!--    <td><%= link_to 'Modificar', edit_ficha_medica_path(ficha_medica), :class=>"btn btn-modificar"  %></td>
         <td><%= link_to 'Destruir', ficha_medica, method: :delete, data: { confirm: 'Estas seguro de querer eliminar?'}, :class=>"btn btn-destruir" %></td> -->
       </tr>

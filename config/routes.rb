@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :especies
   resources :estado_medicos
+  
   resources :tareas do
     member do
        put 'daralta'
@@ -15,7 +16,11 @@ Rails.application.routes.draw do
   resources :estado_conservaciones
   resources :alimentos
   resources :articulos
+
   get 'cuarentena/index'
+  put 'cuarentena/daralta'
+
+
   resources :ficha_medicas  do
     member do
       put 'agregartareas'
