@@ -15,9 +15,13 @@ class AnimalesController < ApplicationController
   # GET /animales/1
   # GET /animales/1.json
   def show
-    #@ficha = @animales.ficha_medicas.create(params[:ficha])
-    #@edad = Animal.find(params[:id])
-    #@edad = (:fecha - DateTime.now).to_i
+ 
+    #Calcular edad de los animales 
+    if params[:id]
+    @edad = (((@animal.edad) - (DateTime.now))).to_i / (-31629805)
+    else 
+    end
+    
   end
 
   # GET /animales/new

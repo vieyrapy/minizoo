@@ -6,7 +6,7 @@
         <%= @animal.identificador %>
       </p>
       <p>
-        <strong>Especie:</strong>
+        <strong>Especie:</strong> 
         <%= @animal.especie.nombre %>
       </p>
       <p>
@@ -30,13 +30,12 @@
 
       <p>
         <strong>Fecha de Nac./Ingreso:</strong>
-        <%= l(@animal.edad, :format => :timehistorial)%> 
+       <%= l(@animal.edad, :format => :timehistorial)%> 
 
       </p>
       <p>
         <strong>Edad:</strong>
-        
-       <script>document.write(anosanimal(<%= l(@animal.edad, :format => :edadanimal)%> ))</script> años
+        <%= @edad %>
       </p>
       <p>
         <strong>Distribución:</strong>
@@ -67,30 +66,42 @@
   </div>
 
   <div class="col-md-3" id="historial">
-    <div class="list-group">
-      <a href="">Historial Médico  
-        <span id="totalspan", class="btn btn-primary badge" style="font-size:14px">
-       </span></a>
+
+    <div class="page-header">
+        <h5 id="timeline">Historial Medico
+        <span id="totalspan", class="btn btn-primary badge" style="font-size:14px"></h5>
     </div>
     
     <% if @animal.ficha_medicas.any? %>
-      <ul class="list-group">
+      <ul class="timeline">
         <% @animal.ficha_medicas.each do |ficha| %> 
-        <li class="list-group-item" ><%=  l(ficha.created_at, :format => :timehistorial)%> - <%= link_to ficha, ficha %></li> 
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-record"></i></div>
+          <div class="timeline-panel">
+          
+              <div class="timeline-heading">
+                 <%=  l(ficha.created_at, :format => :timehistorial)%> 
+              </div>
+
+              <div class="timeline-body">
+                <%= ficha.descripcion%> 
+              </div>
+
+              <%= link_to ficha, ficha %>
+           </div> 
+          </li> 
     
-    <% end %>
-      </ul>
-    <% else %>
-         <p>No hay ficha</p>
-         
-    <% end %>
+          <% end %>
+            </ul>
+          <% else %>
+               <p>No hay ficha</p>
 
-  </div>
-
+          <% end %>
 </div>
 
 <script type="text/javascript">
+
   var totalhistorial = $("#historial li").size();
-    $("#totalspan").text(totalhistorial);
+  $("#totalspan").text(totalhistorial);
 </script>
 
