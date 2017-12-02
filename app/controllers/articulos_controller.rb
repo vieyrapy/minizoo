@@ -1,4 +1,7 @@
 class ArticulosController < ApplicationController
+  before_action :authenticate_user!
+  before_action :admin_only
+  
   before_action :set_articulo, only: [:show, :edit, :update, :destroy]
 
   # GET /articulos
@@ -22,7 +25,11 @@ class ArticulosController < ApplicationController
   # GET /articulos/1/edit
   def edit
   end
-
+def admin_only
+    unless current_user.admin?
+      redirect_to ficha_medicas_path, :alert => "No tienes acceso a esta área"
+    end
+  end
   # POST /articulos
   # POST /articulos.json
   def create

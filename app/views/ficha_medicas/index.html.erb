@@ -27,7 +27,7 @@
   </thead>
 
   <tbody>
-    <% @ficha_medicas.each do |ficha_medica| %>
+    <% @ficha_medicas.each do |ficha_medica| %> 
       <tr>
          
         <td><%= l(ficha_medica.created_at, :format => :long) %></td>
@@ -38,7 +38,9 @@
         <td><%= ficha_medica.dolencia %></td>
         <td><%= link_to 'Mostrar', ficha_medica, :class=>"btn btn-mostrar"  %></td>
         <td><%= link_to 'Modificar', edit_ficha_medica_path(ficha_medica), :class=>"btn btn-modificar"  %></td>
-        <td><%= link_to 'Destruir', ficha_medica, method: :delete, data: { confirm: 'Estas seguro de querer eliminar?'}, :class=>"btn btn-destruir" %></td>
+        <%if current_user.admin?%> 
+           <td><%= link_to 'Destruir', ficha_medica, method: :delete, data: { confirm: 'Estas seguro de querer eliminar?'}, :class=>"btn btn-destruir" %></td>
+        <%end%> 
       </tr>
     <% end %>
   </tbody>

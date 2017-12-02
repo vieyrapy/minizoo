@@ -1,6 +1,5 @@
 class TareasController < ApplicationController
   before_action :authenticate_user!
-  before_action :admin_only, :except => :index
   before_action :set_tarea, only: [:show, :edit, :update, :destroy]
 
   # GET /tareas

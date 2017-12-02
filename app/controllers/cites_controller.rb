@@ -1,4 +1,7 @@
 class CitesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :admin_only
+
   before_action :set_cite, only: [:show, :edit, :update, :destroy]
 
   # GET /cites
@@ -20,7 +23,11 @@ class CitesController < ApplicationController
   # GET /cites/1/edit
   def edit
   end
-
+def admin_only
+    unless current_user.admin?
+      redirect_to ficha_medicas_path, :alert => "No tienes acceso a esta área"
+    end
+  end
   # POST /cites
   # POST /cites.json
   def create

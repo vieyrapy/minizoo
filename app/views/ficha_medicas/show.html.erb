@@ -102,6 +102,10 @@
 
 <div class="row">
   <div class="col-md-12">
+    <p>
+  <strong>Última modificación:</strong>
+    <div class="parrafo"><%= l(@ficha_medica.updated_at, :format => :long)  %></div>
+  </p>
       <strong>Atención!:</strong>
       <% @ficha_medica.tareas.each do |t|%>
       <ul>

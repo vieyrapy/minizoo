@@ -1,4 +1,6 @@
 class AnimalesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :admin_only, only:  :destroy
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
 
@@ -9,7 +11,7 @@ class AnimalesController < ApplicationController
     @animales = Animal.paginate(:page => params[:page], :per_page => 4)
     # Si utilizamos la busqueda se filtra por nombre comun y se agrega paginate al final
     if params[:Buscar]  
-      @animales = Animal.where(["nombre_comun LIKE ?","%#{params[:Buscar]}%"]).paginate(:page => params[:page], :per_page => 2)
+      @animales = Animal.where(["nombre_comun LIKE ?","nombre_cientifico LIKE ?","%#{params[:Buscar]}%"]).paginate(:page => params[:page], :per_page => 2)
     end  
   end
 
@@ -76,6 +78,14 @@ class AnimalesController < ApplicationController
       end
     end
   end
+
+  # Denegar accesos a usuraios que no sean admin
+   def admin_only
+    unless current_user.admin?
+      redirect_to ficha_medicas_path, :alert => "No tienes acceso a esta área"
+    end
+  end
+  # fin denegar acceso
 
   # DELETE /animales/1
   # DELETE /animales/1.json

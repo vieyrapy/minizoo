@@ -1,4 +1,7 @@
 class EspeciesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :admin_only
+
   before_action :set_especie, only: [:show, :edit, :update, :destroy]
 
   # GET /especies
@@ -20,7 +23,7 @@ class EspeciesController < ApplicationController
   # GET /especies/1/edit
   def edit
   end
-
+  
   # POST /especies
   # POST /especies.json
   def create
@@ -36,7 +39,11 @@ class EspeciesController < ApplicationController
       end
     end
   end
-
+def admin_only
+    unless current_user.admin?
+      redirect_to ficha_medicas_path, :alert => "No tienes acceso a esta área"
+    end
+  end
   # PATCH/PUT /especies/1
   # PATCH/PUT /especies/1.json
   def update
