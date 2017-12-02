@@ -11,7 +11,7 @@ class AnimalesController < ApplicationController
     @animales = Animal.paginate(:page => params[:page], :per_page => 4)
     # Si utilizamos la busqueda se filtra por nombre comun y se agrega paginate al final
     if params[:Buscar]  
-      @animales = Animal.where(["nombre_comun LIKE ?","nombre_cientifico LIKE ?","%#{params[:Buscar]}%"]).paginate(:page => params[:page], :per_page => 2)
+      @animales = Animal.where(["descripcion || nombre_comun || nombre_cientifico || origen || identificador || familia LIKE ?","%#{params[:Buscar]}%"]).paginate(:page => params[:page], :per_page => 2)
     end  
   end
 

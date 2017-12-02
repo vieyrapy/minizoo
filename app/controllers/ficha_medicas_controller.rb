@@ -7,7 +7,8 @@ class FichaMedicasController < ApplicationController
     @ficha_medicas = FichaMedica.paginate(:page => params[:page], :per_page => 2)
 
     if params[:Buscar]
-      @ficha_medicas = FichaMedica.where(["nombre_comun LIKE ?","%#{params[:Buscar]}%"]).paginate(:page => params[:page], :per_page => 2)
+      @ficha_medicas = FichaMedica.where(["enfermedad || dolencia || descripcion ||
+veterinario || descripcion  LIKE ?","%#{params[:Buscar]}%"]).paginate(:page => params[:page], :per_page => 2)
     end
   end
 

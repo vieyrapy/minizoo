@@ -1,6 +1,6 @@
     <div class="navbar-form ">
            <div class="form-group">
-                <%= form_tag animales_path, :method => 'get' do %>
+                <%= form_tag ficha_medicas_path, :method => 'get' do %>
                         <%= text_field_tag :Buscar, params[:Buscar], :class=>"form-search", placeholder: "Nombre común", :required=>"required"  %>
                     <%= submit_tag "Buscar" , :class=>"btn btn-default"%>
                 <% end %>
