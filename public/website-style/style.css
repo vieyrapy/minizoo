@@ -256,7 +256,7 @@ header .search-box-area .search-form a {
   color: #ffffff;
 }
 .slider-area .slide-one {
-  background: url(images/slider/1.jpg) no-repeat;
+  background: url(/images/slider/1.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 300px 0;
@@ -284,7 +284,7 @@ header .search-box-area .search-form a {
 }
 .slider-area .slide-one a {
   margin-top: 20px;
-  background: url(images/slider/slider-btn.png) no-repeat;
+  background: url(/images/slider/slider-btn.png) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 15px 20px;
@@ -293,7 +293,7 @@ header .search-box-area .search-form a {
   display: inline-block;
 }
 .slider-area .slide-two {
-  background: url(images/slider/2.jpg) no-repeat;
+  background: url(/images/slider/2.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 300px 0;
@@ -321,7 +321,7 @@ header .search-box-area .search-form a {
 }
 .slider-area .slide-two a {
   margin-top: 20px;
-  background: url(images/slider/slider-btn.png) no-repeat;
+  background: url(/images/slider/slider-btn.png) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 15px 20px;
@@ -360,7 +360,7 @@ header .search-box-area .search-form a {
 }
 .slider-area .slide-tree a {
   margin-top: 20px;
-  background: url(images/slider/slider-btn.png) no-repeat;
+  background: url(/images/slider/slider-btn.png) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 15px 20px;
@@ -370,7 +370,7 @@ header .search-box-area .search-form a {
 }
 
 .slider-area .slide-for {
-  background: url(images/slider/5.jpg) no-repeat;
+  background: url(/images/slider/5.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 300px 0;
@@ -398,7 +398,7 @@ header .search-box-area .search-form a {
 }
 .slider-area .slide-for a {
   margin-top: 20px;
-  background: url(images/slider/slider-btn.png) no-repeat;
+  background: url(/images/slider/slider-btn.png) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 15px 20px;
@@ -443,7 +443,7 @@ header .search-box-area .search-form a {
   bottom: 15px;
   margin: auto;
   text-align: center;
-  background: url(images/services/overley.jpg) no-repeat;
+  background: url(/images/services/overley.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   content: "";
