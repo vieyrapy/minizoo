@@ -19,8 +19,11 @@
 #   event.save
 # end
 
-user = CreateAdminService.new.call
-puts '1-Administrador creado: ' << user.email
+# user = CreateAdminService.new.call
+# puts '1-Administrador creado: ' << user.email
+
+User.create(email:'admin@minizoo.com', name:'Victoriano', role: 2, password:'123admin')
+puts '1-Administrador creado: '
 
 Especie.create([{ nombre: 'Aves' }, 
 				{ nombre: 'Mamiferos' },
