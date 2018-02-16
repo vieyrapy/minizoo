@@ -2,39 +2,40 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Minizoo</title>
-    <meta charset="UTF-8"> <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"> 
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  
-
   </head> 
 
   <body>
 
       <%= render 'layouts/menu' %>
-<br><br><br><br><br>
-<div class="container">
-  
-    <!-- Capsula para las notificaciones de los AVM General -->
-    <% if flash[:notice] -%>
-      <div class = "alert alert-success"><%= flash[:notice] %></div>
-    <% end %>
+      <br><br><br><br><br>
 
-    <% if flash[:alert] -%>
-      <div class = "alert alert-danger"><%= flash[:alert] %></div>
-    <% end %>
+<div class="container">
+    <!-- Capsula para las notificaciones de los AVM General -->
+        <% if flash[:notice] -%>
+          <div class = "alert alert-success"><%= flash[:notice] %></div>
+        <% end %>
+        <% if flash[:alert] -%>
+          <div class = "alert alert-danger"><%= flash[:alert] %></div>
+        <% end %>
+    <!-- Fin Capsula para las notificaciones de los AVM General -->
 
     <!-- Contenido -->
       <%= yield %>
-
+    <!-- Fin Contenido -->
 
 </div>
 <br><br><br><br><br>
+
   <div class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">
-            <p class="navbar-text pull-left">© 2017 - minizoo </p>
+            <p class="navbar-text pull-left">© 2018 - minizoo </p>
         </div>
     </div>
 
