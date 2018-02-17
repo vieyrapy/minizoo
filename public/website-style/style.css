@@ -203,7 +203,7 @@ header .header-top .header-top-right ul li a {
   padding: 10px 15px;
 }
 header .header-top .header-top-right ul li.schedule {
-  background: rgba(0, 0, 0, 0) url("images/btn.png") no-repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url("/images/btn.png") no-repeat scroll 0 0;
   margin: 0 2px 0 40px;
   padding: 0 15px;
 }
@@ -463,7 +463,7 @@ header .search-box-area .search-form a {
   color: #ffffff;
 }
 .home-services-area .single-services .services-image .overley .services-details .services-botton {
-  background: url(images/services/btn.png) no-repeat;
+  background: url(/images/services/btn.png) no-repeat;
   background-position: center;
 }
 .home-services-area .single-services .services-image .overley .services-details .services-botton a {
@@ -636,7 +636,7 @@ header .search-box-area .search-form a {
   border-radius: 5px;
 }
 .our-live-camp-area .total-camp .single-camp ul li .single-live-camp .image .overley .button {
-  background: url(images/services/btn.png) no-repeat;
+  background: url(/images/services/btn.png) no-repeat;
   background-position: center;
   position: relative;
   text-align: center;
@@ -895,7 +895,7 @@ header .search-box-area .search-form a {
 }
 .our-animal-area .total-area .singla-animal .image .overley {
   background: rgba(0, 0, 0, 0);
-  background-image: url("http://localhost:3000/images/services/overley.jpg");
+  background-image: url("/images/services/overley.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -913,7 +913,7 @@ header .search-box-area .search-form a {
   border-radius: 5px;
 }
 .our-animal-area .total-area .singla-animal .image .overley .button {
-  background: url(http://localhost:3000/images/services/btn.png) no-repeat;
+  background: url(/images/services/btn.png) no-repeat;
   background-position: center;
   position: relative;
   text-align: center;
@@ -942,13 +942,13 @@ header .search-box-area .search-form a {
   transition: all 0.3s;
   width: 48px;
   border-radius: 100%;
-  background: url(http://localhost:3000/images/btm.png) no-repeat;
+  background: url(/images/btm.png) no-repeat;
 }
 .our-animal-area .total-area .owl-controls .owl-buttons .owl-prev i {
   padding: 0;
 }
 .our-animal-area .total-area .owl-controls .owl-buttons .owl-prev:hover {
-  background: url(http://localhost:3000/images/btn-hover.png) no-repeat;
+  background: url(/images/btn-hover.png) no-repeat;
 }
 .our-animal-area .total-area .owl-controls .owl-buttons .owl-next {
   background: transparent;
@@ -966,16 +966,16 @@ header .search-box-area .search-form a {
   transition: all 0.3s;
   width: 48px;
   border-radius: 100%;
-  background: url(http://localhost:3000/images/btm.png) no-repeat;
+  background: url(/images/btm.png) no-repeat;
 }
 .our-animal-area .total-area .owl-controls .owl-buttons .owl-next:hover {
-  background: url(http://localhost:3000/images/btn-hover.png) no-repeat;
+  background: url(/images/btn-hover.png) no-repeat;
 }
 /* ------------------------------------
 9.Our Latest Video Area Start Here 
 ---------------------------------------*/
 .our-latest-video-area {
-  background: url(http://localhost:3000/images/video/bg.jpg) no-repeat;
+  background: url(/images/video/bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 100px 0 150px;
@@ -1050,7 +1050,7 @@ header .search-box-area .search-form a {
   color: #dcd794;
 }
 .our-video-content-area .save-the-lion-area {
-  background: rgba(0, 0, 0, 0) url("http://localhost:3000/images/save.png") no-repeat scroll center center;
+  background: rgba(0, 0, 0, 0) url("/images/save.png") no-repeat scroll center center;
   color: #ffffff;
   padding: 180px;
   text-align: center;
@@ -1067,7 +1067,7 @@ header .search-box-area .search-form a {
   margin-right: -110px;
 }
 .our-video-content-area .save-the-lion-area .button {
-  background: rgba(0, 0, 0, 0) url("http://localhost:3000/images/donate-bg.png") no-repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url("/images/donate-bg.png") no-repeat scroll 0 0;
   display: inline-block;
   height: 95px;
   margin: auto;
@@ -1159,7 +1159,7 @@ header .search-box-area .search-form a {
 }
 .our-video-content-area .latest-news .all-news {
   display: inline-block;
-  background: url(http://localhost:3000/images/blog/btn.png) no-repeat;
+  background: url(/images/blog/btn.png) no-repeat;
   background-position: center;
 }
 .our-video-content-area .latest-news .all-news a {
@@ -1216,7 +1216,7 @@ header .search-box-area .search-form a {
 }
 .zooks-connact-area .zooks-social-connect-area ul li a {
   display: block;
-  background: url(http://localhost:3000/images/social/bg.png) no-repeat;
+  background: url(/images/social/bg.png) no-repeat;
   transition: all 0.3s;
   width: 60px;
   height: 60px;
@@ -1226,7 +1226,7 @@ header .search-box-area .search-form a {
   color: #ffffff;
 }
 .zooks-connact-area .zooks-social-connect-area ul li a:hover {
-  background: url(http://localhost:3000/images/social/hover.png) no-repeat;
+  background: url(/images/social/hover.png) no-repeat;
 }
 .zooks-connact-area p {
   padding: 0 250px;
@@ -1261,7 +1261,7 @@ header .search-box-area .search-form a {
   bottom: 10px;
   margin: auto;
   text-align: center;
-  background: url(http://localhost:3000/images/services/overley.jpg) no-repeat;
+  background: url(/images/services/overley.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   content: "";
@@ -1284,7 +1284,7 @@ header .search-box-area .search-form a {
 11.Footer Start Here 
 ---------------------------------------*/
 footer .footer-top {
-  background: url(http://localhost:3000/images/footer-top.jpg) no-repeat;
+  background: url(/images/footer-top.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   padding: 100px 0 0px;
@@ -1428,43 +1428,43 @@ footer .footer-bottom .widget .copyright p i {
 12.Breadcumb Area Start Here
 ---------------------------------------*/
 .breadcumb-area {
-  background: url(http://localhost:3000/images/breadcumb.jpg) no-repeat;
+  background: url(/images/breadcumb.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 350px 0 20px;
 }
 .breadcumb-area.two {
-  background: url(http://localhost:3000/images/breadcumb2.jpg) no-repeat;
+  background: url(/images/breadcumb2.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 .breadcumb-area.three {
-  background: url(http://localhost:3000/images/breadcum3.jpg) no-repeat;
+  background: url(/images/breadcum3.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 .breadcumb-area.four {
-  background: url(http://localhost:3000/images/breadcumb3.jpg) no-repeat;
+  background: url(/images/breadcumb3.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 .breadcumb-area.five {
-  background: url(http://localhost:3000/images/breadcumb4.jpg) no-repeat;
+  background: url(/images/breadcumb4.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 .breadcumb-area.six {
-  background: url(http://localhost:3000/images/breadcumb5.jpg) no-repeat;
+  background: url(/images/breadcumb5.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 .breadcumb-area.seven {
-  background: url(http://localhost:3000/images/breadcumb6.jpg) no-repeat;
+  background: url(/images/breadcumb6.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 .breadcumb-area.eight {
-  background: url(http://localhost:3000/images/breadcumb6.jpg) no-repeat;
+  background: url(/images/breadcumb6.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -1607,7 +1607,7 @@ footer .footer-bottom .widget .copyright p i {
   content: '';
   position: absolute;
   right: 27px;
-  background: url(http://localhost:3000/images/tiger.png) no-repeat;
+  background: url(/images/tiger.png) no-repeat;
   background-size: cover;
   background-position: right;
   bottom: 25px;
@@ -1632,7 +1632,7 @@ footer .footer-bottom .widget .copyright p i {
 }
 .openning-area .booking-area .speedy-box .all-news {
   display: inline-block;
-  background: url(http://localhost:3000/images/blog/btn.png) no-repeat;
+  background: url(/images/blog/btn.png) no-repeat;
   background-position: center;
   position: relative;
 }
@@ -1762,7 +1762,7 @@ footer .footer-bottom .widget .copyright p i {
 }
 .map-of-the-zoo-area .total-area .singla-animal .image .overley {
   background: rgba(0, 0, 0, 0);
-  background-image: url("http://localhost:3000/images/services/overley.jpg");
+  background-image: url("/images/services/overley.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1779,7 +1779,7 @@ footer .footer-bottom .widget .copyright p i {
   border-radius: 5px;
 }
 .map-of-the-zoo-area .total-area .singla-animal .image .overley .button {
-  background: url(http://localhost:3000/images/services/btn.png) no-repeat;
+  background: url(/images/services/btn.png) no-repeat;
   background-position: center;
   position: relative;
   text-align: center;
@@ -1808,13 +1808,13 @@ footer .footer-bottom .widget .copyright p i {
   transition: all 0.3s;
   width: 48px;
   border-radius: 100%;
-  background: url(http://localhost:3000/images/btm.png) no-repeat;
+  background: url(/images/btm.png) no-repeat;
 }
 .map-of-the-zoo-area .total-area .owl-controls .owl-buttons .owl-prev i {
   padding: 0;
 }
 .map-of-the-zoo-area .total-area .owl-controls .owl-buttons .owl-prev:hover {
-  background: url(http://localhost:3000/images/btn-hover.png) no-repeat;
+  background: url(/images/btn-hover.png) no-repeat;
 }
 .map-of-the-zoo-area .total-area .owl-controls .owl-buttons .owl-next {
   background: transparent;
@@ -1832,10 +1832,10 @@ footer .footer-bottom .widget .copyright p i {
   transition: all 0.3s;
   width: 48px;
   border-radius: 100%;
-  background: url(http://localhost:3000/images/btm.png) no-repeat;
+  background: url(/images/btm.png) no-repeat;
 }
 .map-of-the-zoo-area .total-area .owl-controls .owl-buttons .owl-next:hover {
-  background: url(http://localhost:3000/images/btn-hover.png) no-repeat;
+  background: url(/images/btn-hover.png) no-repeat;
 }
 /* ------------------------------------
 15.Where Is animal Live Start Here 
@@ -1947,7 +1947,7 @@ footer .footer-bottom .widget .copyright p i {
   padding: 10px;
 }
 .remember-area .remember-content ul li span {
-  background: rgba(0, 0, 0, 0) url("http://localhost:3000/images/btm.png") no-repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url("/images/btm.png") no-repeat scroll 0 0;
   color: #ffffff;
   display: inline-block;
   float: left;
@@ -1989,18 +1989,18 @@ footer .footer-bottom .widget .copyright p i {
 17. Advertise Start Here 
 ---------------------------------------*/
 .adversite-area {
-  background: url(http://localhost:3000/images/add.png) no-repeat;
+  background: url(/images/add.png) no-repeat;
   padding: 130px 0;
 }
 .adversite-area.adversite-area-two {
-  background: url(http://localhost:3000/images/animal-bg.jpg) no-repeat;
+  background: url(/images/animal-bg.jpg) no-repeat;
   background-size: cover;
 }
 .adversite-area.adversite-area-three {
-  background: url(http://localhost:3000/images/add3.jpg) no-repeat;
+  background: url(/images/add3.jpg) no-repeat;
 }
 .adversite-area.adversite-area-fore {
-  background: url(http://localhost:3000/images/animal-bg.jpg) no-repeat;
+  background: url(/images/animal-bg.jpg) no-repeat;
 }
 .adversite-area .ad-content h2 {
   font-family: 'Architects Daughter', cursive;
@@ -2089,7 +2089,7 @@ FAQ Start Here
   content: '\f175';
   text-align: center;
   transform: none !important;
-  background: url(http://localhost:3000/images/btn-hover.png) no-repeat;
+  background: url(/images/btn-hover.png) no-repeat;
   background-size: cover;
   color: #dcd794;
   padding: 5px 0;
@@ -2112,7 +2112,7 @@ FAQ Start Here
   content: '\f178';
   text-align: center;
   transform: none !important;
-  background: url(http://localhost:3000/images/btnarrow.png) no-repeat;
+  background: url(/images/btnarrow.png) no-repeat;
   background-size: cover;
   color: #dcd794;
   padding: 5px 0;
@@ -2267,7 +2267,7 @@ FAQ Start Here
   position: absolute;
   right: 10px;
   bottom: 10px;
-  background: url(http://localhost:3000/images/check.png) no-repeat;
+  background: url(/images/check.png) no-repeat;
   width: 50px;
   height: 50px;
 }
@@ -2515,7 +2515,7 @@ FAQ Start Here
   box-shadow: none;
 }
 .contact-form .contact fieldset .btn-send {
-  background: rgba(0, 0, 0, 0) url("http://localhost:3000/images/c-btn.png") no-repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url("/images/c-btn.png") no-repeat scroll 0 0;
   border: 0 none;
   color: #ffffff;
   display: inline-block;
@@ -2569,7 +2569,7 @@ FAQ Start Here
   content: '\f175';
   text-align: center;
   transform: none !important;
-  background: url(http://localhost:3000/images/btn-hover.png) no-repeat;
+  background: url(/images/btn-hover.png) no-repeat;
   background-size: cover;
   color: #dcd794;
   padding: 5px 0;
@@ -2594,7 +2594,7 @@ FAQ Start Here
   content: '\f178';
   text-align: center;
   transform: none !important;
-  background: url(http://localhost:3000/images/btnarrow.png) no-repeat;
+  background: url(/images/btnarrow.png) no-repeat;
   background-size: cover;
   color: #dcd794;
   padding: 5px 0;
@@ -2858,7 +2858,7 @@ FAQ Start Here
 }
 .animal-details .animal-content .statas ul.button li:first-child {
   display: inline-block;
-  background: url(http://localhost:3000/images/blog/btn.png) no-repeat;
+  background: url(/images/blog/btn.png) no-repeat;
   background-position: center;
 }
 .animal-details .animal-content .statas ul.button li a {
