@@ -21,7 +21,7 @@
   <tbody>
     <% @tareas.each do |tarea| %>
       <tr>
-        <td><%= tarea.fecha %></td>
+        <td><%= l(tarea.fecha, :format => :long) %></td>
         <td><%= tarea.ficha_medica.animal.nombre_comun %></td>
         <td><%= tarea.ficha_medica.dolencia %></td>
         <td><%= tarea.medicamento %></td>
