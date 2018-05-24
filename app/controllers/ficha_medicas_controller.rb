@@ -4,7 +4,7 @@ class FichaMedicasController < ApplicationController
   # GET /ficha_medicas
   # GET /ficha_medicas.json
   def index
-    @ficha_medicas = FichaMedica.paginate(:page => params[:page], :per_page => 2)
+    @ficha_medicas = FichaMedica.paginate(:page => params[:page], :per_page => 7)
 
     if params[:Buscar]
       @ficha_medicas = FichaMedica.where(["enfermedad || dolencia || descripcion ||
