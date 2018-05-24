@@ -46,6 +46,6 @@
   </tbody>
 </table>
 </div>
-<%= will_paginate @ficha_medica, renderer: BootstrapPagination::Rails %>
+<%= will_paginate @ficha_medica, :previous_label => 'Menos', :next_label => 'Más', renderer: BootstrapPagination::Rails %>
 <br>
 
