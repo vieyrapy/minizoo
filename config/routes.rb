@@ -39,5 +39,10 @@ Rails.application.routes.draw do
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 	get 'website/index'
+  get 'website/elzoo'
+  get 'website/misionvision'
+  get 'website/reglas'
+  get 'website/contacto'
+   get 'website/galeria'
 	root 'website#index'
 end
