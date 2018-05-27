@@ -20,35 +20,23 @@
 	@import "bootstrap-sprockets";
 	@import "bootstrap";
 
-/*
-Template Name: Mbah Bedjo CV
-Template URI: Mbah Bedjo
-Author: Rudhi Sasmito
-Author URI: https://www.behance.net/rudhisasmito
-Version: 1.0
-*/
 
-
-/* ==========================
-RESET
-============================= */
+/* =========================
+CSS appminizoo
+============================ */
 /**
- * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
- * http://cssreset.com
- font: inherit;
+ * MinizooCSSAPP
+ * Trabajo final de grado 
+ 
  */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
+h1, h2, h3, h4, h5, h6, p, blockquote img, ins, kbd, q, s, samp,
+small, strike,  var, u, i, center, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption, tbody, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
+menu, nav, output, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -119,9 +107,9 @@ table {
     text-transform: uppercase;
 }
 
-/* ==========================
+/* ========================
 GENERAL LAYOUT
-============================= */
+========================== */
 body {
   background-color: #fff;
   color: #666;
@@ -383,6 +371,7 @@ BANNER ROTATOR
 /* ==========================
 NAVBAR
 ============================= */
+
 .main-menu {
   min-height: 65px;
 }
@@ -456,7 +445,9 @@ NAVBAR
 }
 
 
-
+.navbar-nav > li > .dropdown-menu {
+  border-radius: 10px;
+  margin-top: -5px; }
 /* ==========================
 ABOUT
 ============================= */
@@ -1942,6 +1933,20 @@ cuerpo-zoo{
     border-radius: 30px;
 }
 
+.btn-alta {
+    box-sizing: border-box;
+    border-width: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .15s linear;
+    font-size: 12px;
+    padding: 4px 10px;
+    line-height: 1.75;
+    border-color: #f00;
+    color: #f00;
+    border-radius: 30px;
+}
+
 .btn-modificar {
     box-sizing: border-box;
     border-width: 2px;
@@ -2034,6 +2039,11 @@ cuerpo-zoo{
 .btn-mostrar:hover {
   color:#fff;
   background-color: #6bd098;
+}
+
+.btn-alta:hover {
+  color:#fff;
+  background-color: #f00;
 }
 
 

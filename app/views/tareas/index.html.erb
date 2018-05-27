@@ -6,12 +6,13 @@
     <%= link_to 'Todos', tareas_path({terminado: 'false'}), method: "get", class:"btn btn-primary" %>
   </div>
        
-
+<br>
 <table class="table table-condensed">
   <thead>
     <tr>
       <th>FECHA/HORA</th>
-      <th>PACIENTE</th>
+      <th>ID</th>
+      <th>NOMBRE COMÚN</th>
       <th>DIAGNÓSTICO</th>
       <th>MEDICAMENTO</th>
       <th colspan="3"></th>
@@ -22,13 +23,14 @@
     <% @tareas.each do |tarea| %>
       <tr>
         <td><%= l(tarea.fecha, :format => :long) %></td>
+        <td><%= tarea.ficha_medica.animal.identificador %></td>
         <td><%= tarea.ficha_medica.animal.nombre_comun %></td>
         <td><%= tarea.ficha_medica.dolencia %></td>
         <td><%= tarea.medicamento %></td>
         <!-- <td><%= check_box_tag (tarea.terminado) %></td>  -->
 
-
-        <td> <%= link_to 'Dar de Alta', daralta_tarea_path(tarea), method: "put", class:"btn btn-primary" %> </td>
+        <td><%= link_to 'Mostrar', tarea.ficha_medica, :class=>"btn btn-mostrar"  %></td>
+        <td> <%= link_to 'Dar de Alta', daralta_tarea_path(tarea), method: "put", class:"btn btn-alta" %> </td>
 
         <!-- <td><%= link_to 'Show', tarea %></td>
         <td><%= link_to 'Edit', edit_tarea_path(tarea) %></td>

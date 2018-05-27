@@ -14,19 +14,18 @@
       <th>PREDIAGNÓSTICO</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> 
 
   <tbody>
     <% @ficha_medicas.each do |ficha_medica| %> 
       <tr>
-         
-        <td><%= ficha_medica.created_at %></td>
+        <td><%= l(ficha_medica.created_at, :format => :long) %></td>
         <td><%= ficha_medica.animal.nombre_comun %></td>
         <td><%= ficha_medica.estado_medico.nombre %></td>
         <td><%= ficha_medica.enfermedad %></td>
         <td><%= ficha_medica.dolencia %></td>
         <td><%= link_to 'Mostrar', ficha_medica, :class=>"btn btn-mostrar"  %></td>
-        <td> <%= link_to 'Dar de Alta', daraltacuarentena_ficha_medica_path(ficha_medica), method: "put", class:"btn btn-primary" %> </td>
+        <td> <%= link_to 'Dar de Alta', daraltacuarentena_ficha_medica_path(ficha_medica), method: "put", class:"btn btn-alta" %> </td>
      <!--    <td><%= link_to 'Modificar', edit_ficha_medica_path(ficha_medica), :class=>"btn btn-modificar"  %></td>
         <td><%= link_to 'Destruir', ficha_medica, method: :delete, data: { confirm: 'Estas seguro de querer eliminar?'}, :class=>"btn btn-destruir" %></td> -->
       </tr>

@@ -8,7 +8,7 @@ class AnimalesController < ApplicationController
   # GET /animales.json
   def index
     #Mostramos la lista de animales con index de paginate 
-    @animales = Animal.paginate(:page => params[:page], :per_page => 8)
+    @animales = Animal.paginate(:page => params[:page], :per_page => 7)
     # Si utilizamos la busqueda se filtra por nombre comun y se agrega paginate al final
     if params[:Buscar]  
       @animales = Animal.where(["descripcion || nombre_comun || nombre_cientifico || origen || identificador || familia LIKE ?","%#{params[:Buscar]}%"]).paginate(:page => params[:page], :per_page => 2)

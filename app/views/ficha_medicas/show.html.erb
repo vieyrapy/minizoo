@@ -1,99 +1,130 @@
+
+<div class="row">
+     <div class="col-md-4">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2">
+          <label>Identificador:</label></span>
+          <div class="form-control"><%= @ficha_medica.animal.identificador%> </div>
+        </div>
+      </div>
+
+    <div class="col-md-4">
+      <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2">
+          <label>Fecha ingreso:</label></span>
+          <div class="form-control"><%= l(@ficha_medica.created_at, :format => :long)  %> </div>
+      </div>
+    </div>
+     <div class="col-md-4">     
+          <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon2">
+              <label>Atendido por:</label></span>
+              <div class="form-control">   <%= @ficha_medica.veterinario %> </div>
+          </div>
+      </div>
+
+</div>
+
+<br>
+<div class="row">
+
+    <div class="col-md-4">
+      <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2">
+          <label>Nombre Común:</label></span>
+          <div class="form-control">   <%= @ficha_medica.animal.nombre_comun %> </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+       <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2">
+          <label>Estado salud:</label></span>
+          <div class="form-control"> <%= @ficha_medica.estado_medico.nombre %> </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon2">
+              <label>Enfermedad:</label></span>
+              <div class="form-control"> <%= @ficha_medica.enfermedad %> </div>
+          </div>
+    </div>
+</div>
+
+  <br>
 <div class="row">
   <div class="col-md-4">
-    <strong>Identificador:</strong>
-    <%= @ficha_medica.animal.identificador%>
+
+      <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon2">
+          <label>Dolencia:</label></span>
+          <div class="form-control"> <%= @ficha_medica.dolencia %> </div>
+      </div>
+
+ 
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-4">
-  <p>
-  <strong>Fecha ingreso:</strong>
-    <%= l(@ficha_medica.created_at, :format => :long)  %>
-  </p>
-  <p>
-    <strong>Atendido por:</strong>
-    <%= @ficha_medica.veterinario %>
-  </p>
-  </div>
-
-  <div class="col-md-4">
-    <p>
-      <strong>Nombre Comun:</strong>
-      <%= @ficha_medica.animal.nombre_comun %>
-    </p>
-
-    <p>
-      <strong>Estado salud:</strong>
-      <%= @ficha_medica.estado_medico.nombre %>
-    </p>
-  </div>
-
-  <div class="col-md-4">
-    <p>
-      <strong>Enfermedad:</strong>
-      <%= @ficha_medica.enfermedad %>
-    </p>
-
-    <p>
-      <strong>Dolencia:</strong>
-      <%= @ficha_medica.dolencia %>
-    </p>
-  </div>
-</div>
-
-
-
-
+<br>
 <div class="row">
   <div class="col-md-12">
-    <div class="card card-outline-secondary ">
-        <div class="card-header">
-          Descripcion
+        <div class="form-group">
+          <strong>Descripción:</strong>
+          <div class="separator_wrapper wow fadeIn"></div>
+          <p> 
+            <%= @ficha_medica.descripcion %></p>
         </div>
-        <div class="card-body">
-          <%= @ficha_medica.descripcion %>
-        </div>
-   
-    </div>
+
+     
   </div>
 </div>
+<br>
 
 <div class="row">
   <div class="col-md-4">
-    <strong>Fotos:</strong>
-    <div class="thumbnail">
-         <% if @ficha_medica.archivos.url.nil? %>
+    <strong>Imagen:</strong>
+
+<div class="r-item wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+            <a href="#" title="" data-toggle="modal" data-target="#modal6">
+              <% if @ficha_medica.archivos.url.nil? %>
               No hay fotos 
-        <% else %>
-              <%= image_tag @ficha_medica.archivos.url %>
-        <% end %>
-    </div>
+              <% else %>
+                    <%= image_tag @ficha_medica.archivos.url %>
+              <% end %>
+              
+            </a>
+          </div>
   </div>
 
   <div class="col-md-4">
-    <strong>Audios:</strong>
-    <div class="thumbnail">
-    <% if @ficha_medica.audio.url.nil? %>
-        No hay Audios 
-    <% else %>
-        <audio controls src=" <%= @ficha_medica.audio.url %>"></audio>
-    <% end %>
-    </div>
+    <strong>Audio:</strong>
+    <div class="r-item wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+            <a href="#" title="" data-toggle="modal" data-target="#modal6">
+              <% if @ficha_medica.audio.url.nil? %>
+                  No hay Audios 
+              <% else %>
+                  <audio controls src=" <%= @ficha_medica.audio.url %>"></audio>
+              <% end %>
+            </a>
+          </div>
   </div>
 
   <div class="col-md-4">
     <strong>Video:</strong>
-    <div class="thumbnail">
-    <% if @ficha_medica.video.url.nil? %>
-        No hay Videos 
-    <% else %>
-      <video width="320" height="240" controls>
-        <source src="<%= @ficha_medica.video.url %>" type="video/mp4">
-        <source src="<%= @ficha_medica.video.url %>" type="video/ogg">
-      </video>
-    <% end %>
-  </div>
+        <div class="r-item wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+            <a href="#" title="" data-toggle="modal" data-target="#modal6">
+              <% if @ficha_medica.video.url.nil? %>
+                  No hay Videos 
+              <% else %>
+                <video width="320" height="240" controls>
+                  <source src="<%= @ficha_medica.video.url %>" type="video/mp4">
+                  <source src="<%= @ficha_medica.video.url %>" type="video/ogg">
+                </video>
+              <% end %>
+            </a>
+          </div>
   </div>
 </div>
 
@@ -101,29 +132,14 @@
 
 
 <div class="row">
+  <div class="r-item wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+
   <div class="col-md-12">
     <p>
   <strong>Última modificación:</strong>
     <div class="parrafo"><%= l(@ficha_medica.updated_at, :format => :long)  %></div>
   </p>
-      <strong>Atención!:</strong>
-      <% @ficha_medica.tareas.each do |t|%>
-      <ul>
-        <li>
-          <% if  (@ficha_medica.id == t.ficha_medica_id) && (t.terminado  == true) %>
-              Su medicación <%= t.medicamento %> fue dada por completa<br>
-              <% elsif @ficha_medica.tratamiento == false %>
-                No se registran tratamiento 
-              </li>
-              <% else %>
-              
-                <li>
-                  <%= link_to "Verificar", tareas_path(@tarea, terminado: false)%> El tratamiento con "<%= t.medicamento %>"  no fue terminado, o no fué dado de alta en el sistema. 
-                </li>
-                
-          <% end %>
-          </ul>
-      <% end %>
+      
   </div>
 </div>
 
@@ -135,6 +151,6 @@
 
 <br>
 
-<%= link_to 'Modificar', edit_ficha_medica_path(@ficha_medica), :class=>"btn btn-modificar" %> |
-<%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-default" %>
+<%= link_to 'Modificar', edit_ficha_medica_path(@ficha_medica), :class=>"btn btn-modificar" %> 
+<%= link_to 'Volver', ficha_medicas_path, :class=>"btn btn-atras" %>
 </div>

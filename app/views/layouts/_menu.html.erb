@@ -22,11 +22,20 @@
   
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav ">
-        <li ><a href="/animales">ANIMALES <span class="sr-only">(current)</span></a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ANIMALES <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/animales/new">Registrar Animal</a></li>
+            <li><a href="/animales">Lista de Animales</a></li>
+          </ul>
+        </li>
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CASOS CLÍNICOS <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/ficha_medicas">Ficha Médica</a></li>
+            <li><a href="/ficha_medicas/new">Nueva Ficha Médica</a></li>
+            <li><a href="/ficha_medicas">Lista Ficha Médica</a></li>
             <li><a href="/tareas">Zona de Tratamiento</a></li>
             <li><a href="/cuarentena/index">Zona de cuarentena</a></li>
           </ul>
@@ -113,12 +122,20 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav ">
-        <li ><a href="/animales">ANIMALES <span class="sr-only">(current)</span></a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ANIMALES <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/animales/new">Registrar Animal</a></li>
+            <li><a href="/animales">Lista de Animales</a></li>
+          </ul>
+        </li>
         
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CASOS CLÍNICOS <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/ficha_medicas">Ficha Médica</a></li>
+            <li><a href="/ficha_medicas/new">Nueva Ficha Médica</a></li>
+            <li><a href="/ficha_medicas">Lista Ficha Médica</a></li>
             <li><a href="/tareas">Zona de Tratamiento</a></li>
             <li><a href="/cuarentena/index">Zona de Cuarentena</a></li>
           </ul>

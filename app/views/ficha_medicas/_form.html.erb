@@ -26,34 +26,34 @@ $(document).ready(function() {
         <div class="input-group">
           <span class="input-group-addon" id="sizing-addon2">
           <%= form.label "Atendido Por:" %></span>
-          <%= form.text_field :veterinario, id: :ficha_medica_veterinario,:class=>"form-control", :placeholder=>"Dr. Nestor Tapia", :style=>"width: 70%" %>
+          <%= form.text_field :veterinario, id: :ficha_medica_veterinario,:class=>"form-control", :placeholder=>"Dr. Nestor Tapia", :style=>"width: 100%" %>
         </div>
     </div>
 
 
-    <div class="col-md-6">
+   <!--  <div class="col-md-6">
      <div class="input-group">
         <span class="input-group-addon" id="sizing-addon2">
         <%= form.label "Iden Paciente:" %>
         </span>
           <%= form.collection_select(:animal_id, Animal.all, :id, :identificador, {}, {:class=>"js-example-basic-single js-states form-control", :style=>"width: 70%"}) %>
       </div>
-    </div>
+    </div> -->
 
 </div> 
 <br>
 
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
      <div class="input-group">
         <span class="input-group-addon" id="sizing-addon2">
-        <%= form.label "Animal: " %>
+        <%= form.label "Iden Paciente: " %>
         </span>
-          <%= form.collection_select(:animal_id, Animal.all, :id, :nombre_comun, {}, {:class=>"js-example-basic-single js-states form-control", :style=>"width: 100%"}) %>
+          <%= form.collection_select(:animal_id, Animal.all, :id, :identificador, {}, {:class=>"js-example-basic-single js-states form-control", :style=>"width: 100%"}) %>
       </div>
     </div>
 
-      <div class="col-md-2">
+      <div class="col-md-3">
         <div class="input-group">
           <span class="input-group-addon" id="sizing-addon2">
         <%= form.label "Estado" %>
@@ -95,19 +95,19 @@ $(document).ready(function() {
 
    <div class="col-md-4">
       <div class="field">
-        <%= form.label "Subir Fotos" %><br>
+        <%= form.label "Subir Imagen" %><br>
         
         <%= form.file_field :archivos %>
       </div>
       <br>
       <div class="field">
-        <%= form.label "Subir Audios" %><br>
+        <%= form.label "Subir Audio" %><br>
         <%= form.file_field :audio %>
         <small id="fileHelp" class="form-text text-muted">Solo se admiten audios con extesión .mp3</small>
       </div>
       <br>
       <div class="form-control-file">
-        <label for="exampleInputFile">Video</label>
+        <label for="exampleInputFile">Subir Video</label>
         <input id="ficha_medica_video" type="file" name="ficha_medica[video]">
         <small id="fileHelp" class="form-text text-muted">Solo se admiten videos con extesión .mp4</small>
       </div>
@@ -157,7 +157,7 @@ $(document).ready(function() {
             <%= form.nested_fields_for :tareas do |ff|  %>
                 
                   <div class="field">
-                      <%= ff.label "Medicamento" %> </a>
+                      <%= ff.label "Medicamento / Indicación" %> </a>
                       <%= ff.text_field :medicamento, id: :tarea_medicamento, :class=>"form-control", :placeholder=>"Rp. Ketofen 20 mg."  %>
                   </div>
                 
