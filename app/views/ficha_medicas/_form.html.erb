@@ -136,6 +136,7 @@ $(document).ready(function() {
         <br>
         <br>
         <br>
+        
 
     </div>
 
@@ -182,11 +183,32 @@ $(document).ready(function() {
 </div>
  </div>
 
+ 
+          <script type="text/javascript">
+  
+            function check_inactivo(){
+              var tratamiento_checked = $("#ficha_medica_tratamiento").is(':checked');
+              var internacion_checked = $("#ficha_medica_internacion").is(':checked');
+              
+              var activo = tratamiento_checked || internacion_checked;
+              
+              $("#ficha_medica_activo").attr("checked", false).attr('hidden', activo);
+            }
+
+            $("#ficha_medica_tratamiento").click(function(){
+              check_inactivo();
+            });
+            
+            $("#ficha_medica_internacion").click(function(){
+              check_inactivo();
+            });
+           </script>
+
 <script type="text/javascript">
   
   $('#ficha_medica_tratamiento').on('change', function() { 
     
-      if($('#ficha_medica_tratamiento').is(':checked')){
+      if($('#ficha_medica_tratamiento').is(':checked') ){
 
           $('#tratamiento_medico').removeClass('hidden')
       }else{
