@@ -41,8 +41,8 @@
   .our-video-content-area .latest-news .section-title h2:after {
     width: 200px;
   }
-  .zooks-connact-area .section-title h2:before,
-  .zooks-connact-area .section-title h2:after {
+  .zoo-connact-area .section-title h2:before,
+  .zoo-connact-area .section-title h2:after {
     width: 200px;
   }
   .openning-area .section-title h2:before,
@@ -169,11 +169,11 @@
   .our-video-content-area .save-the-lion-area p {
     margin: 0;
   }
-  .zooks-connact-area .section-title h2 {
+  .zoo-connact-area .section-title h2 {
     font-size: 35px;
   }
-  .zooks-connact-area .section-title h2:before,
-  .zooks-connact-area .section-title h2:after {
+  .zoo-connact-area .section-title h2:before,
+  .zoo-connact-area .section-title h2:after {
     width: 22%;
 	top: 19px;
   }
@@ -370,7 +370,7 @@
   .our-video-content-area .save-the-lion-area p {
     margin: 0;
   }
-  .zooks-connact-area p {
+  .zoo-connact-area p {
     padding: 0 20px;
   }
   .twitter-post-area .single-post {
@@ -577,7 +577,7 @@
   .our-video-content-area .save-the-lion-area p {
     margin: 0;
   }
-  .zooks-connact-area p {
+  .zoo-connact-area p {
     padding: 0 20px;
   }
   .twitter-post-area .single-post {
