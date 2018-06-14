@@ -140,14 +140,14 @@
 
     <div class="col-md-2">
         <div class="field">
-          <%= form.label "Cite" %>
+          <%= form.label "CITE" %>
            <%= form.collection_select(:cite_id, Cite.all, :id, :nombre, {} , {:class => 'form-control'}) %>
         </div>
     </div>
 
     <div class="col-md-3">
       <div class="field">
-        <%= form.label "Estado de Conservación" %>
+        <%= form.label "Estado de Conservación (CDC)" %>
          <%= form.collection_select(:estado_conservacion_id, EstadoConservacion.all, :id, :nombre, {} , {:class => 'form-control'})%><br>
       </div>
     </div>
