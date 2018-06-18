@@ -1,4 +1,5 @@
 class CuarentenaController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_ficha_medica, only: [:show, :edit, :update, :destroy]
 
   def index

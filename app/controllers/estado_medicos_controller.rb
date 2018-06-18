@@ -1,4 +1,5 @@
 class EstadoMedicosController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_estado_medico, only: [:show, :edit, :update, :destroy]
 
   # GET /estado_medicos

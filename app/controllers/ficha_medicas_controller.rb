@@ -1,4 +1,5 @@
 class FichaMedicasController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_ficha_medica, only: [:show, :edit, :update, :destroy]
 
   # GET /ficha_medicas
