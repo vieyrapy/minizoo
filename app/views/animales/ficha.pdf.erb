@@ -1,8 +1,20 @@
-  <%= render partial: 'animales/header_ficha', formats: [:html], :locals => { }  %> 
+<!DOCTYPE html>
+<html>
+	<head>
+	  	<%= stylesheet_link_tag wicked_pdf_asset_base64("pdf") %>
+	  	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Ficha de Animales</title>
+	</head>
 
-  <h4 class="text-uppercase">
-  <strong>FICHA MEDICA DE ANIMALES</strong>
-  <hr>
-</h4>
- 
-  <%= render partial: 'animales/body_ficha', formats: [:html], :locals => { }  %> 
+	<body>
+
+	  <%= render partial: 'animales/header_ficha', formats: [:html], :locals => { }  %> 
+
+	  	<h4 class="text-uppercase">
+		  <strong>FICHA MEDICA DE ANIMALES</strong>
+		  <hr>
+		</h4>
+	 
+	  <%= render partial: 'animales/body_ficha', formats: [:html], :locals => { }  %> 
+	</body>
+</html>
