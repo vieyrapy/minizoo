@@ -70,7 +70,7 @@
         <%if current_user.admin?%> 
       <%= link_to('Destruir', @animal, method: :delete, data: { confirm: 'Esta seguro de querer eliminar' }, :class=>"btn btn-destruir")  %>
       <%end%> 
-      <%= link_to 'Imprimir', ficha_animal_path(@animal, format: :pdf),  method: :get, :class=>"btn btn-modificar" %> 
+      <%= link_to 'Imprimir', ficha_animal_path(@animal, format: :pdf),  method: :get,  :target=>"_blank", :class=>"btn btn-modificar" %> 
       <%= link_to 'Volver', animales_path, :class=>"btn btn-atras" %>
   </div>
 
