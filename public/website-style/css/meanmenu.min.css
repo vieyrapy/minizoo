@@ -34,7 +34,7 @@ a.meanmenu-reveal{display:none}
   font-weight: bold;
 }
 .mobile-menu-area {
-  background: #262626;
+  background: #009f2c;
 }
 .mean-container .mean-nav ul li li a {
   border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -77,7 +77,7 @@ a.meanmenu-reveal{display:none}
 .mean-container .mean-bar,.mean-container .mean-bar *{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}
 .mean-remove{display:none!important}
 .mean-container .mean-bar::after {
-  background: transparent url("../images/logo.png") no-repeat scroll 0 0;
+  background: transparent url("/images/logo_mobile.png") no-repeat scroll 0 0;
   color: #ffffff;
   content: ".";
   font-size: 21px;

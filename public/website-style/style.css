@@ -1237,52 +1237,9 @@ header .search-box-area .search-form a {
   color: #ffffff;
 }
 /* ------------------------------------
-11.Footer Start Here 
+11.Footer  
 ---------------------------------------*/
-footer .footer-top {
-  background: url(/images/footer-top.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 100px 0 0px;
-}
-footer .footer-top .apps-area img {
-  display: block;
-}
-footer .footer-top .apps-area img:hover {
-  opacity: .9;
-}
-footer .footer-top .footer-top-content h2 {
-  font-family: 'Architects Daughter', cursive;
-  color: #a09833;
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-footer .footer-top .footer-top-content strong {
-  margin-bottom: 20px;
-}
-footer .footer-top .footer-top-content p {
-  margin-top: 20px;
-}
-footer .footer-top .footer-top-content .about-botton ul li {
-  margin-bottom: 0px;
-  font-size: 18px;
-  display: inline-block;
-  margin-right: 20px;
-}
-footer .footer-top .footer-top-content .about-botton ul li a {
-  border-bottom: 2px solid #fb8b40;
-  color: #fb8b40;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 1px;
-  padding-bottom: 1px;
-  transition: all 0.3s ease 0s;
-}
-footer .footer-top .footer-top-content .about-botton ul li a:hover {
-  border-bottom: 2px solid #a09833;
-  color: #a09833;
-}
+
 footer .main-footer {
   padding: 50px 0;
   border-bottom: 1px solid #dddddd;
@@ -1364,9 +1321,13 @@ footer .footer-bottom .widget .footer-menu ul li {
   margin: 0 5px;
 }
 footer .footer-bottom .widget .footer-menu ul li a {
-  display: block;
-  color: #333333;
-  font-size: 16px;
+    width: 100%;
+    position: relative;
+    clear: both;
+    font-size: 12px;
+    padding: 12px 0;
+    border-top: 1px solid #e7ebf3;
+    background-color: #fff;
 }
 footer .footer-bottom .widget .footer-menu ul li a:hover {
   color: #a09833;
