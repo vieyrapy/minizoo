@@ -2903,8 +2903,6 @@ FAQ Start Here
 }
 .gal-container .description{
   position: relative;
-  height: 40px;
-  top: -40px;
   padding: 10px 25px;
   background-color: rgba(0,0,0,0.5);
   color: #fff;
