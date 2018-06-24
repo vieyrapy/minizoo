@@ -292,6 +292,7 @@ header .search-box-area .search-form a {
   background-size: cover;
   background-position: center;
   padding: 300px 0;
+
 }
 .slider-area .slide-tree h2 {
   font-size: 120px;
@@ -300,6 +301,7 @@ header .search-box-area .search-form a {
   padding-bottom: 10px;
   margin-bottom: 10px;
   position: relative;
+  
 }
 .slider-area .slide-tree h2:after {
   background: #dcd794;
@@ -1335,9 +1337,7 @@ footer .footer-bottom .widget .footer-menu ul li a:hover {
 footer .footer-bottom .widget .copyright p {
   color: #414141;
 }
-footer .footer-bottom .widget .copyright p i {
-  color: red;
-}
+
 .mfp-bottom-bar {
   display: none;
 }
