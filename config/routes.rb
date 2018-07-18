@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   get 'website/misionvision'
   get 'website/reglas'
   get 'website/contacto'
-   get 'website/galeria'
+  get 'website/galeria'
+  get 'website/sueno'
 	root 'website#index'
 end
