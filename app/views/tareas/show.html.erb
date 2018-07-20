@@ -1,14 +1,32 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Fecha:</strong>
-  <%= @tarea.fecha %>
-</p>
+<!-- Alerta para un usuario vip -->
+<% if current_user.try(:vip?) %> 
+      <div class="alert alert-danger" role="alert">
+      <h2>No tiene permiso para utilizar esta sección consulte con el administrador</h2>
+<% end %>
+<!-- fin de alerta -->
 
-<p>
-  <strong>Terminado:</strong>
-  <%= @tarea.terminado %>
-</p>
+<!-- Si es admin y user se muestra la pagina -->
+<% if user_signed_in? %>
+  <% if current_user.try(:user?) || current_user.try(:admin?)  %> 
+<!-- finaliza al pie de esta lamina con dos end  -->
 
-<%= link_to 'Edit', edit_tarea_path(@tarea) %> |
-<%= link_to 'Back', tareas_path %>
+
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <strong>Fecha:</strong>
+	  <%= @tarea.fecha %>
+	</p>
+
+	<p>
+	  <strong>Terminado:</strong>
+	  <%= @tarea.terminado %>
+	</p>
+
+	<%= link_to 'Edit', edit_tarea_path(@tarea) %> |
+	<%= link_to 'Back', tareas_path %>
+
+
+<% end %>
+<% end %>

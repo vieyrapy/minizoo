@@ -1,3 +1,19 @@
+
+
+<!-- Alerta para un usuario vip -->
+<% if current_user.try(:vip?) %> 
+      <div class="alert alert-danger" role="alert">
+      <h2>No tiene permiso para utilizar esta sección consulte con el administrador</h2>
+<% end %>
+<!-- fin de alerta -->
+
+<!-- Si es admin y user se muestra la pagina -->
+<% if user_signed_in? %>
+  <% if current_user.try(:user?) || current_user.try(:admin?)  %> 
+<!-- finaliza al pie de esta lamina con dos end  -->
+
+
+
   <h3>Zona de Animales con tratamientos</h3>
   <hr></hr>
   
@@ -43,3 +59,5 @@
 <br>
 
 
+<% end %>
+<% end %>
