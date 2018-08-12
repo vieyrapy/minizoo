@@ -57,7 +57,7 @@ h4 {
     margin: 0 0 24px;
     font-weight: 500;
     font-size: 25px;
-    color: #9e951e;
+    color: #28a745;
     font-family: 'Gloria Hallelujah', cursive;
 }
 h5 {
@@ -90,6 +90,20 @@ img {
     margin-right: auto;
     border: 5px solid #fff;
     border-radius: 4px;
+}
+
+.footer-image {
+    background-image: url("/images/logo_footer.png");
+    background-repeat: no-repeat;
+    padding: 20px;
+    width: 122px;
+    height: 98px;
+}
+.footer-image-pie {
+ 
+    background-image: url("/images/fondo-footer.png");
+    background-repeat: no-repeat;
+
 }
 .contenido {
     width: 100%;
@@ -217,10 +231,6 @@ img {
 .slider-texto {
     font-size: 22px;
 }
-.media-footer {
-    padding: 50px;
-    padding-right: 100px;
-}
 .explorer a, li {
     font-size: 15px;
     text-decoration: none;
@@ -246,7 +256,7 @@ img {
 }
 .area-extincion-titulo h2 {
     text-align: center;
-    color: #9e951e;
+    color: #b55d00;
     font-size: 24px;
     padding-bottom: 10px;
     margin-bottom: 25px;
