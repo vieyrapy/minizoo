@@ -84,8 +84,10 @@ h6 {
     height: 133px;
 }
 img {
-    max-width: 100%;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .contenido {
     width: 100%;
