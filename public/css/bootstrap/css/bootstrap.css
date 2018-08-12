@@ -4057,6 +4057,7 @@ input[type="button"].btn-block {
     flex-flow: row nowrap;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    
   }
   .navbar-expand-md .navbar-nav {
     -ms-flex-direction: row;
