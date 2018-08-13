@@ -110,6 +110,20 @@ img {
     padding: 50px;
     padding-left: 200px;
 }
+.regla-item-uno{
+    margin: 0 0 24px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #2b2a2a;
+
+}
+.regla-item-dos{
+    margin: 0 0 24px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #f07f00;
+ 
+}
 .bg-dark {
     background-color: #e8e8e8 !important;
 }
