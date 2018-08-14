@@ -37,6 +37,17 @@ section {
 p {
     margin: 0 0 24px;
 }
+.visita {
+    margin: 0 0 24px;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #ffc107;
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 h1, h2 {
     margin: 0 0 24px;
     font-weight: 500;
@@ -50,7 +61,7 @@ h3 {
     margin: 0 0 24px;
     font-weight: 500;
     font-size: 35px;
-    color: #ff802b;
+    color: #28a745;
     font-family: 'Gloria Hallelujah', cursive;
 }
 h4 {
@@ -242,6 +253,12 @@ img {
     font-size: 10px;
     color: #ffc107;
 }
+
+.linea-extincion {
+
+    color: #b3b3b3;
+}
+
 .slider-texto {
     font-size: 22px;
 }
@@ -257,7 +274,7 @@ img {
     padding: 75px 0;
 }
 .area-extincion {
-    background-color: #52ab710d;
+    background-color: #f1f1f1;
     padding: 75px 0;
 }
 .extincion-images {
@@ -270,7 +287,7 @@ img {
 }
 .area-extincion-titulo h2 {
     text-align: center;
-    color: #b55d00;
+    color: #61542f;
     font-size: 24px;
     padding-bottom: 10px;
     margin-bottom: 25px;
