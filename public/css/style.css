@@ -161,6 +161,9 @@ img {
     font-size: 22px;
     color: #dcd794;
 }
+ul.destacado li {
+    margin: 0 20px 0 0;
+}
 /*!
  * Area collapse movil 
  * Bootsrapp
@@ -288,7 +291,7 @@ img {
 .area-extincion-titulo h2 {
     text-align: center;
     color: #61542f;
-    font-size: 24px;
+    font-size: 20px;
     padding-bottom: 10px;
     margin-bottom: 25px;
     font-family: 'Gloria Hallelujah', cursive;
